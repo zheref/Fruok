@@ -1,0 +1,876 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		14C6239F686582508AEA4A58F5F66E56 /* Element.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47DD63FBD7FBA08F89D8526C174A364E /* Element.swift */; };
+		20D84C143269E60FBCDFCC30FFB2D6DB /* Error.swift in Sources */ = {isa = PBXBuildFile; fileRef = 329A0A982CB077AE6A40E4047EC745B2 /* Error.swift */; };
+		2197490DD9650014F437CCF553C5804D /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		2758CD107D81A4B5951A58608D939FEF /* Options.swift in Sources */ = {isa = PBXBuildFile; fileRef = 568B52E5F3F2C9CFE037E48A7E680DFC /* Options.swift */; };
+		32671DDA354644444FE925A6F0EF38B7 /* Pods-FruokTests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 02AB07AF21DBB7EB4F6936F6B80373E3 /* Pods-FruokTests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3F32E4E755ACB30B8701F53C3B8917B5 /* Parser.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6239B61BCCC622B8E625507E67C4CA0 /* Parser.swift */; };
+		5C67BD33BEAD1A739CEC2A825F38C257 /* AEXML-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = A3F8E65743C3113764504B96F91AF0CC /* AEXML-dummy.m */; };
+		5DD1C9E300865986CBCBC18E90F5D79D /* AEXML-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = ED3DA76CFC4A95032C73A419129F1836 /* AEXML-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6813DE9FFF17030C0F50711FE5AB98AE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		6E4E7C06A1B9C35408BECAEFEA3C3AD5 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = A71826DA1CE395D371D044BA74C166D9 /* Document.swift */; };
+		80B3E157C47AA568EB16091845C2B0F0 /* Pods-Fruok-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 347DB9AFD03A8648A7DB520EAC52DE05 /* Pods-Fruok-dummy.m */; };
+		90C2749A03D804315951E62FB1BFAF28 /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		A17431BA907176C77CCC2E0676D337A6 /* Pods-FruokTests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 2DC52236BBD382ADB5791EF898AD78AD /* Pods-FruokTests-dummy.m */; };
+		B9E520B21CF1378448C1CCEEFC4B5259 /* Pods-FruokUITests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 157153CF34627BF96665091771264DB9 /* Pods-FruokUITests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		CDEEB336BA72CF6B4C2FD2EFB487D8DE /* Cocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */; };
+		EAFAB035A3881BF103A6BA80346E4708 /* Pods-FruokUITests-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 3815C453215136F449B8F09A3918D64A /* Pods-FruokUITests-dummy.m */; };
+		F9C78BDE97CA9E163BB94BA1331C110C /* Pods-Fruok-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 1C499B72D30FAF3ECAEAC408DE5CE009 /* Pods-Fruok-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		DAA277932E1AEFD4CEF9EE3DEE339510 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 88C257C954247EE49E09C66A8B19E56A;
+			remoteInfo = AEXML;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		02AB07AF21DBB7EB4F6936F6B80373E3 /* Pods-FruokTests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FruokTests-umbrella.h"; sourceTree = "<group>"; };
+		03B9F0897651C380B704BA1D09542F62 /* Pods-FruokUITests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FruokUITests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		0D30AA036FFFF63A21F415BEDB862F90 /* AEXML.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = AEXML.modulemap; sourceTree = "<group>"; };
+		157153CF34627BF96665091771264DB9 /* Pods-FruokUITests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-FruokUITests-umbrella.h"; sourceTree = "<group>"; };
+		1C499B72D30FAF3ECAEAC408DE5CE009 /* Pods-Fruok-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Fruok-umbrella.h"; sourceTree = "<group>"; };
+		1D305ACA23C0ED1678254E1FA4CBD38C /* AEXML-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-prefix.pch"; sourceTree = "<group>"; };
+		270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Cocoa.framework; path = Platforms/MacOSX.platform/Developer/SDKs/MacOSX10.12.sdk/System/Library/Frameworks/Cocoa.framework; sourceTree = DEVELOPER_DIR; };
+		2DC52236BBD382ADB5791EF898AD78AD /* Pods-FruokTests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FruokTests-dummy.m"; sourceTree = "<group>"; };
+		30078B08D24A678E7C9A61F8654FE732 /* Pods-FruokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FruokUITests.release.xcconfig"; sourceTree = "<group>"; };
+		3094545DEA086CBBC0E6545F9775FEFE /* Pods-FruokUITests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FruokUITests-resources.sh"; sourceTree = "<group>"; };
+		30E0228B57FB1254DBF28E576748AE59 /* Pods-FruokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FruokTests.debug.xcconfig"; sourceTree = "<group>"; };
+		329A0A982CB077AE6A40E4047EC745B2 /* Error.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Error.swift; path = Sources/Error.swift; sourceTree = "<group>"; };
+		347DB9AFD03A8648A7DB520EAC52DE05 /* Pods-Fruok-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Fruok-dummy.m"; sourceTree = "<group>"; };
+		3815C453215136F449B8F09A3918D64A /* Pods-FruokUITests-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-FruokUITests-dummy.m"; sourceTree = "<group>"; };
+		38AE26FB50A1753B8D8414439BF036DF /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3B70B4EB5A97E181D1C1B04A72BDCCD1 /* Pods-FruokUITests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FruokUITests.modulemap"; sourceTree = "<group>"; };
+		462DC0C4885939ADF54C4772FF49A01B /* AEXML.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = AEXML.framework; path = AEXML.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		47DD63FBD7FBA08F89D8526C174A364E /* Element.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Element.swift; path = Sources/Element.swift; sourceTree = "<group>"; };
+		568B52E5F3F2C9CFE037E48A7E680DFC /* Options.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Options.swift; path = Sources/Options.swift; sourceTree = "<group>"; };
+		59B17180343050A68FD1D7CC0E29A3EC /* Pods-Fruok-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Fruok-acknowledgements.markdown"; sourceTree = "<group>"; };
+		59D5E22D2501C0205CA2889BB9608516 /* Pods-FruokTests-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FruokTests-resources.sh"; sourceTree = "<group>"; };
+		59E57DB563DC547CA96238C382C3F128 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		648256CE0A575FF1B93B3CC0C33440F2 /* Pods-FruokUITests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FruokUITests-frameworks.sh"; sourceTree = "<group>"; };
+		6ABE48372458D91F5C2827DFC461C3C1 /* Pods-Fruok.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-Fruok.modulemap"; sourceTree = "<group>"; };
+		6ADCEB42317B1664782546CD9FD73C2F /* Pods-FruokTests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FruokTests-acknowledgements.plist"; sourceTree = "<group>"; };
+		7A4F66AC062B8F12652AC8BC16266E76 /* AEXML.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = AEXML.xcconfig; sourceTree = "<group>"; };
+		8F25E8289F4FA49C26330210BFB7F7FC /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		914C22210DFB12281F49DFC0A45DC283 /* Pods-FruokTests-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-FruokTests-acknowledgements.markdown"; sourceTree = "<group>"; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		96AE111D592F17E6ACD1A83D4E944D7B /* Pods-Fruok-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fruok-frameworks.sh"; sourceTree = "<group>"; };
+		A203714F27CF885C5459DAA4279ECC25 /* Pods-FruokTests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; path = "Pods-FruokTests.modulemap"; sourceTree = "<group>"; };
+		A2228BC30EA788C28E036B87011D8481 /* Pods-FruokTests-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-FruokTests-frameworks.sh"; sourceTree = "<group>"; };
+		A3F8E65743C3113764504B96F91AF0CC /* AEXML-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "AEXML-dummy.m"; sourceTree = "<group>"; };
+		A5C0C6709C5E16BD41974A97C2271600 /* Pods-Fruok.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fruok.release.xcconfig"; sourceTree = "<group>"; };
+		A71826DA1CE395D371D044BA74C166D9 /* Document.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Document.swift; path = Sources/Document.swift; sourceTree = "<group>"; };
+		B23F7D36D801FF34B13DB248D6833495 /* Pods_FruokTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FruokTests.framework; path = "Pods-FruokTests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		B56892C449811B660B32C7F2B9D7C819 /* Pods_FruokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_FruokUITests.framework; path = "Pods-FruokUITests.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BC0C7346D1679FE7D291CC3CCBD0A7CF /* Pods_Fruok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = Pods_Fruok.framework; path = "Pods-Fruok.framework"; sourceTree = BUILT_PRODUCTS_DIR; };
+		BD9AB74C6DEC0B004DC87A9ECF50B28B /* Pods-FruokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FruokUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		C6239B61BCCC622B8E625507E67C4CA0 /* Parser.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Parser.swift; path = Sources/Parser.swift; sourceTree = "<group>"; };
+		CA5983066F7A2A61B13E953B6B04B4CD /* Pods-Fruok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Fruok.debug.xcconfig"; sourceTree = "<group>"; };
+		D0A65998B15D202B4F695C6CC69A474E /* Pods-FruokUITests-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-FruokUITests-acknowledgements.plist"; sourceTree = "<group>"; };
+		D3A50D577301EA3B30DB20F3B29994C0 /* Pods-Fruok-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Fruok-resources.sh"; sourceTree = "<group>"; };
+		E4015FC791B79797C42155C28034C300 /* Pods-FruokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-FruokTests.release.xcconfig"; sourceTree = "<group>"; };
+		E6F16055ACE835454B0A928F48878F0B /* Pods-Fruok-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Fruok-acknowledgements.plist"; sourceTree = "<group>"; };
+		ED3DA76CFC4A95032C73A419129F1836 /* AEXML-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "AEXML-umbrella.h"; sourceTree = "<group>"; };
+		FBD44B14C36F4C3A4BF683B3ED4B03A1 /* Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		170E8820BA34F7986F539DB98BAB9054 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				2197490DD9650014F437CCF553C5804D /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		518E6C2ACCC13E563AF22747A463BB49 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6813DE9FFF17030C0F50711FE5AB98AE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		60644DC017B6F6566CDA31228E18E51B /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				CDEEB336BA72CF6B4C2FD2EFB487D8DE /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DBFFF193EA227C74EE478FBF84943A16 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				90C2749A03D804315951E62FB1BFAF28 /* Cocoa.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		04C068A18C5413F804A2959126093416 /* OS X */ = {
+			isa = PBXGroup;
+			children = (
+				270DD1219F1E6CF00379D39F252D87C6 /* Cocoa.framework */,
+			);
+			name = "OS X";
+			sourceTree = "<group>";
+		};
+		39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				04C068A18C5413F804A2959126093416 /* OS X */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		4C1144A977FE32812344D548D2BD061B /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				8D97E99108818602C2660D9E39CC37B9 /* Pods-Fruok */,
+				7C3C773013AF865C397D1E80FCF349D0 /* Pods-FruokTests */,
+				B5DE7B94D1DD745453D52BF25FBD1D75 /* Pods-FruokUITests */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		60808A1FE9D094B0C5ADE6989DF4C57F /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				0D30AA036FFFF63A21F415BEDB862F90 /* AEXML.modulemap */,
+				7A4F66AC062B8F12652AC8BC16266E76 /* AEXML.xcconfig */,
+				A3F8E65743C3113764504B96F91AF0CC /* AEXML-dummy.m */,
+				1D305ACA23C0ED1678254E1FA4CBD38C /* AEXML-prefix.pch */,
+				ED3DA76CFC4A95032C73A419129F1836 /* AEXML-umbrella.h */,
+				38AE26FB50A1753B8D8414439BF036DF /* Info.plist */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/AEXML";
+			sourceTree = "<group>";
+		};
+		7C3C773013AF865C397D1E80FCF349D0 /* Pods-FruokTests */ = {
+			isa = PBXGroup;
+			children = (
+				59E57DB563DC547CA96238C382C3F128 /* Info.plist */,
+				A203714F27CF885C5459DAA4279ECC25 /* Pods-FruokTests.modulemap */,
+				914C22210DFB12281F49DFC0A45DC283 /* Pods-FruokTests-acknowledgements.markdown */,
+				6ADCEB42317B1664782546CD9FD73C2F /* Pods-FruokTests-acknowledgements.plist */,
+				2DC52236BBD382ADB5791EF898AD78AD /* Pods-FruokTests-dummy.m */,
+				A2228BC30EA788C28E036B87011D8481 /* Pods-FruokTests-frameworks.sh */,
+				59D5E22D2501C0205CA2889BB9608516 /* Pods-FruokTests-resources.sh */,
+				02AB07AF21DBB7EB4F6936F6B80373E3 /* Pods-FruokTests-umbrella.h */,
+				30E0228B57FB1254DBF28E576748AE59 /* Pods-FruokTests.debug.xcconfig */,
+				E4015FC791B79797C42155C28034C300 /* Pods-FruokTests.release.xcconfig */,
+			);
+			name = "Pods-FruokTests";
+			path = "Target Support Files/Pods-FruokTests";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				39E9EE8210D861DFD82346C1F5EB7218 /* Frameworks */,
+				8A80BA96A9D32501AB683A4FE1C44887 /* Pods */,
+				FDFBFBC336E53AEC341CAA626E767045 /* Products */,
+				4C1144A977FE32812344D548D2BD061B /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		8A80BA96A9D32501AB683A4FE1C44887 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				DD6B1BAD7BDE39095F08F278C593092A /* AEXML */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		8D97E99108818602C2660D9E39CC37B9 /* Pods-Fruok */ = {
+			isa = PBXGroup;
+			children = (
+				FBD44B14C36F4C3A4BF683B3ED4B03A1 /* Info.plist */,
+				6ABE48372458D91F5C2827DFC461C3C1 /* Pods-Fruok.modulemap */,
+				59B17180343050A68FD1D7CC0E29A3EC /* Pods-Fruok-acknowledgements.markdown */,
+				E6F16055ACE835454B0A928F48878F0B /* Pods-Fruok-acknowledgements.plist */,
+				347DB9AFD03A8648A7DB520EAC52DE05 /* Pods-Fruok-dummy.m */,
+				96AE111D592F17E6ACD1A83D4E944D7B /* Pods-Fruok-frameworks.sh */,
+				D3A50D577301EA3B30DB20F3B29994C0 /* Pods-Fruok-resources.sh */,
+				1C499B72D30FAF3ECAEAC408DE5CE009 /* Pods-Fruok-umbrella.h */,
+				CA5983066F7A2A61B13E953B6B04B4CD /* Pods-Fruok.debug.xcconfig */,
+				A5C0C6709C5E16BD41974A97C2271600 /* Pods-Fruok.release.xcconfig */,
+			);
+			name = "Pods-Fruok";
+			path = "Target Support Files/Pods-Fruok";
+			sourceTree = "<group>";
+		};
+		B5DE7B94D1DD745453D52BF25FBD1D75 /* Pods-FruokUITests */ = {
+			isa = PBXGroup;
+			children = (
+				8F25E8289F4FA49C26330210BFB7F7FC /* Info.plist */,
+				3B70B4EB5A97E181D1C1B04A72BDCCD1 /* Pods-FruokUITests.modulemap */,
+				03B9F0897651C380B704BA1D09542F62 /* Pods-FruokUITests-acknowledgements.markdown */,
+				D0A65998B15D202B4F695C6CC69A474E /* Pods-FruokUITests-acknowledgements.plist */,
+				3815C453215136F449B8F09A3918D64A /* Pods-FruokUITests-dummy.m */,
+				648256CE0A575FF1B93B3CC0C33440F2 /* Pods-FruokUITests-frameworks.sh */,
+				3094545DEA086CBBC0E6545F9775FEFE /* Pods-FruokUITests-resources.sh */,
+				157153CF34627BF96665091771264DB9 /* Pods-FruokUITests-umbrella.h */,
+				BD9AB74C6DEC0B004DC87A9ECF50B28B /* Pods-FruokUITests.debug.xcconfig */,
+				30078B08D24A678E7C9A61F8654FE732 /* Pods-FruokUITests.release.xcconfig */,
+			);
+			name = "Pods-FruokUITests";
+			path = "Target Support Files/Pods-FruokUITests";
+			sourceTree = "<group>";
+		};
+		DD6B1BAD7BDE39095F08F278C593092A /* AEXML */ = {
+			isa = PBXGroup;
+			children = (
+				A71826DA1CE395D371D044BA74C166D9 /* Document.swift */,
+				47DD63FBD7FBA08F89D8526C174A364E /* Element.swift */,
+				329A0A982CB077AE6A40E4047EC745B2 /* Error.swift */,
+				568B52E5F3F2C9CFE037E48A7E680DFC /* Options.swift */,
+				C6239B61BCCC622B8E625507E67C4CA0 /* Parser.swift */,
+				60808A1FE9D094B0C5ADE6989DF4C57F /* Support Files */,
+			);
+			name = AEXML;
+			path = AEXML;
+			sourceTree = "<group>";
+		};
+		FDFBFBC336E53AEC341CAA626E767045 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				462DC0C4885939ADF54C4772FF49A01B /* AEXML.framework */,
+				BC0C7346D1679FE7D291CC3CCBD0A7CF /* Pods_Fruok.framework */,
+				B23F7D36D801FF34B13DB248D6833495 /* Pods_FruokTests.framework */,
+				B56892C449811B660B32C7F2B9D7C819 /* Pods_FruokUITests.framework */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		1D22126E58855CC6CE3DB84BB7D365CF /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				32671DDA354644444FE925A6F0EF38B7 /* Pods-FruokTests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B0B0C79E2B30376AEBB26963B0070855 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F9C78BDE97CA9E163BB94BA1331C110C /* Pods-Fruok-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0613CA45FA3570375BCF0AD7364E7F9 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5DD1C9E300865986CBCBC18E90F5D79D /* AEXML-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F82B7E6168EAEE0508DD1E09A82918E0 /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				B9E520B21CF1378448C1CCEEFC4B5259 /* Pods-FruokUITests-umbrella.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		193E8892EB33D4203042AE609D137644 /* Pods-FruokTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 8E258BCB36B5DDFC82F62CFC258EDD67 /* Build configuration list for PBXNativeTarget "Pods-FruokTests" */;
+			buildPhases = (
+				D0FB67996709FC1A1B0F471CECFD72F8 /* Sources */,
+				60644DC017B6F6566CDA31228E18E51B /* Frameworks */,
+				1D22126E58855CC6CE3DB84BB7D365CF /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FruokTests";
+			productName = "Pods-FruokTests";
+			productReference = B23F7D36D801FF34B13DB248D6833495 /* Pods_FruokTests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		88C257C954247EE49E09C66A8B19E56A /* AEXML */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3C4627B7E11408E0460F1F8F976E2F4 /* Build configuration list for PBXNativeTarget "AEXML" */;
+			buildPhases = (
+				747A9DA0F6886F738BFD444632081895 /* Sources */,
+				DBFFF193EA227C74EE478FBF84943A16 /* Frameworks */,
+				D0613CA45FA3570375BCF0AD7364E7F9 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = AEXML;
+			productName = AEXML;
+			productReference = 462DC0C4885939ADF54C4772FF49A01B /* AEXML.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		8E516EADEE56F5E52EF16BAAC9422242 /* Pods-Fruok */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C3265AB878B56BEE880AFCF4D5D8F5B4 /* Build configuration list for PBXNativeTarget "Pods-Fruok" */;
+			buildPhases = (
+				F9E2638FCE399FD361CB7FBB20081D2F /* Sources */,
+				518E6C2ACCC13E563AF22747A463BB49 /* Frameworks */,
+				B0B0C79E2B30376AEBB26963B0070855 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				8A6865CEEC39CB0EDB957C3650DE81E0 /* PBXTargetDependency */,
+			);
+			name = "Pods-Fruok";
+			productName = "Pods-Fruok";
+			productReference = BC0C7346D1679FE7D291CC3CCBD0A7CF /* Pods_Fruok.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		A9F0E2E7E84BA5D3A85E7164B1DFF1D4 /* Pods-FruokUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = B393E8EFCD4F7DBAF6F8D12CA57CD6C7 /* Build configuration list for PBXNativeTarget "Pods-FruokUITests" */;
+			buildPhases = (
+				ADE84A9363EFD5D65D7DA5948FBC225E /* Sources */,
+				170E8820BA34F7986F539DB98BAB9054 /* Frameworks */,
+				F82B7E6168EAEE0508DD1E09A82918E0 /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Pods-FruokUITests";
+			productName = "Pods-FruokUITests";
+			productReference = B56892C449811B660B32C7F2B9D7C819 /* Pods_FruokUITests.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0730;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = FDFBFBC336E53AEC341CAA626E767045 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				88C257C954247EE49E09C66A8B19E56A /* AEXML */,
+				8E516EADEE56F5E52EF16BAAC9422242 /* Pods-Fruok */,
+				193E8892EB33D4203042AE609D137644 /* Pods-FruokTests */,
+				A9F0E2E7E84BA5D3A85E7164B1DFF1D4 /* Pods-FruokUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		747A9DA0F6886F738BFD444632081895 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				5C67BD33BEAD1A739CEC2A825F38C257 /* AEXML-dummy.m in Sources */,
+				6E4E7C06A1B9C35408BECAEFEA3C3AD5 /* Document.swift in Sources */,
+				14C6239F686582508AEA4A58F5F66E56 /* Element.swift in Sources */,
+				20D84C143269E60FBCDFCC30FFB2D6DB /* Error.swift in Sources */,
+				2758CD107D81A4B5951A58608D939FEF /* Options.swift in Sources */,
+				3F32E4E755ACB30B8701F53C3B8917B5 /* Parser.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ADE84A9363EFD5D65D7DA5948FBC225E /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				EAFAB035A3881BF103A6BA80346E4708 /* Pods-FruokUITests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		D0FB67996709FC1A1B0F471CECFD72F8 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A17431BA907176C77CCC2E0676D337A6 /* Pods-FruokTests-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F9E2638FCE399FD361CB7FBB20081D2F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				80B3E157C47AA568EB16091845C2B0F0 /* Pods-Fruok-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		8A6865CEEC39CB0EDB957C3650DE81E0 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = AEXML;
+			target = 88C257C954247EE49E09C66A8B19E56A /* AEXML */;
+			targetProxy = DAA277932E1AEFD4CEF9EE3DEE339510 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		34342BBF37D3A9ED85FF2EB654934920 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		5663E6A6A07352BC07734A6BBD523A17 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = BD9AB74C6DEC0B004DC87A9ECF50B28B /* Pods-FruokUITests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FruokUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-FruokUITests/Pods-FruokUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FruokUITests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		57EC2AA176E68499CC8E42EF97A97D86 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30078B08D24A678E7C9A61F8654FE732 /* Pods-FruokUITests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FruokUITests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-FruokUITests/Pods-FruokUITests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FruokUITests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6B62BCF1673C43229F840863F0A55D03 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A5C0C6709C5E16BD41974A97C2271600 /* Pods-Fruok.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Fruok/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-Fruok/Pods-Fruok.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Fruok;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		6FA248DC22DFBBB9FCC3881CB881B437 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E4015FC791B79797C42155C28034C300 /* Pods-FruokTests.release.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FruokTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-FruokTests/Pods-FruokTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FruokTests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AAC0C516B160AFABCFD69F684BD6FB6D /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A4F66AC062B8F12652AC8BC16266E76 /* AEXML.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AEXML/AEXML-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AEXML/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/AEXML/AEXML.modulemap";
+				MTL_ENABLE_DEBUG_INFO = NO;
+				PRODUCT_NAME = AEXML;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
+		AB451F16A8986690093D47E64BE45600 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CA5983066F7A2A61B13E953B6B04B4CD /* Pods-Fruok.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-Fruok/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-Fruok/Pods-Fruok.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_Fruok;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D37007326D45C10626B3E50245925033 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 30E0228B57FB1254DBF28E576748AE59 /* Pods-FruokTests.debug.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				INFOPLIST_FILE = "Target Support Files/Pods-FruokTests/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACH_O_TYPE = staticlib;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				MODULEMAP_FILE = "Target Support Files/Pods-FruokTests/Pods-FruokTests.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = Pods_FruokTests;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		EE38961A2FA2DA4B21C02D55A1623326 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7A4F66AC062B8F12652AC8BC16266E76 /* AEXML.xcconfig */;
+			buildSettings = {
+				CODE_SIGN_IDENTITY = "-";
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				FRAMEWORK_VERSION = A;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/AEXML/AEXML-prefix.pch";
+				INFOPLIST_FILE = "Target Support Files/AEXML/Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/../Frameworks @loader_path/Frameworks";
+				MACOSX_DEPLOYMENT_TARGET = 10.9;
+				MODULEMAP_FILE = "Target Support Files/AEXML/AEXML.modulemap";
+				MTL_ENABLE_DEBUG_INFO = YES;
+				PRODUCT_NAME = AEXML;
+				SDKROOT = macosx;
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		F6FC88CB717F413199C282718D2DC09F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.12;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				34342BBF37D3A9ED85FF2EB654934920 /* Debug */,
+				F6FC88CB717F413199C282718D2DC09F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		8E258BCB36B5DDFC82F62CFC258EDD67 /* Build configuration list for PBXNativeTarget "Pods-FruokTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D37007326D45C10626B3E50245925033 /* Debug */,
+				6FA248DC22DFBBB9FCC3881CB881B437 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		B393E8EFCD4F7DBAF6F8D12CA57CD6C7 /* Build configuration list for PBXNativeTarget "Pods-FruokUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5663E6A6A07352BC07734A6BBD523A17 /* Debug */,
+				57EC2AA176E68499CC8E42EF97A97D86 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3265AB878B56BEE880AFCF4D5D8F5B4 /* Build configuration list for PBXNativeTarget "Pods-Fruok" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AB451F16A8986690093D47E64BE45600 /* Debug */,
+				6B62BCF1673C43229F840863F0A55D03 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C3C4627B7E11408E0460F1F8F976E2F4 /* Build configuration list for PBXNativeTarget "AEXML" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EE38961A2FA2DA4B21C02D55A1623326 /* Debug */,
+				AAC0C516B160AFABCFD69F684BD6FB6D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}
