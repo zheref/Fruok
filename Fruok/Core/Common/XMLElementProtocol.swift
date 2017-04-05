@@ -1,5 +1,5 @@
 //
-//  XMLCompliantProtocol.swift
+//  XMLElementProtocol.swift
 //  Fruok
 //
 //  Created by Sergio Daniel L. García on 4/5/17.
@@ -9,8 +9,10 @@
 import Foundation
 import AEXML
 
-protocol XMLCompliantProtocol : XMLElementProtocol {
+protocol XMLElementProtocol {
     
-    var xmlDocumentEquivalent: AEXMLDocument { get }
+    static var TagName: String { get }
+    
+    var xmlElementEquivalent: AEXMLElement { get }
     
 }
