@@ -170,14 +170,11 @@
 		2B93ED201E95ACF0000D15A2 /* Fruok */ = {
 			isa = PBXGroup;
 			children = (
+				2B93ED8E1E9666AF000D15A2 /* Main */,
 				2B93ED7B1E95F60B000D15A2 /* UI */,
 				2B93ED681E95BBEA000D15A2 /* IO */,
 				2B93ED4E1E95B6E5000D15A2 /* Core */,
-				2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */,
-				2B93ED231E95ACF0000D15A2 /* ViewController.swift */,
-				2B93ED251E95ACF0000D15A2 /* Document.swift */,
 				2B93ED271E95ACF0000D15A2 /* Assets.xcassets */,
-				2B93ED291E95ACF0000D15A2 /* Main.storyboard */,
 				2B93ED2C1E95ACF0000D15A2 /* Info.plist */,
 			);
 			path = Fruok;
@@ -274,6 +271,25 @@
 				2B93ED851E95F841000D15A2 /* WorkspaceCanvasViewModel.swift */,
 			);
 			name = Workspace;
+			sourceTree = "<group>";
+		};
+		2B93ED8E1E9666AF000D15A2 /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				2B93ED8F1E9666C6000D15A2 /* macOS */,
+			);
+			name = Main;
+			sourceTree = "<group>";
+		};
+		2B93ED8F1E9666C6000D15A2 /* macOS */ = {
+			isa = PBXGroup;
+			children = (
+				2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */,
+				2B93ED231E95ACF0000D15A2 /* ViewController.swift */,
+				2B93ED251E95ACF0000D15A2 /* Document.swift */,
+				2B93ED291E95ACF0000D15A2 /* Main.storyboard */,
+			);
+			name = macOS;
 			sourceTree = "<group>";
 		};
 		C319CCA9F4DE57E281ECF31B /* Pods */ = {
