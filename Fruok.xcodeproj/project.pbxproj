@@ -8,8 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		1CB5C0E33AB5BFF20A14E7EC /* Pods_Fruok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0971BAA60165D6104169A /* Pods_Fruok.framework */; };
+		2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
+		2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
+		2B6C26841E988EAA00BD6285 /* ProjectCreationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */; };
+		2B6C26851E988EAA00BD6285 /* ProjectCreationWindowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */; };
+		2B6C268A1E98F23800BD6285 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26891E98F23800BD6285 /* MVVM.swift */; };
+		2B6C268B1E98F23800BD6285 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26891E98F23800BD6285 /* MVVM.swift */; };
+		2B6C268C1E98F23800BD6285 /* MVVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26891E98F23800BD6285 /* MVVM.swift */; };
+		2B6C268E1E98FB6B00BD6285 /* FruokDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */; };
+		2B6C268F1E98FB6B00BD6285 /* FruokDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */; };
+		2B6C26901E98FB6B00BD6285 /* FruokDocument.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */; };
+		2B6C26921E98FDD400BD6285 /* FruokWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26911E98FDD400BD6285 /* FruokWireframe.swift */; };
+		2B6C26931E98FDD400BD6285 /* FruokWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26911E98FDD400BD6285 /* FruokWireframe.swift */; };
+		2B6C26941E98FDD400BD6285 /* FruokWireframe.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26911E98FDD400BD6285 /* FruokWireframe.swift */; };
+		2B6C26961E98FE6100BD6285 /* FruokModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26951E98FE6100BD6285 /* FruokModule.swift */; };
+		2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26951E98FE6100BD6285 /* FruokModule.swift */; };
+		2B6C26981E98FE6100BD6285 /* FruokModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26951E98FE6100BD6285 /* FruokModule.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
-		2B93ED241E95ACF0000D15A2 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED231E95ACF0000D15A2 /* ViewController.swift */; };
 		2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
 		2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED271E95ACF0000D15A2 /* Assets.xcassets */; };
 		2B93ED2B1E95ACF0000D15A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED291E95ACF0000D15A2 /* Main.storyboard */; };
@@ -57,6 +72,9 @@
 		2B93ED8B1E966245000D15A2 /* Workspace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED8A1E966245000D15A2 /* Workspace.storyboard */; };
 		2B93ED8C1E966245000D15A2 /* Workspace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED8A1E966245000D15A2 /* Workspace.storyboard */; };
 		2B93ED8D1E966245000D15A2 /* Workspace.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED8A1E966245000D15A2 /* Workspace.storyboard */; };
+		2B93ED921E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
+		2B93ED931E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
+		2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
 		7497358592B08B90A4CFED0C /* Pods_FruokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */; };
 		9611097ABFBD5621D77E4F42 /* Pods_FruokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CEF88CA40E9C82B3B94BB7 /* Pods_FruokUITests.framework */; };
 /* End PBXBuildFile section */
@@ -82,9 +100,14 @@
 		066425D60E3A161DEC3D9144 /* Pods-FruokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FruokTests/Pods-FruokTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20AC4386318C4051534DA5D0 /* Pods-FruokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokUITests/Pods-FruokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		27088D216761F1798183548A /* Pods-FruokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokTests/Pods-FruokTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectCreation.storyboard; path = UI/macOS/ProjectCreation/ProjectCreation.storyboard; sourceTree = "<group>"; };
+		2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationWindowController.swift; path = UI/macOS/ProjectCreation/ProjectCreationWindowController.swift; sourceTree = "<group>"; };
+		2B6C26891E98F23800BD6285 /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVVM.swift; path = UI/Common/MVVM.swift; sourceTree = "<group>"; };
+		2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FruokDocument.swift; path = UI/macOS/FruokDocument.swift; sourceTree = "<group>"; };
+		2B6C26911E98FDD400BD6285 /* FruokWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruokWireframe.swift; sourceTree = "<group>"; };
+		2B6C26951E98FE6100BD6285 /* FruokModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruokModule.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2B93ED231E95ACF0000D15A2 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		2B93ED251E95ACF0000D15A2 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
 		2B93ED271E95ACF0000D15A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2B93ED2A1E95ACF0000D15A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -109,6 +132,7 @@
 		2B93ED811E95F81D000D15A2 /* WorkspaceCanvasViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkspaceCanvasViewController.swift; path = UI/macOS/WorkspaceCanvasViewController.swift; sourceTree = "<group>"; };
 		2B93ED851E95F841000D15A2 /* WorkspaceCanvasViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkspaceCanvasViewModel.swift; path = UI/macOS/Workspace/WorkspaceCanvasViewModel.swift; sourceTree = "<group>"; };
 		2B93ED8A1E966245000D15A2 /* Workspace.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Workspace.storyboard; path = UI/macOS/Workspace/Workspace.storyboard; sourceTree = "<group>"; };
+		2B93ED911E966AEF000D15A2 /* KUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KUI.swift; path = UI/Common/KUI.swift; sourceTree = "<group>"; };
 		3EB0971BAA60165D6104169A /* Pods_Fruok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fruok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CEF88CA40E9C82B3B94BB7 /* Pods_FruokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruokTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -145,6 +169,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B6C267F1E9738F900BD6285 /* ProjectCreation */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */,
+				2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */,
+			);
+			name = ProjectCreation;
+			sourceTree = "<group>";
+		};
 		2B93ED151E95ACF0000D15A2 = {
 			isa = PBXGroup;
 			children = (
@@ -249,6 +282,7 @@
 		2B93ED7B1E95F60B000D15A2 /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				2B93ED901E966AD1000D15A2 /* Common */,
 				2B93ED7C1E95F619000D15A2 /* macOS */,
 			);
 			name = UI;
@@ -257,6 +291,8 @@
 		2B93ED7C1E95F619000D15A2 /* macOS */ = {
 			isa = PBXGroup;
 			children = (
+				2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */,
+				2B6C267F1E9738F900BD6285 /* ProjectCreation */,
 				2B93ED891E95F846000D15A2 /* Workspace */,
 			);
 			name = macOS;
@@ -285,11 +321,21 @@
 			isa = PBXGroup;
 			children = (
 				2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */,
-				2B93ED231E95ACF0000D15A2 /* ViewController.swift */,
 				2B93ED251E95ACF0000D15A2 /* Document.swift */,
 				2B93ED291E95ACF0000D15A2 /* Main.storyboard */,
+				2B6C26911E98FDD400BD6285 /* FruokWireframe.swift */,
+				2B6C26951E98FE6100BD6285 /* FruokModule.swift */,
 			);
 			name = macOS;
+			sourceTree = "<group>";
+		};
+		2B93ED901E966AD1000D15A2 /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				2B93ED911E966AEF000D15A2 /* KUI.swift */,
+				2B6C26891E98F23800BD6285 /* MVVM.swift */,
+			);
+			name = Common;
 			sourceTree = "<group>";
 		};
 		C319CCA9F4DE57E281ECF31B /* Pods */ = {
@@ -435,6 +481,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B93ED8B1E966245000D15A2 /* Workspace.storyboard in Resources */,
+				2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */,
 				2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */,
 				2B93ED2B1E95ACF0000D15A2 /* Main.storyboard in Resources */,
 			);
@@ -453,6 +500,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B93ED8D1E966245000D15A2 /* Workspace.storyboard in Resources */,
+				2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -601,6 +649,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6C26841E988EAA00BD6285 /* ProjectCreationWindowController.swift in Sources */,
 				2B93ED861E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED731E95BDD8000D15A2 /* Writer.swift in Sources */,
 				2B93ED6B1E95BD1B000D15A2 /* KCore.swift in Sources */,
@@ -608,12 +657,16 @@
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B93ED7E1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
-				2B93ED241E95ACF0000D15A2 /* ViewController.swift in Sources */,
+				2B93ED921E966AEF000D15A2 /* KUI.swift in Sources */,
+				2B6C268A1E98F23800BD6285 /* MVVM.swift in Sources */,
 				2B93ED6F1E95BD57000D15A2 /* PropertyList.swift in Sources */,
+				2B6C26961E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */,
 				2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */,
 				2B93ED781E95F2DA000D15A2 /* IODocument.swift in Sources */,
 				2B93ED511E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,
+				2B6C268E1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
+				2B6C26921E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B93ED611E95BB67000D15A2 /* Client.swift in Sources */,
 				2B93ED821E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED591E95BA64000D15A2 /* Project.swift in Sources */,
@@ -626,15 +679,20 @@
 			files = (
 				2B93ED361E95ACF1000D15A2 /* FruokTests.swift in Sources */,
 				2B93ED521E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,
+				2B6C26931E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B93ED6C1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED621E95BB67000D15A2 /* Client.swift in Sources */,
 				2B93ED871E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED561E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
+				2B6C268F1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B93ED7F1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
+				2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED701E95BD57000D15A2 /* PropertyList.swift in Sources */,
 				2B93ED741E95BDD8000D15A2 /* Writer.swift in Sources */,
 				2B93ED5A1E95BA64000D15A2 /* Project.swift in Sources */,
 				2B93ED5E1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				2B6C268B1E98F23800BD6285 /* MVVM.swift in Sources */,
+				2B93ED931E966AEF000D15A2 /* KUI.swift in Sources */,
 				2B93ED831E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED661E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED791E95F2DA000D15A2 /* IODocument.swift in Sources */,
@@ -651,11 +709,17 @@
 				2B93ED631E95BB67000D15A2 /* Client.swift in Sources */,
 				2B93ED881E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED571E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
+				2B6C26901E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
+				2B6C26941E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B93ED801E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
+				2B6C268C1E98F23800BD6285 /* MVVM.swift in Sources */,
 				2B93ED711E95BD57000D15A2 /* PropertyList.swift in Sources */,
+				2B6C26851E988EAA00BD6285 /* ProjectCreationWindowController.swift in Sources */,
 				2B93ED751E95BDD8000D15A2 /* Writer.swift in Sources */,
+				2B6C26981E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED5B1E95BA64000D15A2 /* Project.swift in Sources */,
 				2B93ED5F1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */,
 				2B93ED841E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED671E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED7A1E95F2DA000D15A2 /* IODocument.swift in Sources */,

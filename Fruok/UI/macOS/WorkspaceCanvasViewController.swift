@@ -8,13 +8,32 @@
 
 import Cocoa
 
-class WorkspaceCanvasViewController: NSViewController {
+
+protocol WorkspaceCanvasViewControllerProtocol : ViewControllerProtocol {
     
-    //var model: WorkspaceCanvasViewModel
+}
+
+
+class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewControllerProtocol {
+    
+    var vm: ViewModelProtocol = WorkspaceCanvasViewModel() {
+        didSet {
+            
+        }
+    }
+    
+    var window: WindowControllerProtocol? {
+        return view.window?.windowController as? WindowControllerProtocol
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        vm.vc = self
+    }
+    
+    override func viewDidAppear() {
+        vm.ready()
     }
     
 }

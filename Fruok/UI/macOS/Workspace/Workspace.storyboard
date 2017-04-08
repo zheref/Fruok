@@ -9,7 +9,7 @@
         <!--Window Controller-->
         <scene sceneID="Cck-Nf-6h4">
             <objects>
-                <windowController storyboardIdentifier="WorkspaceWindowController" id="XOF-Ir-89t" customClass="WorkspaceWindowController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
+                <windowController storyboardIdentifier="Workspace" id="XOF-Ir-89t" customClass="WorkspaceWindowController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
                     <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="ewG-fh-fLN">
                         <windowStyleMask key="styleMask" titled="YES" closable="YES" miniaturizable="YES" resizable="YES"/>
                         <rect key="contentRect" x="1734" y="683" width="1024" height="768"/>
@@ -23,10 +23,10 @@
             </objects>
             <point key="canvasLocation" x="-118" y="-103"/>
         </scene>
-        <!--View Controller-->
+        <!--Workspace Canvas View Controller-->
         <scene sceneID="yrO-KU-f5B">
             <objects>
-                <viewController id="hoO-lM-0Eu" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="WorkspaceVC" id="hoO-lM-0Eu" customClass="WorkspaceCanvasViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="MeO-Pq-De0">
                         <rect key="frame" x="0.0" y="0.0" width="1024" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>

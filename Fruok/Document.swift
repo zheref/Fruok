@@ -8,7 +8,7 @@
 
 import Cocoa
 
-class Document: NSDocument {
+class Document: FruokDocument {
 
     override init() {
         super.init()
@@ -20,9 +20,7 @@ class Document: NSDocument {
     }
 
     override func makeWindowControllers() {
-        // Returns the Storyboard that contains your Document window.
-        let windowController = WorkspaceWindowController.make()
-        self.addWindowController(windowController)
+        addWindowController(Wireframe.requestWorkspace().wc)
     }
 
     override func data(ofType typeName: String) throws -> Data {

@@ -8,8 +8,33 @@
 
 import Foundation
 
-public class WorkspaceCanvasViewModel {
+public protocol WorkspaceCanvasViewModelProtocol : ViewModelProtocol {
     
     
+    
+}
+
+
+public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
+    
+    weak public var vc: ViewControllerProtocol?
+    
+    var ui: WorkspaceCanvasViewControllerProtocol? {
+        return vc as? WorkspaceCanvasViewControllerProtocol
+    }
+    
+    public func ready() {
+        guard let document = vc?.window?.doc else {
+            return
+        }
+        
+        if !document.existsOnDisk {
+            startProjectCreationFlow()
+        }
+    }
+
+    fileprivate func startProjectCreationFlow() {
+        ui?.window?.presentSheet(forModule: Wireframe.requestProjectCreation())
+    }
     
 }

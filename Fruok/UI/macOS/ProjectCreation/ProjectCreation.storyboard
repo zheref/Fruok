@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Window Controller-->
+        <scene sceneID="rj4-ng-3S6">
+            <objects>
+                <windowController storyboardIdentifier="ProjectCreation" id="Duq-Ti-7uB" customClass="ProjectCreationWindowController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
+                    <window key="window" title="Window" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" oneShot="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" frameAutosaveName="" animationBehavior="default" id="cEn-ix-Xdy">
+                        <windowStyleMask key="styleMask" titled="YES"/>
+                        <windowPositionMask key="initialPositionMask" topStrut="YES"/>
+                        <rect key="contentRect" x="1734" y="683" width="480" height="270"/>
+                        <rect key="screenRect" x="1440" y="369" width="1920" height="1058"/>
+                    </window>
+                    <connections>
+                        <segue destination="dKk-oc-O7B" kind="relationship" relationship="window.shadowedContentViewController" id="mLO-lw-hbG"/>
+                    </connections>
+                </windowController>
+                <customObject id="Twj-D4-DJA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="17"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="bWu-ar-Qij">
+            <objects>
+                <viewController id="dKk-oc-O7B" sceneMemberID="viewController">
+                    <view key="view" id="172-Rz-J8t">
+                        <rect key="frame" x="0.0" y="0.0" width="480" height="270"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <subviews>
+                            <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw6-aC-yqQ">
+                                <rect key="frame" x="191" y="146" width="99" height="17"/>
+                                <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="ProjectCreation" id="gYW-r9-uPJ">
+                                    <font key="font" metaFont="system"/>
+                                    <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
+                                    <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
+                                </textFieldCell>
+                            </textField>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="Dw6-aC-yqQ" firstAttribute="top" secondItem="172-Rz-J8t" secondAttribute="top" constant="107" id="Zkl-T9-Nlm"/>
+                            <constraint firstItem="Dw6-aC-yqQ" firstAttribute="centerX" secondItem="172-Rz-J8t" secondAttribute="centerX" id="cMT-3j-2ZH"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <customObject id="nhp-18-dfP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="490"/>
+        </scene>
+    </scenes>
+</document>
