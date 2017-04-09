@@ -8,7 +8,7 @@
 
 import Foundation
 
-public protocol WorkspaceCanvasViewModelProtocol : ViewModelProtocol {
+public protocol WorkspaceCanvasViewModelProtocol : ViewControllerModelProtocol {
     
     
     

@@ -58,6 +58,8 @@ class XMLParser {
     static func unparse(projectType: ProjectType) -> AEXMLElement {
         var attributes = [String: String]();
         
+        attributes[ProjectType.IdAttrName] = projectType.id
+        
         if let relImageUrl = projectType.relImageUrl {
             attributes[ProjectType.RelImageUrlAttrName] = relImageUrl
         }
@@ -68,6 +70,10 @@ class XMLParser {
         
         return xmlElement
     }
+    
+//    static func parse(xml: AEXMLElement) -> ProjectType {
+//        
+//    }
     
     // Unparse client instance into ints XML equivalent element and returns it
     static func unparse(client: Client) -> AEXMLElement {

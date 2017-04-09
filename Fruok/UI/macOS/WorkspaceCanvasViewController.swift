@@ -16,14 +16,10 @@ protocol WorkspaceCanvasViewControllerProtocol : ViewControllerProtocol {
 
 class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewControllerProtocol {
     
-    var vm: ViewModelProtocol = WorkspaceCanvasViewModel() {
+    var vm: ViewControllerModelProtocol = WorkspaceCanvasViewModel() {
         didSet {
             
         }
-    }
-    
-    var window: WindowControllerProtocol? {
-        return view.window?.windowController as? WindowControllerProtocol
     }
     
     override func viewDidLoad() {

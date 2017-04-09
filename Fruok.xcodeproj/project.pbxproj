@@ -24,6 +24,28 @@
 		2B6C26961E98FE6100BD6285 /* FruokModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26951E98FE6100BD6285 /* FruokModule.swift */; };
 		2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26951E98FE6100BD6285 /* FruokModule.swift */; };
 		2B6C26981E98FE6100BD6285 /* FruokModule.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26951E98FE6100BD6285 /* FruokModule.swift */; };
+		2B6C269A1E99222B00BD6285 /* ProjectTypes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26991E99222B00BD6285 /* ProjectTypes.xml */; };
+		2B6C269B1E99222B00BD6285 /* ProjectTypes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26991E99222B00BD6285 /* ProjectTypes.xml */; };
+		2B6C269C1E99222B00BD6285 /* ProjectTypes.xml in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26991E99222B00BD6285 /* ProjectTypes.xml */; };
+		2B6C269E1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C269D1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift */; };
+		2B6C269F1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C269D1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift */; };
+		2B6C26A01E9923B100BD6285 /* ProjectTypeSelectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C269D1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift */; };
+		2B6C26A21E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A11E99242400BD6285 /* ProjectTypeSelectionViewModel.swift */; };
+		2B6C26A31E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A11E99242400BD6285 /* ProjectTypeSelectionViewModel.swift */; };
+		2B6C26A41E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A11E99242400BD6285 /* ProjectTypeSelectionViewModel.swift */; };
+		2B6C26A61E99288900BD6285 /* ProjectTypesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */; };
+		2B6C26A71E99288900BD6285 /* ProjectTypesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */; };
+		2B6C26A81E99288900BD6285 /* ProjectTypesManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */; };
+		2B6C26AA1E997DD600BD6285 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A91E997DD600BD6285 /* Globals.swift */; };
+		2B6C26AB1E997DD600BD6285 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A91E997DD600BD6285 /* Globals.swift */; };
+		2B6C26AC1E997DD600BD6285 /* Globals.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26A91E997DD600BD6285 /* Globals.swift */; };
+		2B6C26AF1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26AD1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift */; };
+		2B6C26B01E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26AD1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift */; };
+		2B6C26B11E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26AE1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib */; };
+		2B6C26B21E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26AE1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib */; };
+		2B6C26B41E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */; };
+		2B6C26B51E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */; };
+		2B6C26B61E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
 		2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
 		2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED271E95ACF0000D15A2 /* Assets.xcassets */; };
@@ -106,6 +128,14 @@
 		2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FruokDocument.swift; path = UI/macOS/FruokDocument.swift; sourceTree = "<group>"; };
 		2B6C26911E98FDD400BD6285 /* FruokWireframe.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruokWireframe.swift; sourceTree = "<group>"; };
 		2B6C26951E98FE6100BD6285 /* FruokModule.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FruokModule.swift; sourceTree = "<group>"; };
+		2B6C26991E99222B00BD6285 /* ProjectTypes.xml */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.xml; name = ProjectTypes.xml; path = Core/Common/ProjectTypes.xml; sourceTree = "<group>"; };
+		2B6C269D1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeSelectionViewController.swift; path = UI/macOS/ProjectCreation/ProjectTypeSelectionViewController.swift; sourceTree = "<group>"; };
+		2B6C26A11E99242400BD6285 /* ProjectTypeSelectionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeSelectionViewModel.swift; path = UI/macOS/ProjectCreation/ProjectTypeSelectionViewModel.swift; sourceTree = "<group>"; };
+		2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypesManager.swift; path = Core/Common/ProjectTypesManager.swift; sourceTree = "<group>"; };
+		2B6C26A91E997DD600BD6285 /* Globals.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Globals.swift; path = Core/Common/Globals.swift; sourceTree = "<group>"; };
+		2B6C26AD1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeCollectionViewItem.swift; path = UI/macOS/ProjectCreation/ProjectTypeCollectionViewItem.swift; sourceTree = "<group>"; };
+		2B6C26AE1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProjectTypeCollectionViewItem.xib; path = UI/macOS/ProjectCreation/ProjectTypeCollectionViewItem.xib; sourceTree = "<group>"; };
+		2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeCollectionItemViewModel.swift; path = UI/macOS/ProjectCreation/ProjectTypeCollectionItemViewModel.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B93ED251E95ACF0000D15A2 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -174,6 +204,11 @@
 			children = (
 				2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */,
 				2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */,
+				2B6C269D1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift */,
+				2B6C26A11E99242400BD6285 /* ProjectTypeSelectionViewModel.swift */,
+				2B6C26AD1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift */,
+				2B6C26AE1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib */,
+				2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */,
 			);
 			name = ProjectCreation;
 			sourceTree = "<group>";
@@ -249,6 +284,9 @@
 				2B93ED5C1E95BB11000D15A2 /* XMLParser.swift */,
 				2B93ED601E95BB67000D15A2 /* Client.swift */,
 				2B93ED641E95BB7F000D15A2 /* ProjectType.swift */,
+				2B6C26991E99222B00BD6285 /* ProjectTypes.xml */,
+				2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */,
+				2B6C26A91E997DD600BD6285 /* Globals.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -481,7 +519,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B93ED8B1E966245000D15A2 /* Workspace.storyboard in Resources */,
+				2B6C26B11E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib in Resources */,
 				2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */,
+				2B6C269A1E99222B00BD6285 /* ProjectTypes.xml in Resources */,
 				2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */,
 				2B93ED2B1E95ACF0000D15A2 /* Main.storyboard in Resources */,
 			);
@@ -491,6 +531,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B6C269B1E99222B00BD6285 /* ProjectTypes.xml in Resources */,
 				2B93ED8C1E966245000D15A2 /* Workspace.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -501,6 +542,8 @@
 			files = (
 				2B93ED8D1E966245000D15A2 /* Workspace.storyboard in Resources */,
 				2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */,
+				2B6C269C1E99222B00BD6285 /* ProjectTypes.xml in Resources */,
+				2B6C26B21E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,6 +695,8 @@
 				2B6C26841E988EAA00BD6285 /* ProjectCreationWindowController.swift in Sources */,
 				2B93ED861E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED731E95BDD8000D15A2 /* Writer.swift in Sources */,
+				2B6C26A61E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
+				2B6C26B41E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */,
 				2B93ED6B1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED651E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
@@ -660,12 +705,16 @@
 				2B93ED921E966AEF000D15A2 /* KUI.swift in Sources */,
 				2B6C268A1E98F23800BD6285 /* MVVM.swift in Sources */,
 				2B93ED6F1E95BD57000D15A2 /* PropertyList.swift in Sources */,
+				2B6C269E1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift in Sources */,
+				2B6C26AA1E997DD600BD6285 /* Globals.swift in Sources */,
 				2B6C26961E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */,
 				2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */,
 				2B93ED781E95F2DA000D15A2 /* IODocument.swift in Sources */,
 				2B93ED511E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,
 				2B6C268E1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
+				2B6C26A21E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */,
+				2B6C26AF1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */,
 				2B6C26921E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B93ED611E95BB67000D15A2 /* Client.swift in Sources */,
 				2B93ED821E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
@@ -682,16 +731,21 @@
 				2B6C26931E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B93ED6C1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED621E95BB67000D15A2 /* Client.swift in Sources */,
+				2B6C269F1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift in Sources */,
 				2B93ED871E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED561E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
+				2B6C26A31E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */,
 				2B6C268F1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B93ED7F1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
 				2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED701E95BD57000D15A2 /* PropertyList.swift in Sources */,
 				2B93ED741E95BDD8000D15A2 /* Writer.swift in Sources */,
 				2B93ED5A1E95BA64000D15A2 /* Project.swift in Sources */,
+				2B6C26A71E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
 				2B93ED5E1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				2B6C26AB1E997DD600BD6285 /* Globals.swift in Sources */,
 				2B6C268B1E98F23800BD6285 /* MVVM.swift in Sources */,
+				2B6C26B51E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */,
 				2B93ED931E966AEF000D15A2 /* KUI.swift in Sources */,
 				2B93ED831E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED661E95BB7F000D15A2 /* ProjectType.swift in Sources */,
@@ -711,6 +765,7 @@
 				2B93ED571E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B6C26901E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B6C26941E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
+				2B6C26A81E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
 				2B93ED801E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
 				2B6C268C1E98F23800BD6285 /* MVVM.swift in Sources */,
 				2B93ED711E95BD57000D15A2 /* PropertyList.swift in Sources */,
@@ -719,7 +774,12 @@
 				2B6C26981E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED5B1E95BA64000D15A2 /* Project.swift in Sources */,
 				2B93ED5F1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				2B6C26A01E9923B100BD6285 /* ProjectTypeSelectionViewController.swift in Sources */,
+				2B6C26A41E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */,
+				2B6C26B61E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */,
 				2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */,
+				2B6C26B01E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */,
+				2B6C26AC1E997DD600BD6285 /* Globals.swift in Sources */,
 				2B93ED841E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED671E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED7A1E95F2DA000D15A2 /* IODocument.swift in Sources */,

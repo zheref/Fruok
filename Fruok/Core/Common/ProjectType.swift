@@ -17,7 +17,11 @@ public struct ProjectType : XMLElementProtocol {
     
     static let RelImageUrlAttrName = "relImageUrl"
     
+    static let IdAttrName = "id"
+    
     // MARK: - STORED PROPERTIES
+    
+    public let id: String
     
     public var relImageUrl: String?
     

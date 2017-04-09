@@ -8,7 +8,29 @@
 
 import Cocoa
 
+// MARK: - VIEW RELATED
+
 public protocol ViewModelProtocol : class {
+    
+    weak var view: ViewProtocol? { get set }
+    
+    func ready()
+    
+}
+
+public protocol ViewModelRepresentant {
+    
+    var vm: ViewModelProtocol? { get set }
+    
+}
+
+public protocol ViewProtocol : class, ViewModelRepresentant {
+    
+}
+
+// MARK: - VIEW CONTROLLER RELATED
+
+public protocol ViewControllerModelProtocol {
     
     weak var vc: ViewControllerProtocol? { get set }
     
@@ -16,11 +38,25 @@ public protocol ViewModelProtocol : class {
     
 }
 
-public protocol ViewControllerProtocol : class {
+public protocol ViewControllerModelRepresentant {
+ 
+    var vm: ViewControllerModelProtocol { get set }
     
-    var vm: ViewModelProtocol { get set }
+}
+
+public protocol ViewControllerProtocol : class, ViewControllerModelRepresentant {
+    
+    var view: NSView { get set }
     
     var window: WindowControllerProtocol? { get }
+    
+}
+
+extension ViewControllerProtocol {
+    
+    var window: WindowControllerProtocol? {
+        return view.window?.windowController as? WindowControllerProtocol
+    }
     
 }
 
