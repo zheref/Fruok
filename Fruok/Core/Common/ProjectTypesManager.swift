@@ -15,8 +15,9 @@ class ProjectTypesManager {
     }()
     
     func readProjectTypes(returner: ProjectTypesReturner) {
-        let projectType = ProjectType(id: "software", relImageUrl: "ProjectTypeSoftware", title: "Software Project")
-        let projectTypes = [projectType]
+        let projectType1 = ProjectType(id: "software", relImageUrl: "ProjectTypeSoftware", title: "Software Project")
+        let projectType2 = ProjectType(id: "website", relImageUrl: "ProyectTypeWebsite", title: "Website Project")
+        let projectTypes = [projectType1, projectType2]
         returner(projectTypes)
     }
     
