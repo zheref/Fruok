@@ -46,6 +46,11 @@
 		2B6C26B41E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */; };
 		2B6C26B51E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */; };
 		2B6C26B61E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */; };
+		2B6C26BB1E9AE25100BD6285 /* ProjectOptionsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BA1E9AE25000BD6285 /* ProjectOptionsFormViewController.swift */; };
+		2B6C26BC1E9AE25100BD6285 /* ProjectOptionsFormViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BA1E9AE25000BD6285 /* ProjectOptionsFormViewController.swift */; };
+		2B6C26BE1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */; };
+		2B6C26BF1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */; };
+		2B6C26C01E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
 		2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
 		2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED271E95ACF0000D15A2 /* Assets.xcassets */; };
@@ -136,6 +141,8 @@
 		2B6C26AD1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeCollectionViewItem.swift; path = UI/macOS/ProjectCreation/ProjectTypeCollectionViewItem.swift; sourceTree = "<group>"; };
 		2B6C26AE1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ProjectTypeCollectionViewItem.xib; path = UI/macOS/ProjectCreation/ProjectTypeCollectionViewItem.xib; sourceTree = "<group>"; };
 		2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeCollectionItemViewModel.swift; path = UI/macOS/ProjectCreation/ProjectTypeCollectionItemViewModel.swift; sourceTree = "<group>"; };
+		2B6C26BA1E9AE25000BD6285 /* ProjectOptionsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectOptionsFormViewController.swift; path = UI/macOS/ProjectCreation/ProjectOptionsForm/ProjectOptionsFormViewController.swift; sourceTree = "<group>"; };
+		2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectOptionsFormViewModel.swift; path = UI/macOS/ProjectCreation/ProjectOptionsForm/ProjectOptionsFormViewModel.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B93ED251E95ACF0000D15A2 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -204,13 +211,39 @@
 			children = (
 				2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */,
 				2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */,
+				2B6C26B71E9AE1BC00BD6285 /* ProjectTypeSelection */,
+				2B6C26B91E9AE1E600BD6285 /* ProjectOptionsForm */,
+			);
+			name = ProjectCreation;
+			sourceTree = "<group>";
+		};
+		2B6C26B71E9AE1BC00BD6285 /* ProjectTypeSelection */ = {
+			isa = PBXGroup;
+			children = (
 				2B6C269D1E9923B100BD6285 /* ProjectTypeSelectionViewController.swift */,
 				2B6C26A11E99242400BD6285 /* ProjectTypeSelectionViewModel.swift */,
+				2B6C26B81E9AE1D100BD6285 /* ProjectTypeItem */,
+			);
+			name = ProjectTypeSelection;
+			sourceTree = "<group>";
+		};
+		2B6C26B81E9AE1D100BD6285 /* ProjectTypeItem */ = {
+			isa = PBXGroup;
+			children = (
 				2B6C26AD1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift */,
 				2B6C26AE1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib */,
 				2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */,
 			);
-			name = ProjectCreation;
+			name = ProjectTypeItem;
+			sourceTree = "<group>";
+		};
+		2B6C26B91E9AE1E600BD6285 /* ProjectOptionsForm */ = {
+			isa = PBXGroup;
+			children = (
+				2B6C26BA1E9AE25000BD6285 /* ProjectOptionsFormViewController.swift */,
+				2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */,
+			);
+			name = ProjectOptionsForm;
 			sourceTree = "<group>";
 		};
 		2B93ED151E95ACF0000D15A2 = {
@@ -695,6 +728,7 @@
 				2B6C26841E988EAA00BD6285 /* ProjectCreationWindowController.swift in Sources */,
 				2B93ED861E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED731E95BDD8000D15A2 /* Writer.swift in Sources */,
+				2B6C26BB1E9AE25100BD6285 /* ProjectOptionsFormViewController.swift in Sources */,
 				2B6C26A61E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
 				2B6C26B41E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift in Sources */,
 				2B93ED6B1E95BD1B000D15A2 /* KCore.swift in Sources */,
@@ -702,6 +736,7 @@
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B93ED7E1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
+				2B6C26BE1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */,
 				2B93ED921E966AEF000D15A2 /* KUI.swift in Sources */,
 				2B6C268A1E98F23800BD6285 /* MVVM.swift in Sources */,
 				2B93ED6F1E95BD57000D15A2 /* PropertyList.swift in Sources */,
@@ -735,6 +770,7 @@
 				2B93ED871E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
 				2B93ED561E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B6C26A31E99242400BD6285 /* ProjectTypeSelectionViewModel.swift in Sources */,
+				2B6C26BF1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */,
 				2B6C268F1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B93ED7F1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
 				2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */,
@@ -762,6 +798,7 @@
 				2B93ED6D1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED631E95BB67000D15A2 /* Client.swift in Sources */,
 				2B93ED881E95F841000D15A2 /* WorkspaceCanvasViewModel.swift in Sources */,
+				2B6C26C01E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */,
 				2B93ED571E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B6C26901E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B6C26941E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
@@ -783,6 +820,7 @@
 				2B93ED841E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED671E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED7A1E95F2DA000D15A2 /* IODocument.swift in Sources */,
+				2B6C26BC1E9AE25100BD6285 /* ProjectOptionsFormViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

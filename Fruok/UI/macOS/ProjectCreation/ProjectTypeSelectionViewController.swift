@@ -57,7 +57,7 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
     }
     
     @IBAction func userDidClickNext(_ sender: Any) {
-        
+        performSegue(withIdentifier: KUI.Segue.ProjectTypeSelectionToProjectOptionsForm.rawValue, sender: self)
     }
     
     // MARK: - INSTANCE METHODS

@@ -20,4 +20,8 @@ class KUI {
         case ProjectCreation
     }
     
+    enum Segue : String {
+        case ProjectTypeSelectionToProjectOptionsForm
+    }
+    
 }
