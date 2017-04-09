@@ -28,13 +28,19 @@ class ProjectTypeCollectionViewItem: NSCollectionViewItem, ViewModelRepresentant
         }
     }
     
-    //var vm: ViewModelProtocol
+    override var isSelected: Bool {
+        didSet {
+            //view.layer?.borderWidth = isSelected ? 5.0 : 0.0
+            view.layer?.backgroundColor = isSelected ? NSColor.darkGray.cgColor : NSColor.white.cgColor
+            textField?.textColor = isSelected ? NSColor.white : NSColor.black
+        }
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.wantsLayer = true
-        //view.layer?.backgroundColor = NSColor.gray.cgColor
+        view.layer?.backgroundColor = NSColor.white.cgColor
     }
     
 }

@@ -38,7 +38,7 @@
                                     <rect key="frame" x="1" y="1" width="458" height="210"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
-                                        <collectionView id="6Gd-Cg-Uep">
+                                        <collectionView selectable="YES" id="6Gd-Cg-Uep">
                                             <rect key="frame" x="0.0" y="0.0" width="458" height="207"/>
                                             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                             <collectionViewFlowLayout key="collectionViewLayout" minimumInteritemSpacing="10" minimumLineSpacing="10" id="SHK-jc-xkb">
