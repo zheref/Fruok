@@ -205,6 +205,9 @@ Gw
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="m2J-2G-JKe" id="aDa-cc-KDu"/>
+                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-MW-Dn8">
                                             <rect key="frame" x="194" y="179" width="193" height="22"/>
@@ -213,6 +216,9 @@ Gw
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="m2J-2G-JKe" id="smh-t1-BPc"/>
+                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-TR-9yg">
                                             <rect key="frame" x="194" y="143" width="178" height="22"/>
@@ -221,6 +227,9 @@ Gw
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="m2J-2G-JKe" id="GFd-Ag-m3c"/>
+                                            </connections>
                                         </textField>
                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vlk-aw-d5N">
                                             <rect key="frame" x="194" y="106" width="196" height="27"/>
@@ -254,6 +263,9 @@ Gw
                                                     <string>Item 3</string>
                                                 </objectValues>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="m2J-2G-JKe" id="HYb-hX-8l6"/>
+                                            </connections>
                                         </comboBox>
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="daP-jk-1gZ">
                                             <rect key="frame" x="371" y="141" width="19" height="27"/>

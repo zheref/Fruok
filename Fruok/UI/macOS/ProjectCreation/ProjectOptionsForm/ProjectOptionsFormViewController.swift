@@ -26,4 +26,12 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
     var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel()
+    
+    // MARK: - ACTIONS
+    
+    @IBAction func userDidChangeText(_ sender: NSTextField) {
+        
+    }
+    
+    
 }

@@ -13,6 +13,8 @@ protocol ProjectTypeSelectionViewControllerProtocol : ViewControllerProtocol {
     
     func reload()
     
+    func changeToProjectOptionsForm()
+    
 }
 
 
@@ -50,14 +52,20 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
         projectTypesCollectionView.reloadData()
     }
     
+    
+    func changeToProjectOptionsForm() {
+        performSegue(withIdentifier: KUI.Segue.ProjectTypeSelectionToProjectOptionsForm.rawValue, sender: self)
+    }
+    
+    
     // MARK: - ACTIONS
     
     @IBAction func userDidClickCancel(_ sender: Any) {
-        
+        model.userDidCancel()
     }
     
     @IBAction func userDidClickNext(_ sender: Any) {
-        performSegue(withIdentifier: KUI.Segue.ProjectTypeSelectionToProjectOptionsForm.rawValue, sender: self)
+        model.userWillingNext()
     }
     
     // MARK: - INSTANCE METHODS

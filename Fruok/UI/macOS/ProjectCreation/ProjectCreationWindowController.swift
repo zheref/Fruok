@@ -9,15 +9,21 @@
 import Cocoa
 
 class ProjectCreationWindowController: NSWindowController, WindowControllerProtocol {
-    
     // MARK: - CLASS MEMBERS
     
-    public static func create() -> ProjectCreationWindowController {
+    public static func create(withDelegate delegate: ProjectCreationCompletionDelegate) -> ProjectCreationWindowController {
         let storyboard = NSStoryboard(name: KUI.Storyboard.ProjectCreation.rawValue, bundle: nil)
         let windowController = storyboard.instantiateController(
             withIdentifier: KUI.WindowController.ProjectCreation.rawValue) as! ProjectCreationWindowController
+        windowController.delegate = delegate
         return windowController
     }
+    
+    // MARK: - INSTANCE MEMBERS
+    
+    var delegate: ProjectCreationCompletionDelegate?
+    
+    // MARK: - LIFECYCLE
 
     override func windowDidLoad() {
         super.windowDidLoad()
@@ -32,6 +38,10 @@ class ProjectCreationWindowController: NSWindowController, WindowControllerProto
     }
     
     public func presentSheet(forModule module: ModuleProtocol) {
+        
+    }
+    
+    public func dismissSheet(forModule module: ModuleProtocol) {
         
     }
     

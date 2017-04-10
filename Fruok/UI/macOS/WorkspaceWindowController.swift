@@ -39,9 +39,15 @@ public class WorkspaceWindowController: NSWindowController, WindowControllerProt
     
     public func presentSheet(forModule module: ModuleProtocol) {
         if let targetWindow = module.wc.window {
-            window?.beginSheet(targetWindow, completionHandler: { response in
-                // Completion
-            })
+            window?.beginSheet(targetWindow, completionHandler: nil)
+        } else {
+            // Report error
+        }
+    }
+    
+    public func dismissSheet(forModule module: ModuleProtocol) {
+        if let targetWindow = module.wc.window {
+            window?.endSheet(targetWindow)
         } else {
             // Report error
         }

@@ -27,13 +27,13 @@ class FruokWireframe {
     
     private var projectCreation: FruokModule?
     
-    func requestProjectCreation() -> FruokModule {
-        if let module = projectCreation {
-            return module
-        } else {
-            projectCreation = FruokModule(withWindowController: ProjectCreationWindowController.create())
-            return projectCreation!
+    func requestProjectCreation(withDelegate delegate: ProjectCreationCompletionDelegate) -> FruokModule {
+        if projectCreation == nil {
+            let wc = ProjectCreationWindowController.create(withDelegate: delegate)
+            projectCreation = FruokModule(withWindowController: wc)
         }
+        
+        return projectCreation!
     }
     
     func releaseProjectCreation() {

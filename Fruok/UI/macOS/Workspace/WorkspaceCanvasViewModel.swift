@@ -34,7 +34,23 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     }
 
     fileprivate func startProjectCreationFlow() {
-        ui?.window?.presentSheet(forModule: Wireframe.requestProjectCreation())
+        ui?.window?.presentSheet(forModule: Wireframe.requestProjectCreation(withDelegate: self))
+    }
+    
+}
+
+extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
+    
+    func projectCreationDidFail(becauseOf error: Error) {
+        
+    }
+    
+    func userDidCancelProjectCreation() {
+        ui?.window?.dismissSheet(forModule: Wireframe.requestProjectCreation(withDelegate: self))
+    }
+    
+    func userDidCompleteProjectCreation() {
+        
     }
     
 }

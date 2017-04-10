@@ -14,6 +14,10 @@ protocol ProjectTypeSelectionViewModelProtocol : ViewControllerModelProtocol {
     var itemsCount: Int { get }
     
     var projectTypesModels: [ProjectTypeCollectionItemViewModel] { get }
+    
+    func userDidCancel()
+    
+    func userWillingNext()
 
 }
 
@@ -55,6 +59,18 @@ class ProjectTypeSelectionViewModel: ProjectTypeSelectionViewModelProtocol {
                 this.ui?.reload()
             }
         }
+    }
+    
+    
+    func userDidCancel() {
+        if let window = ui?.window as? ProjectCreationWindowController {
+            window.delegate?.userDidCancelProjectCreation()
+        }
+    }
+    
+    
+    func userWillingNext() {
+        ui?.changeToProjectOptionsForm()
     }
 
 }

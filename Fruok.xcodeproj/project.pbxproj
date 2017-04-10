@@ -51,6 +51,8 @@
 		2B6C26BE1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */; };
 		2B6C26BF1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */; };
 		2B6C26C01E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */; };
+		2B6C26C21E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26C11E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift */; };
+		2B6C26C31E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26C11E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
 		2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
 		2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED271E95ACF0000D15A2 /* Assets.xcassets */; };
@@ -143,6 +145,7 @@
 		2B6C26B31E9A816800BD6285 /* ProjectTypeCollectionItemViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectTypeCollectionItemViewModel.swift; path = UI/macOS/ProjectCreation/ProjectTypeCollectionItemViewModel.swift; sourceTree = "<group>"; };
 		2B6C26BA1E9AE25000BD6285 /* ProjectOptionsFormViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectOptionsFormViewController.swift; path = UI/macOS/ProjectCreation/ProjectOptionsForm/ProjectOptionsFormViewController.swift; sourceTree = "<group>"; };
 		2B6C26BD1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectOptionsFormViewModel.swift; path = UI/macOS/ProjectCreation/ProjectOptionsForm/ProjectOptionsFormViewModel.swift; sourceTree = "<group>"; };
+		2B6C26C11E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationCompletionDelegate.swift; path = UI/macOS/ProjectCreation/ProjectCreationCompletionDelegate.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B93ED251E95ACF0000D15A2 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -211,6 +214,7 @@
 			children = (
 				2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */,
 				2B6C26831E988EAA00BD6285 /* ProjectCreationWindowController.swift */,
+				2B6C26C11E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift */,
 				2B6C26B71E9AE1BC00BD6285 /* ProjectTypeSelection */,
 				2B6C26B91E9AE1E600BD6285 /* ProjectOptionsForm */,
 			);
@@ -752,6 +756,7 @@
 				2B6C26AF1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */,
 				2B6C26921E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B93ED611E95BB67000D15A2 /* Client.swift in Sources */,
+				2B6C26C21E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift in Sources */,
 				2B93ED821E95F81D000D15A2 /* WorkspaceCanvasViewController.swift in Sources */,
 				2B93ED591E95BA64000D15A2 /* Project.swift in Sources */,
 			);
@@ -794,6 +799,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				2B93ED411E95ACF1000D15A2 /* FruokUITests.swift in Sources */,
+				2B6C26C31E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift in Sources */,
 				2B93ED531E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,
 				2B93ED6D1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED631E95BB67000D15A2 /* Client.swift in Sources */,
