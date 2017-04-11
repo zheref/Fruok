@@ -1,12 +1,21 @@
 PODS:
   - AEXML (4.1.0)
+  - Bond (6.2.4):
+    - Diff (~> 0.4)
+    - ReactiveKit (~> 3.5.1)
+  - Diff (0.5.3)
+  - ReactiveKit (3.5.1)
 
 DEPENDENCIES:
   - AEXML
+  - Bond
 
 SPEC CHECKSUMS:
   AEXML: 647fbb051280f3fb38a1a7caa62b0344055a851c
+  Bond: c54dc8e6ad4f2d4e3d60c680c25637a7824161df
+  Diff: befa1d19c32726b2b36ce915d98793e2fbde8dcc
+  ReactiveKit: aa0faf668053e7fddd6a07829ba3696741cbff37
 
-PODFILE CHECKSUM: 5943b3301a7e314036495281ebb9209212dd2083
+PODFILE CHECKSUM: f615e4cb1a65d8b9bb11b462a2f02fa8a16c5af8
 
 COCOAPODS: 1.2.0

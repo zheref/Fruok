@@ -8,6 +8,7 @@ target 'Fruok' do
   use_frameworks!
 
   # Pods for Fruok
+  pod 'Bond'
 
   target 'FruokTests' do
     inherit! :search_paths
