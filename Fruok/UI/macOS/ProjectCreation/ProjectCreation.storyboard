@@ -18,17 +18,30 @@
                         <rect key="screenRect" x="1440" y="369" width="1920" height="1058"/>
                     </window>
                     <connections>
-                        <segue destination="dKk-oc-O7B" kind="relationship" relationship="window.shadowedContentViewController" id="mLO-lw-hbG"/>
+                        <segue destination="7Wt-3g-Ka0" kind="relationship" relationship="window.shadowedContentViewController" id="qyt-yO-LnF"/>
                     </connections>
                 </windowController>
                 <customObject id="Twj-D4-DJA" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2" y="17"/>
         </scene>
+        <!--Project Creation Container View Controller-->
+        <scene sceneID="a2a-c9-mZK">
+            <objects>
+                <viewController storyboardIdentifier="ProjectCreationContainer" id="7Wt-3g-Ka0" customClass="ProjectCreationContainerViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" id="RIr-UG-6gw">
+                        <rect key="frame" x="0.0" y="0.0" width="450" height="300"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </view>
+                </viewController>
+                <customObject id="bQa-bX-kWc" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2" y="509"/>
+        </scene>
         <!--Project Type Selection View Controller-->
         <scene sceneID="bWu-ar-Qij">
             <objects>
-                <viewController id="dKk-oc-O7B" customClass="ProjectTypeSelectionViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectTypeSelection" id="dKk-oc-O7B" customClass="ProjectTypeSelectionViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="172-Rz-J8t">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="300"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -133,17 +146,16 @@ Gw
                     </view>
                     <connections>
                         <outlet property="projectTypesCollectionView" destination="6Gd-Cg-Uep" id="FXm-Dl-KWC"/>
-                        <segue destination="m2J-2G-JKe" kind="sheet" identifier="ProjectTypeSelectionToProjectOptionsForm" id="cZB-oP-D8s"/>
                     </connections>
                 </viewController>
                 <customObject id="nhp-18-dfP" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-2" y="490"/>
+            <point key="canvasLocation" x="-2" y="995"/>
         </scene>
         <!--Project Options Form View Controller-->
         <scene sceneID="arB-lm-iFy">
             <objects>
-                <viewController id="m2J-2G-JKe" customClass="ProjectOptionsFormViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ProjectOptionsForm" id="m2J-2G-JKe" customClass="ProjectOptionsFormViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" id="azv-Le-vX7">
                         <rect key="frame" x="0.0" y="0.0" width="500" height="391"/>
                         <autoresizingMask key="autoresizingMask"/>
@@ -370,7 +382,7 @@ Gw
                 </viewController>
                 <customObject id="AzH-pp-a7a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="678" y="490"/>
+            <point key="canvasLocation" x="695" y="1014"/>
         </scene>
     </scenes>
 </document>

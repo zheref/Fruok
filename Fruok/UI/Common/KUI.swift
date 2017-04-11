@@ -20,6 +20,12 @@ class KUI {
         case ProjectCreation
     }
     
+    enum ViewController : String {
+        case ProjectCreationContainer
+        case ProjectTypeSelection
+        case ProjectOptionsForm
+    }
+    
     enum Segue : String {
         case ProjectTypeSelectionToProjectOptionsForm
     }

@@ -31,10 +31,19 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
         vm.vc = self
     }
     
+    
     override func viewDidAppear() {
         configureCollectionView()
         vm.ready()
     }
+    
+    
+    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
+        if let destinationVC = segue.destinationController as? ProjectOptionsFormViewController {
+            
+        }
+    }
+    
     
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
