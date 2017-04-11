@@ -11,6 +11,8 @@ import Cocoa
 
 protocol ProjectTypeSelectionViewControllerProtocol : ViewControllerProtocol {
     
+    var parentVC: ProjectCreationContainerViewControllerProtocol? { get set }
+    
     func reload()
     
     func changeToProjectOptionsForm()
@@ -57,13 +59,15 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
         return vm as! ProjectTypeSelectionViewModelProtocol
     }
     
+    var parentVC: ProjectCreationContainerViewControllerProtocol?
+    
     func reload() {
         projectTypesCollectionView.reloadData()
     }
     
     
     func changeToProjectOptionsForm() {
-        performSegue(withIdentifier: KUI.Segue.ProjectTypeSelectionToProjectOptionsForm.rawValue, sender: self)
+        parentVC?.presentProjectOptionsForm(withPreviousVM: model)
     }
     
     

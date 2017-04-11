@@ -23,7 +23,7 @@ class ProjectCreationContainerViewModel : ProjectCreationContainerViewModelProto
     }
     
     func ready() {
-        ui?.presentProjectTypeSelection()
+        ui?.presentProjectTypeSelection(withNextVM: nil)
     }
     
 }

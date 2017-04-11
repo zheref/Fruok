@@ -11,7 +11,7 @@ import Cocoa
 
 protocol ProjectOptionsFormViewControllerProtocol : ViewControllerProtocol {
     
-    
+    var parentVC: ProjectCreationContainerViewControllerProtocol? { get set }
     
 }
 
@@ -26,6 +26,8 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
     var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel()
+    
+    var parentVC: ProjectCreationContainerViewControllerProtocol?
     
     // MARK: - ACTIONS
     
