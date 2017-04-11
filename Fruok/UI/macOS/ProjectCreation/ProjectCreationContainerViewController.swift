@@ -31,10 +31,16 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
     
     public var vm: ViewControllerModelProtocol = ProjectCreationContainerViewModel()
     
+    var model: ProjectCreationContainerViewModelProtocol {
+        return vm as! ProjectCreationContainerViewModelProtocol
+    }
+    
     func cancelByDismissingWindow() {
         guard let window = view.window else { /* Report error */ return }
         
         window.sheetParent?.endSheet(window)
+        
+        model.userDidCancel()
     }
     
     func presentProjectTypeSelection(withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol? = nil) {

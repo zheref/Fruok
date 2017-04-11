@@ -46,7 +46,7 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
     }
     
     func userDidCancelProjectCreation() {
-        ui?.window?.dismissSheet(forModule: Wireframe.requestProjectCreation(withDelegate: self))
+        ui?.window?.close()
     }
     
     func userDidCompleteProjectCreation() {

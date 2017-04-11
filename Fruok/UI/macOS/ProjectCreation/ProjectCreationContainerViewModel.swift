@@ -11,10 +11,20 @@ import Foundation
 
 protocol ProjectCreationContainerViewModelProtocol : ViewControllerModelProtocol {
     
+    func userDidCancel()
+    
 }
 
 
 class ProjectCreationContainerViewModel : ProjectCreationContainerViewModelProtocol {
+    
+    private var delegate: ProjectCreationCompletionDelegate? {
+        if let wc = ui?.window as? ProjectCreationWindowController {
+            return wc.delegate
+        }
+        
+        return nil
+    }
     
     weak var vc: ViewControllerProtocol?
     
@@ -24,6 +34,11 @@ class ProjectCreationContainerViewModel : ProjectCreationContainerViewModelProto
     
     func ready() {
         ui?.presentProjectTypeSelection(withNextVM: nil)
+    }
+    
+    
+    func userDidCancel() {
+        delegate?.userDidCancelProjectCreation()
     }
     
 }
