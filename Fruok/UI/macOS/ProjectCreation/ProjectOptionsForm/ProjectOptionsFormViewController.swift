@@ -13,6 +13,8 @@ protocol ProjectOptionsFormViewControllerProtocol : ViewControllerProtocol {
     
     var parentVC: ProjectCreationContainerViewControllerProtocol? { get set }
     
+    func cancelByDismissing()
+    
     func changeToProjectTypeSelection()
     
 }
@@ -37,11 +39,22 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     
     var parentVC: ProjectCreationContainerViewControllerProtocol?
     
+    
+    func cancelByDismissing() {
+        parentVC?.cancelByDismissingWindow()
+    }
+    
+    
     func changeToProjectTypeSelection() {
         parentVC?.presentProjectTypeSelection(withNextVM: model)
     }
     
     // MARK: - ACTIONS
+    
+    @IBAction func userDidClickCancel(_ sender: Any) {
+        model.userDidCancel()
+    }
+    
     
     @IBAction func userDidClickPrevious(_ sender: Any) {
         model.userWillingPrevious()

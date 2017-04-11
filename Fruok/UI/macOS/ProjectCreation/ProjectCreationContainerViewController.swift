@@ -11,6 +11,8 @@ import Cocoa
 
 protocol ProjectCreationContainerViewControllerProtocol : ViewControllerProtocol {
     
+    func cancelByDismissingWindow()
+    
     func presentProjectTypeSelection(withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol?)
     
     func presentProjectOptionsForm(withPreviousVM projectTypeSelectionVM: ProjectTypeSelectionViewModelProtocol)
@@ -28,6 +30,12 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
     // MARK: - PROJECTCREATIONCONTAINER VIEWCONTROLLER PROTOCOL
     
     public var vm: ViewControllerModelProtocol = ProjectCreationContainerViewModel()
+    
+    func cancelByDismissingWindow() {
+        guard let window = view.window else { /* Report error */ return }
+        
+        window.sheetParent?.endSheet(window)
+    }
     
     func presentProjectTypeSelection(withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol? = nil) {
         let storyboard = NSStoryboard(name: KUI.Storyboard.ProjectCreation.rawValue, bundle: nil)

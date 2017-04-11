@@ -11,6 +11,8 @@ import Foundation
 
 protocol ProjectOptionsFormViewModelProtocol : ViewControllerModelProtocol {
     
+    func userDidCancel()
+    
     func userWillingPrevious()
     
 }
@@ -29,6 +31,12 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     func ready() {
         
     }
+    
+    
+    func userDidCancel() {
+        ui?.cancelByDismissing()
+    }
+    
     
     func userWillingPrevious() {
         ui?.changeToProjectTypeSelection()

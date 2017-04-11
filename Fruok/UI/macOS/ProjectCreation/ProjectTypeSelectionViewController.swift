@@ -15,6 +15,8 @@ protocol ProjectTypeSelectionViewControllerProtocol : ViewControllerProtocol {
     
     func reload()
     
+    func cancelByDismissing()
+    
     func changeToProjectOptionsForm()
     
 }
@@ -56,6 +58,11 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
     
     func reload() {
         projectTypesCollectionView.reloadData()
+    }
+    
+    
+    func cancelByDismissing() {
+        parentVC?.cancelByDismissingWindow()
     }
     
     

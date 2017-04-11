@@ -63,9 +63,11 @@ class ProjectTypeSelectionViewModel: ProjectTypeSelectionViewModelProtocol {
     
     
     func userDidCancel() {
-        if let window = ui?.window as? ProjectCreationWindowController {
-            window.delegate?.userDidCancelProjectCreation()
-        }
+        ui?.cancelByDismissing()
+        
+//        if let window = ui?.window as? ProjectCreationWindowController {
+//            window.delegate?.userDidCancelProjectCreation()
+//        }
     }
     
     
