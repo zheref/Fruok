@@ -8,6 +8,7 @@
 
 import Foundation
 
+// MARK: - INTERFACE
 
 protocol ProjectOptionsFormViewModelProtocol : ViewControllerModelProtocol {
     
@@ -17,10 +18,22 @@ protocol ProjectOptionsFormViewModelProtocol : ViewControllerModelProtocol {
     
 }
 
+// MARK: - IMPLEMENTATION
 
 class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     
-    // MARK: - PROJECTOPTIONSFORM VIEWMODEL PROTOCOL
+    // MARK: INSTANCE PROPERTIES
+    
+    var codename = ""
+    var commercialName = ""
+    
+    var duration: Int = 0
+    var deadline: Date = Date()
+    
+    var clientCode = ""
+    var clientName = ""
+    
+    // MARK: - PROJECT OPTIONS FORM VIEWMODEL PROTOCOL
     
     public weak var vc: ViewControllerProtocol?
     
@@ -28,8 +41,9 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
         return vc as? ProjectOptionsFormViewControllerProtocol
     }
     
+    
     func ready() {
-        
+        loadClients()
     }
     
     
@@ -41,5 +55,12 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     func userWillingPrevious() {
         ui?.changeToProjectTypeSelection()
     }
+    
+    // MARK: INSTANCE METHODS
+    
+    func loadClients() {
+        // TODO: Implement load clients from XML
+    }
+    
     
 }
