@@ -48,7 +48,7 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
         view.addSubview(projectTypeSelectionVC.view)
         view.frame = projectTypeSelectionVC.view.frame
         
-        if projectOptionsFormVM == nil {
+        if projectOptionsFormVM != nil {
             view.window?.setFrame(projectTypeSelectionVC.view.frame, display: true, animate: true)
         }
     }

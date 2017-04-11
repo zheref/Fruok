@@ -40,13 +40,6 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
     }
     
     
-    override func prepare(for segue: NSStoryboardSegue, sender: Any?) {
-        if let destinationVC = segue.destinationController as? ProjectOptionsFormViewController {
-            
-        }
-    }
-    
-    
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
     var vm: ViewControllerModelProtocol = ProjectTypeSelectionViewModel() {

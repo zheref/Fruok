@@ -11,7 +11,7 @@ import Foundation
 
 protocol ProjectOptionsFormViewModelProtocol : ViewControllerModelProtocol {
     
-    
+    func userWillingPrevious()
     
 }
 
@@ -22,12 +22,16 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     
     public weak var vc: ViewControllerProtocol?
     
-    var ui: ProjectTypeSelectionViewControllerProtocol? {
-        return vc as? ProjectTypeSelectionViewControllerProtocol
+    var ui: ProjectOptionsFormViewControllerProtocol? {
+        return vc as? ProjectOptionsFormViewControllerProtocol
     }
     
     func ready() {
         
+    }
+    
+    func userWillingPrevious() {
+        ui?.changeToProjectTypeSelection()
     }
     
 }

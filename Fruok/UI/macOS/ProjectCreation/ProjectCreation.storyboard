@@ -340,6 +340,9 @@ Gw
 Gw
 </string>
                                 </buttonCell>
+                                <connections>
+                                    <action selector="userDidClickPrevious:" target="m2J-2G-JKe" id="7jz-4q-2ny"/>
+                                </connections>
                             </button>
                             <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jTj-Ok-cpb">
                                 <rect key="frame" x="398" y="13" width="92" height="32"/>

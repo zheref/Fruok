@@ -13,6 +13,8 @@ protocol ProjectOptionsFormViewControllerProtocol : ViewControllerProtocol {
     
     var parentVC: ProjectCreationContainerViewControllerProtocol? { get set }
     
+    func changeToProjectTypeSelection()
+    
 }
 
 
@@ -20,16 +22,30 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        vm.vc = self
+        vm.ready()
     }
     
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
     var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel()
     
+    var model: ProjectOptionsFormViewModelProtocol {
+        return vm as! ProjectOptionsFormViewModelProtocol
+    }
+    
     var parentVC: ProjectCreationContainerViewControllerProtocol?
     
+    func changeToProjectTypeSelection() {
+        parentVC?.presentProjectTypeSelection(withNextVM: model)
+    }
+    
     // MARK: - ACTIONS
+    
+    @IBAction func userDidClickPrevious(_ sender: Any) {
+        model.userWillingPrevious()
+    }
     
     @IBAction func userDidChangeText(_ sender: NSTextField) {
         
