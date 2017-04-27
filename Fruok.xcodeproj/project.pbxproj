@@ -110,6 +110,7 @@
 		2B93ED931E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
 		2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
 		7497358592B08B90A4CFED0C /* Pods_FruokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */; };
+		78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0352E1EAFA73E00A04161 /* BondExtensions.swift */; };
 		9611097ABFBD5621D77E4F42 /* Pods_FruokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CEF88CA40E9C82B3B94BB7 /* Pods_FruokUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -182,6 +183,7 @@
 		2B93ED911E966AEF000D15A2 /* KUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KUI.swift; path = UI/Common/KUI.swift; sourceTree = "<group>"; };
 		3EB0971BAA60165D6104169A /* Pods_Fruok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fruok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CEF88CA40E9C82B3B94BB7 /* Pods_FruokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		78E0352E1EAFA73E00A04161 /* BondExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BondExtensions.swift; path = UI/Common/BondExtensions.swift; sourceTree = "<group>"; };
 		CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruokTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3967F0D0954624E5193CEE /* Pods-FruokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FruokUITests/Pods-FruokUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		DF37CF5ADF4F2088B64FF7CA /* Pods-Fruok.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Fruok.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Fruok/Pods-Fruok.debug.xcconfig"; sourceTree = "<group>"; };
@@ -418,6 +420,7 @@
 			children = (
 				2B93ED911E966AEF000D15A2 /* KUI.swift */,
 				2B6C26891E98F23800BD6285 /* MVVM.swift */,
+				78E0352E1EAFA73E00A04161 /* BondExtensions.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -749,6 +752,7 @@
 				2B93ED651E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
+				78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */,
 				2B93ED7E1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
 				2B6C26BE1E9AE9E900BD6285 /* ProjectOptionsFormViewModel.swift in Sources */,
 				2B93ED921E966AEF000D15A2 /* KUI.swift in Sources */,

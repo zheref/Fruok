@@ -22,11 +22,11 @@ class AppDelegate: NSObject, NSApplicationDelegate {
     }
     
     func applicationShouldOpenUntitledFile(_ sender: NSApplication) -> Bool {
-        return false
+        return true
     }
     
     func applicationShouldHandleReopen(_ sender: NSApplication, hasVisibleWindows flag: Bool) -> Bool {
-        return false
+        return true
     }
 
 

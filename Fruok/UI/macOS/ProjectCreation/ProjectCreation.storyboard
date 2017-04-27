@@ -382,6 +382,13 @@ Gw
                             <constraint firstItem="KQq-XK-1Nz" firstAttribute="leading" secondItem="azv-Le-vX7" secondAttribute="leading" constant="20" id="zTM-8q-0Xm"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="clientComboBox" destination="EuD-mZ-nca" id="nJf-d7-Uql"/>
+                        <outlet property="codenameTextField" destination="w7x-1h-8IQ" id="PcP-RZ-HQ8"/>
+                        <outlet property="commercialNameTextField" destination="fnH-MW-Dn8" id="23m-5Q-FYV"/>
+                        <outlet property="deadlineDatePicker" destination="Vlk-aw-d5N" id="PJh-nY-zb4"/>
+                        <outlet property="durationTextField" destination="lgS-TR-9yg" id="tcA-46-bPJ"/>
+                    </connections>
                 </viewController>
                 <customObject id="AzH-pp-a7a" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

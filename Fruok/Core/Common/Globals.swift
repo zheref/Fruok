@@ -12,3 +12,13 @@ typealias Callback = () -> Void
 typealias ErrorHandler = (Error) -> Void
 
 typealias ProjectTypesReturner = ([ProjectType]) -> Void
+
+extension Date {
+    
+    var americanString: String {
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "M/d/yyyy"
+        return dateFormatter.string(from: self)
+    }
+    
+}

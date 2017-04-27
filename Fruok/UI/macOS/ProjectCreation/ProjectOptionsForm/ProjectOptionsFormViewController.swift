@@ -7,7 +7,7 @@
 //
 
 import Cocoa
-
+import Bond
 
 protocol ProjectOptionsFormViewControllerProtocol : ViewControllerProtocol {
     
@@ -21,6 +21,16 @@ protocol ProjectOptionsFormViewControllerProtocol : ViewControllerProtocol {
 
 
 class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormViewControllerProtocol {
+    
+    // MARK: - OUTLETS
+    
+    @IBOutlet weak var codenameTextField: NSTextField!
+    @IBOutlet weak var commercialNameTextField: NSTextField!
+    @IBOutlet weak var durationTextField: NSTextField!
+    @IBOutlet weak var deadlineDatePicker: NSDatePicker!
+    @IBOutlet weak var clientComboBox: NSComboBox!
+    
+    // MARK: - LIFECYCLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,7 +41,32 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
-    var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel()
+    var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel() {
+        didSet {
+            if let vm = vm as? ProjectOptionsFormViewModelProtocol {
+                vm.codename.bidirectionalBind(to: codenameTextField.reactive.editingString)
+                vm.commercialName.bidirectionalBind(to: commercialNameTextField.reactive.editingString)
+                
+                vm.duration
+                    .map({ "\($0) days" })
+                    .bind(to: durationTextField)
+                
+                //vm.deadline.bidirectionalBind(to: deadlineDatePicker.reactive.)
+                
+                vm.deadline
+                    .map({ $0.americanString })
+                    .bind(to: deadlineDatePicker)
+                
+                
+                
+                
+//                durationTextField.reactive.editingString
+//                    .map { $0 + " days" }
+//                    .bind(to: clientComboBox)
+                
+            }
+        }
+    }
     
     var model: ProjectOptionsFormViewModelProtocol {
         return vm as! ProjectOptionsFormViewModelProtocol
