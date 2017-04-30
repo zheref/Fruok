@@ -37,6 +37,13 @@ class ProjectCreationWindowController: NSWindowController, WindowControllerProto
         return document as? DocumentProtocol
     }
     
+    
+    func dismissAsSheet() {
+        guard let window = window else { return }
+        window.sheetParent?.endSheet(window)
+    }
+    
+    
     public func presentSheet(forModule module: ModuleProtocol) {
         
     }

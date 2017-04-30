@@ -55,10 +55,7 @@ class ProjectCreationContainerViewController:
     
     
     func cancelByDismissingWindow() {
-        guard let window = view.window else { /* Report error */ return }
-        
-        window.sheetParent?.endSheet(window)
-        
+        window?.dismissAsSheet()
         model.userDidCancel()
     }
     

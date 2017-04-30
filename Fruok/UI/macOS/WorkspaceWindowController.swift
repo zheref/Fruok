@@ -37,6 +37,8 @@ public class WorkspaceWindowController: NSWindowController, WindowControllerProt
         return document as? DocumentProtocol
     }
     
+    public func dismissAsSheet() {}
+    
     public func presentSheet(forModule module: ModuleProtocol) {
         if let targetWindow = module.wc.window {
             window?.beginSheet(targetWindow, completionHandler: nil)

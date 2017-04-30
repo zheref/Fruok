@@ -76,6 +76,8 @@ public protocol WindowControllerProtocol : ViewControllerLifecycleDelegate {
     
     func close()
     
+    func dismissAsSheet()
+    
 }
 
 public protocol DocumentProtocol {
