@@ -26,6 +26,8 @@ protocol ProjectOptionsFormViewModelProtocol : ViewControllerModelProtocol {
     
     func userWillingPrevious()
     
+    func userWillingToFinishSave()
+    
 }
 
 // MARK: - IMPLEMENTATION
@@ -66,7 +68,14 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
         ui?.changeToProjectTypeSelection()
     }
     
+    
+    func userWillingToFinishSave() {
+        ui?.bringUpPathPickerForSaving()
+    }
+    
+    
     // MARK: INSTANCE METHODS
+    
     
     func loadClients() {
         // TODO: Implement load clients from XML

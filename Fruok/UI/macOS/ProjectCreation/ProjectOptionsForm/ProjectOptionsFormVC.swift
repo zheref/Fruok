@@ -17,6 +17,8 @@ protocol ProjectOptionsFormViewControllerProtocol : ViewControllerProtocol {
     
     func changeToProjectTypeSelection()
     
+    func bringUpPathPickerForSaving()
+    
 }
 
 
@@ -36,37 +38,37 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
         super.viewDidLoad()
         
         vm.vc = self
+        
+        bind()
+        
         vm.ready()
+    }
+    
+    func bind() {
+        guard let vm = vm as? ProjectOptionsFormViewModelProtocol else {
+            return
+        }
+        
+        vm.codename.bidirectionalBind(to: codenameTextField.reactive.editingString)
+        vm.commercialName.bidirectionalBind(to: commercialNameTextField.reactive.editingString)
+        
+        vm.duration
+            .map({ "\($0) days" })
+            .bind(to: durationTextField)
+        
+        vm.deadline
+            .map({ $0.americanString })
+            .bind(to: deadlineDatePicker)
+    }
+    
+    func updateModel() {
+        model.codename.value = codenameTextField.cell?.title ?? ""
+        print(model.codename)
     }
     
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL
     
-    var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel() {
-        didSet {
-            if let vm = vm as? ProjectOptionsFormViewModelProtocol {
-                vm.codename.bidirectionalBind(to: codenameTextField.reactive.editingString)
-                vm.commercialName.bidirectionalBind(to: commercialNameTextField.reactive.editingString)
-                
-                vm.duration
-                    .map({ "\($0) days" })
-                    .bind(to: durationTextField)
-                
-                //vm.deadline.bidirectionalBind(to: deadlineDatePicker.reactive.)
-                
-                vm.deadline
-                    .map({ $0.americanString })
-                    .bind(to: deadlineDatePicker)
-                
-                
-                
-                
-//                durationTextField.reactive.editingString
-//                    .map { $0 + " days" }
-//                    .bind(to: clientComboBox)
-                
-            }
-        }
-    }
+    var vm: ViewControllerModelProtocol = ProjectOptionsFormViewModel()
     
     var model: ProjectOptionsFormViewModelProtocol {
         return vm as! ProjectOptionsFormViewModelProtocol
@@ -84,6 +86,10 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
         parentVC?.presentProjectTypeSelection(withNextVM: model)
     }
     
+    func bringUpPathPickerForSaving() {
+        parentVC?.completeSaveProcess(withCurrentVM: model)
+    }
+    
     // MARK: - ACTIONS
     
     @IBAction func userDidClickCancel(_ sender: Any) {
@@ -94,6 +100,12 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     @IBAction func userDidClickPrevious(_ sender: Any) {
         model.userWillingPrevious()
     }
+    
+    
+    @IBAction func userDidClickNext(_ sender: Any) {
+        model.userWillingToFinishSave()
+    }
+    
     
     @IBAction func userDidChangeText(_ sender: NSTextField) {
         

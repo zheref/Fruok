@@ -45,5 +45,9 @@ class FruokDocument: NSDocument, DocumentProtocol {
     var existsOnDisk: Bool {
         return fileURL != nil
     }
+    
+    func saveByDisplayingPathPicker(sender: Any?) {
+        saveTo(sender)
+    }
 
 }

@@ -14,6 +14,7 @@ protocol ProjectCreationCompletionDelegate {
     
     func userDidCancelProjectCreation()
     
-    func userDidCompleteProjectCreation()
+    func userDidCompleteProjectCreation(
+        withCompletionVM completionVM: ProjectCreationContainerViewModel)
     
 }

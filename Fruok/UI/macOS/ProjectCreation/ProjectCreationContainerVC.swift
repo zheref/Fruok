@@ -13,19 +13,37 @@ protocol ProjectCreationContainerViewControllerProtocol : ViewControllerProtocol
     
     func cancelByDismissingWindow()
     
-    func presentProjectTypeSelection(withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol?)
+    func presentProjectTypeSelection(
+        withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol?)
     
-    func presentProjectOptionsForm(withPreviousVM projectTypeSelectionVM: ProjectTypeSelectionViewModelProtocol)
+    func presentProjectOptionsForm(
+        withPreviousVM projectTypeSelectionVM: ProjectTypeSelectionViewModelProtocol)
     
+    func completeSaveProcess(
+        withCurrentVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol)
+    
+    func openSavePanel(forProjectNamed projectName: String,
+                       toReturnURLBy urlReturner: @escaping (URL?) -> Void)
 }
 
 
-class ProjectCreationContainerViewController: NSViewController, ProjectCreationContainerViewControllerProtocol {
+class ProjectCreationContainerViewController:
+    NSViewController, ProjectCreationContainerViewControllerProtocol {
     
     // MARK: - SUB VIEWCONTROLLERS
     
     private var projectTypeSelectionViewController: ProjectTypeSelectionViewController?
     private var projectOptionsFormViewController: ProjectOptionsFormViewController?
+    
+    
+    // MARK: - LIFECYCLE
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        vm.vc = self
+        vm.ready()
+    }
+    
     
     // MARK: - PROJECTCREATIONCONTAINER VIEWCONTROLLER PROTOCOL
     
@@ -35,6 +53,7 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
         return vm as! ProjectCreationContainerViewModelProtocol
     }
     
+    
     func cancelByDismissingWindow() {
         guard let window = view.window else { /* Report error */ return }
         
@@ -43,7 +62,12 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
         model.userDidCancel()
     }
     
-    func presentProjectTypeSelection(withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol? = nil) {
+    
+    func presentProjectTypeSelection(
+        withNextVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol? = nil) {
+        
+        model.projectOptionsFormVM = projectOptionsFormVM
+        
         let storyboard = NSStoryboard(name: KUI.Storyboard.ProjectCreation.rawValue, bundle: nil)
         
         let projectTypeSelectionVCIdentifier = KUI.ViewController.ProjectTypeSelection.rawValue
@@ -52,7 +76,9 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
             storyboard.instantiateController(withIdentifier: projectTypeSelectionVCIdentifier)
                 as! NSViewController
         
-        if let projectTypeSelectionVC = projectTypeSelectionVC as? ProjectTypeSelectionViewController {
+        if let projectTypeSelectionVC =
+            projectTypeSelectionVC as? ProjectTypeSelectionViewController {
+            
             projectTypeSelectionVC.parentVC = self
             projectTypeSelectionViewController = projectTypeSelectionVC
         }
@@ -67,9 +93,15 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
         }
     }
     
-    func presentProjectOptionsForm(withPreviousVM projectTypeSelectionVM: ProjectTypeSelectionViewModelProtocol) {
-        let storyboard = NSStoryboard(name: KUI.Storyboard.ProjectCreation.rawValue, bundle: nil)
+    
+    /// Display Project Options Form VC
+    /// Brings **Project Type Selection** VM to save it
+    func presentProjectOptionsForm(
+        withPreviousVM projectTypeSelectionVM: ProjectTypeSelectionViewModelProtocol) {
         
+        model.projectTypeSelectionVM = projectTypeSelectionVM
+        
+        let storyboard = NSStoryboard(name: KUI.Storyboard.ProjectCreation.rawValue, bundle: nil)
         let projectOptionsFormVCIdentifier = KUI.ViewController.ProjectOptionsForm.rawValue
         
         let projectOptionsFormVC =
@@ -89,14 +121,31 @@ class ProjectCreationContainerViewController: NSViewController, ProjectCreationC
         view.window?.setFrame(projectOptionsFormVC.view.frame, display: true, animate: true)
     }
     
-    // MARK: - LIFECYCLE
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        vm.vc = self
-        vm.ready()
+    
+    func completeSaveProcess(
+        withCurrentVM projectOptionsFormVM: ProjectOptionsFormViewModelProtocol) {
+        
+        model.projectOptionsFormVM = projectOptionsFormVM
+        model.userDidFinishSaveProcess()
     }
     
     
+    func openSavePanel(forProjectNamed projectName: String,
+                       toReturnURLBy urlReturner: @escaping (URL?) -> Void) {
+        guard let hostWindow = view.window else {
+            return
+        }
+        
+        let panel = NSSavePanel()
+        panel.nameFieldStringValue = "\(projectName).fruok"
+        panel.allowedFileTypes = ["fruok"]
+        panel.isExtensionHidden = true
+        
+        panel.beginSheetModal(for: hostWindow) { (result) in
+            if result == NSFileHandlingPanelOKButton {
+                urlReturner(panel.url)
+            }
+        }
+    }
     
 }

@@ -49,7 +49,13 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
         ui?.window?.close()
     }
     
-    func userDidCompleteProjectCreation() {
+    func userDidCompleteProjectCreation(
+        withCompletionVM completionVM: ProjectCreationContainerViewModel) {
+        
+        guard let document = vc?.window?.doc else {
+            return
+        }
+        
         
     }
     

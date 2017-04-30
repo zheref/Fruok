@@ -30,7 +30,7 @@ public protocol ViewProtocol : class, ViewModelRepresentant {
 
 // MARK: - VIEW CONTROLLER RELATED
 
-public protocol ViewControllerModelProtocol {
+public protocol ViewControllerModelProtocol : class {
     
     weak var vc: ViewControllerProtocol? { get set }
     
@@ -81,6 +81,8 @@ public protocol WindowControllerProtocol : ViewControllerLifecycleDelegate {
 public protocol DocumentProtocol {
     
     var existsOnDisk: Bool { get }
+    
+    func saveByDisplayingPathPicker(sender: Any?)
     
 }
 
