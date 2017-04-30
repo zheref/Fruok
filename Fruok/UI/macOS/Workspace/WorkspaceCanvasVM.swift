@@ -51,7 +51,7 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
     }
     
     func userDidCancelProjectCreation() {
-        ui?.window?.close()
+        ui?.closeMyWindow()
     }
     
     func userDidCompleteProjectCreation(
