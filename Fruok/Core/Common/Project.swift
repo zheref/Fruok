@@ -40,6 +40,25 @@ public struct Project : XMLCompliantProtocol {
         self.projectType = projectType
     }
     
+    
+    init(with projectCreationVM: ProjectCreationContainerViewModelProtocol) {
+        let name = projectCreationVM.projectOptionsFormVM?.codename.value ?? ""
+        
+        // TODO: Use client coming from VM
+        let client = Client(name: "Client name",
+                            socialName: "Client social name",
+                            socialId: "Client social id",
+                            responsible: "Whoever",
+                            email: "clientemail@domain.com",
+                            phoneNumber: "")
+        
+        let projectType = projectCreationVM.projectTypeSelectionVM?.selectedProjectTypeModel?.projectType
+            ?? ProjectType(id: "notdefined", relImageUrl: nil, title: "Not defined")
+        
+        self.init(withName: name, client: client, andType: projectType)
+    }
+    
+    
     // MARK: - COMPUTED PROPERTIES
     
     var xmlDocumentEquivalent: AEXMLDocument {

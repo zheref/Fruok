@@ -23,6 +23,11 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
         return vc as? WorkspaceCanvasViewControllerProtocol
     }
     
+    // UNSAFE!
+    var document: Document {
+        return vc!.window!.doc! as! Document
+    }
+    
     public func ready() {
         guard let document = vc?.window?.doc else {
             return
@@ -52,11 +57,13 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
     func userDidCompleteProjectCreation(
         withCompletionVM completionVM: ProjectCreationContainerViewModel) {
         
-        guard let document = vc?.window?.doc else {
-            return
+        document.content.project = Project(with: completionVM)
+        document.content.updateXML()
+        print(document.content.xml)
+        
+        document.save(to: completionVM.urlToSave!, ofType: "fruok", for: .saveAsOperation) { (error) in
+            
         }
-        
-        
     }
     
 }

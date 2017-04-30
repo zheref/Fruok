@@ -7,14 +7,32 @@
 //
 
 import Cocoa
+import AEXML
 
+
+// This is the custom model representation of a document specific for Fruok
 class Document: FruokDocument {
+    
+    // MARK: - CONSTANTS
+    
+    private static let ExtensionPLKey = "FileExtension"
+    
+    // MARK: - PROPERTIES
+    
+    var content: FXMLContent
+    
+    // MARK: - INITIALIZERS
+    
 
     override init() {
+        self.content = FXMLContent()
+        
         super.init()
-        // Add your subclass-specific initialization here.
     }
-
+    
+    
+    // MARK: - NSDOCUMENT OVERRIDES
+    
     override class func autosavesInPlace() -> Bool {
         return true
     }
@@ -22,12 +40,16 @@ class Document: FruokDocument {
     override func makeWindowControllers() {
         addWindowController(Wireframe.requestWorkspace().wc)
     }
+    
 
     override func data(ofType typeName: String) throws -> Data {
-        // Insert code here to write your document to data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning nil.
-        // You can also choose to override fileWrapperOfType:error:, writeToURL:ofType:error:, or writeToURL:ofType:forSaveOperation:originalContentsURL:error: instead.
-        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        if let data = content.xml.data(using: .utf8) {
+            return data
+        } else {
+            throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        }
     }
+    
 
     override func read(from data: Data, ofType typeName: String) throws {
         // Insert code here to read your document from the given data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning false.

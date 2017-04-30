@@ -10,7 +10,7 @@ import Foundation
 
 class ProjectTypeCollectionItemViewModel : ViewModelProtocol {
     
-    private var projectType: ProjectType
+    var projectType: ProjectType
     
     var imageAssetName: String? {
         return projectType.relImageUrl

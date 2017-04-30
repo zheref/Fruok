@@ -58,6 +58,8 @@
 		2B7C5BE31E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
 		2B7C5BE41E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
 		2B7C5BE51E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
+		2B92AF1C1EB668F10091D72C /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
+		2B92AF1E1EB66BC80091D72C /* Freelance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1D1EB66BC80091D72C /* Freelance.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
 		2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
 		2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2B93ED271E95ACF0000D15A2 /* Assets.xcassets */; };
@@ -154,6 +156,8 @@
 		2B6C26C11E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationCompletionDelegate.swift; path = UI/macOS/ProjectCreation/ProjectCreationCompletionDelegate.swift; sourceTree = "<group>"; };
 		2B7C5BDF1E9BA92F009974E7 /* ProjectCreationContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationContainerVC.swift; path = UI/macOS/ProjectCreation/ProjectCreationContainerVC.swift; sourceTree = "<group>"; };
 		2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationContainerVM.swift; path = UI/macOS/ProjectCreation/ProjectCreationContainerVM.swift; sourceTree = "<group>"; };
+		2B92AF1B1EB668F10091D72C /* FXMLContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FXMLContent.swift; path = IO/Common/FXMLContent.swift; sourceTree = "<group>"; };
+		2B92AF1D1EB66BC80091D72C /* Freelance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Freelance.swift; path = Core/Common/Freelance.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2B93ED251E95ACF0000D15A2 /* Document.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Document.swift; sourceTree = "<group>"; };
@@ -261,6 +265,16 @@
 			name = ProjectOptionsForm;
 			sourceTree = "<group>";
 		};
+		2B92AF1F1EB66BF60091D72C /* ProjectType */ = {
+			isa = PBXGroup;
+			children = (
+				2B93ED641E95BB7F000D15A2 /* ProjectType.swift */,
+				2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */,
+				2B6C26991E99222B00BD6285 /* ProjectTypes.xml */,
+			);
+			name = ProjectType;
+			sourceTree = "<group>";
+		};
 		2B93ED151E95ACF0000D15A2 = {
 			isa = PBXGroup;
 			children = (
@@ -326,15 +340,14 @@
 		2B93ED4F1E95B759000D15A2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2B92AF1F1EB66BF60091D72C /* ProjectType */,
 				2B93ED501E95B7E0000D15A2 /* XMLCompliantProtocol.swift */,
 				2B93ED541E95BA34000D15A2 /* XMLElementProtocol.swift */,
 				2B93ED581E95BA64000D15A2 /* Project.swift */,
 				2B93ED5C1E95BB11000D15A2 /* XMLParser.swift */,
 				2B93ED601E95BB67000D15A2 /* Client.swift */,
-				2B93ED641E95BB7F000D15A2 /* ProjectType.swift */,
-				2B6C26991E99222B00BD6285 /* ProjectTypes.xml */,
-				2B6C26A51E99288900BD6285 /* ProjectTypesManager.swift */,
 				2B6C26A91E997DD600BD6285 /* Globals.swift */,
+				2B92AF1D1EB66BC80091D72C /* Freelance.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -353,6 +366,7 @@
 				2B93ED6A1E95BD1B000D15A2 /* KCore.swift */,
 				2B93ED6E1E95BD57000D15A2 /* PropertyList.swift */,
 				2B93ED721E95BDD8000D15A2 /* Writer.swift */,
+				2B92AF1B1EB668F10091D72C /* FXMLContent.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -751,6 +765,7 @@
 				2B93ED6B1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED651E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				2B92AF1E1EB66BC80091D72C /* Freelance.swift in Sources */,
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */,
 				2B93ED7E1E95F797000D15A2 /* WorkspaceWindowController.swift in Sources */,
@@ -764,6 +779,7 @@
 				2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */,
 				2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */,
 				2B93ED781E95F2DA000D15A2 /* IODocument.swift in Sources */,
+				2B92AF1C1EB668F10091D72C /* FXMLContent.swift in Sources */,
 				2B93ED511E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,
 				2B6C268E1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B6C26A21E99242400BD6285 /* ProjectTypeSelectionVM.swift in Sources */,

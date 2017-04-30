@@ -119,3 +119,18 @@ extension ProjectTypeSelectionViewController : NSCollectionViewDataSource {
     }
     
 }
+
+extension ProjectTypeSelectionViewController : NSCollectionViewDelegate {
+    
+    func collectionView(_ collectionView: NSCollectionView, didSelectItemsAt indexPaths: Set<IndexPath>) {
+        if indexPaths.count > 1 {
+            print("Only 1 project type should be selected")
+        } else {
+            if let indexPath = indexPaths.first {
+                let collectionItemViewModel = model.projectTypesModels[indexPath.item]
+                model.selectedProjectTypeModel = collectionItemViewModel
+            }
+        }
+    }
+    
+}

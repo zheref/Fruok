@@ -18,6 +18,8 @@ protocol ProjectTypeSelectionViewModelProtocol : ViewControllerModelProtocol {
     func userDidCancel()
     
     func userWillingNext()
+    
+    var selectedProjectTypeModel: ProjectTypeCollectionItemViewModel? { get set }
 
 }
 
@@ -29,6 +31,8 @@ class ProjectTypeSelectionViewModel: ProjectTypeSelectionViewModelProtocol {
     // MARK: Instance Properties
     
     private var projectTypes = [ProjectType]()
+    
+    var selectedProjectTypeModel: ProjectTypeCollectionItemViewModel?
     
     // MARK: Computed Properties
     
