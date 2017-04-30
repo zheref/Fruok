@@ -50,6 +50,8 @@ public protocol ViewControllerProtocol : class, ViewControllerModelRepresentant 
     
     var window: WindowControllerProtocol? { get }
     
+    func closeMyWindow()
+    
 }
 
 extension ViewControllerProtocol {

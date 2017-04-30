@@ -98,6 +98,12 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
         projectTypesCollectionView.layer?.backgroundColor = NSColor.white.cgColor
     }
     
+    // MARK: WorkspaceCanvasViewControllerProtocol
+    
+    func closeMyWindow() {
+        window?.close()
+    }
+    
 }
 
 extension ProjectTypeSelectionViewController : NSCollectionViewDataSource {

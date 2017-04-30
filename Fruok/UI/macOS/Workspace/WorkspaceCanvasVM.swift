@@ -57,12 +57,10 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
     func userDidCompleteProjectCreation(
         withCompletionVM completionVM: ProjectCreationContainerViewModel) {
         
-        document.content.project = Project(with: completionVM)
-        document.content.updateXML()
-        print(document.content.xml)
+        document.project = Project(with: completionVM)
         
         document.save(to: completionVM.urlToSave!, ofType: "fruok", for: .saveAsOperation) { (error) in
-            
+            // TODO: HANDLE ERROR
         }
     }
     

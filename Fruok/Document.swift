@@ -21,6 +21,16 @@ class Document: FruokDocument {
     
     var content: FXMLContent
     
+    // MARK: - COMPUTED PROPERTIES
+    
+    var project: Project? {
+        get { return content.project }
+        set {
+            content.project = newValue
+            content.updateXML()
+        }
+    }
+    
     // MARK: - INITIALIZERS
     
 

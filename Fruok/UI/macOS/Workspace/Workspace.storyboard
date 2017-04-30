@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="11762"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -33,8 +33,23 @@
                     </view>
                 </viewController>
                 <customObject id="1KY-So-IOW" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
+                <toolbar implicitIdentifier="09D11707-F4A3-4FD5-970E-AC5832E91C2B" autosavesConfiguration="NO" displayMode="iconAndLabel" sizeMode="regular" id="jIR-UB-vkN">
+                    <allowedToolbarItems>
+                        <toolbarItem implicitItemIdentifier="NSToolbarShowColorsItem" id="O5p-2m-YN5"/>
+                        <toolbarItem implicitItemIdentifier="NSToolbarShowFontsItem" id="lXp-Hd-ZQB"/>
+                        <toolbarItem implicitItemIdentifier="NSToolbarPrintItem" id="mOT-H6-baQ"/>
+                        <toolbarItem implicitItemIdentifier="NSToolbarSpaceItem" id="Mcr-Ei-seF"/>
+                        <toolbarItem implicitItemIdentifier="NSToolbarFlexibleSpaceItem" id="GQ6-H7-ucc"/>
+                    </allowedToolbarItems>
+                    <defaultToolbarItems>
+                        <toolbarItem reference="O5p-2m-YN5"/>
+                        <toolbarItem reference="lXp-Hd-ZQB"/>
+                        <toolbarItem reference="GQ6-H7-ucc"/>
+                        <toolbarItem reference="mOT-H6-baQ"/>
+                    </defaultToolbarItems>
+                </toolbar>
             </objects>
-            <point key="canvasLocation" x="-118" y="877"/>
+            <point key="canvasLocation" x="-128" y="1084"/>
         </scene>
     </scenes>
 </document>

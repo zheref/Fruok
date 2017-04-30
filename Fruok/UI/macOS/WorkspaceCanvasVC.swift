@@ -32,4 +32,10 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
         vm.ready()
     }
     
+    // MARK: WorkspaceCanvasViewControllerProtocol
+    
+    func closeMyWindow() {
+        window?.close()
+    }
+    
 }

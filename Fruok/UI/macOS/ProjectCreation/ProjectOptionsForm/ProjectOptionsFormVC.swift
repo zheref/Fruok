@@ -63,7 +63,12 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     
     func updateModel() {
         model.codename.value = codenameTextField.cell?.title ?? ""
-        print(model.codename)
+    }
+    
+    // MARK: WorkspaceCanvasViewControllerProtocol
+    
+    func closeMyWindow() {
+        window?.close()
     }
     
     // MARK: - PROJECTTYPESELECTIONVIEWCONTROLLER PROTOCOL

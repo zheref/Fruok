@@ -46,6 +46,12 @@ class ProjectCreationContainerViewController:
         vm.ready()
     }
     
+    // MARK: WorkspaceCanvasViewControllerProtocol
+    
+    func closeMyWindow() {
+        window?.close()
+    }
+    
     
     // MARK: - PROJECTCREATIONCONTAINER VIEWCONTROLLER PROTOCOL
     
