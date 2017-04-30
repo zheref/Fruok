@@ -24,6 +24,8 @@ protocol ProjectCreationContainerViewControllerProtocol : ViewControllerProtocol
     
     func openSavePanel(forProjectNamed projectName: String,
                        toReturnURLBy urlReturner: @escaping (URL?) -> Void)
+    
+    func finishByDismissingWindow()
 }
 
 
@@ -57,6 +59,11 @@ class ProjectCreationContainerViewController:
     func cancelByDismissingWindow() {
         window?.dismissAsSheet()
         model.userDidCancel()
+    }
+    
+    
+    func finishByDismissingWindow() {
+        window?.dismissAsSheet()
     }
     
     

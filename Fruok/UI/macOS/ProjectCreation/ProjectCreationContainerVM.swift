@@ -62,6 +62,7 @@ class ProjectCreationContainerViewModel : ProjectCreationContainerViewModelProto
             ui?.openSavePanel(forProjectNamed: projectName, toReturnURLBy: { [unowned self] (url) in
                 self.urlToSave = url
                 self.delegate?.userDidCompleteProjectCreation(withCompletionVM: self)
+                self.ui?.finishByDismissingWindow()
             })
         }
     }

@@ -73,9 +73,11 @@ class ProjectTypeSelectionViewController: NSViewController, ProjectTypeSelection
     
     // MARK: - ACTIONS
     
+    
     @IBAction func userDidClickCancel(_ sender: Any) {
         model.userDidCancel()
     }
+    
     
     @IBAction func userDidClickNext(_ sender: Any) {
         model.userWillingNext()
