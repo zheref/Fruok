@@ -13,6 +13,7 @@ public class WorkspaceSourceListItemVM : NSObject, ViewModelProtocol {
     // MARK: - SUBTYPES
     
     enum ItemIcon : String {
+        case project
         case file
     }
     

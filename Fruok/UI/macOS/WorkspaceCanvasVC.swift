@@ -11,6 +11,8 @@ import Cocoa
 
 protocol WorkspaceCanvasViewControllerProtocol : ViewControllerProtocol {
     
+    func reloadSourceListData()
+    
 }
 
 
@@ -19,6 +21,7 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     // MARK: - OUTLETS
     
     @IBOutlet weak var splitView: NSSplitView!
+    @IBOutlet weak var sourceListOutlineView: NSOutlineView!
     
     // MARK: - COMPUTED PROPERTIES
     
@@ -65,6 +68,12 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     func closeMyWindow() {
         window?.close()
     }
+    
+    
+    func reloadSourceListData() {
+        sourceListOutlineView.reloadData()
+    }
+    
     
 }
 

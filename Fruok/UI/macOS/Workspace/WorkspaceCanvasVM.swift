@@ -11,7 +11,7 @@ import Foundation
 
 public protocol WorkspaceCanvasViewModelProtocol : ViewControllerModelProtocol {
     
-    var items: [WorkspaceSourceListItemVM] { get set }
+    var items: [WorkspaceSourceListItemVM] { get }
     
 }
 
@@ -25,8 +25,10 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
         
         // TODO: This should be read from project XML
         
-        items.append(WorkspaceSourceListItemVM(withTitle: "Project Name",
-                                               icon: .file,
+        //let projectName = document.project?.name ?? "Project Name"
+        
+        items.append(WorkspaceSourceListItemVM(withTitle: "",
+                                               icon: .project,
                                                destination: .ProjectConfig))
         
         return items
@@ -58,6 +60,9 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
         
         if !document.existsOnDisk {
             startProjectCreationFlow()
+        } else {
+            updateProjectName()
+            ui?.reloadSourceListData()
         }
     }
     
@@ -67,6 +72,15 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     fileprivate func startProjectCreationFlow() {
         // TODO: IMPROVE
         ui?.window?.presentSheet(forModule: Wireframe.requestProjectCreation(withDelegate: self))
+    }
+    
+    
+    private func updateProjectName() {
+        for item in items {
+            if item.collapsedIcon == .project {
+                item.title = document.project?.name ?? ""
+            }
+        }
     }
     
 }
