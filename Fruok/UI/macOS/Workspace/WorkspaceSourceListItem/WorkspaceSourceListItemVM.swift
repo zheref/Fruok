@@ -15,10 +15,14 @@ public class WorkspaceSourceListItemVM : NSObject, ViewModelProtocol {
     enum ItemIcon : String {
         case project
         case file
+        case freelance
+        case client
     }
     
     enum Destination {
         case ProjectConfig
+        case Freelance
+        case Client
     }
     
     // MARK: - PROPERTIES

@@ -25,11 +25,21 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
         
         // TODO: This should be read from project XML
         
-        //let projectName = document.project?.name ?? "Project Name"
+        let projectItem = WorkspaceSourceListItemVM(withTitle: "",
+                                                    icon: .project,
+                                                    destination: .ProjectConfig)
         
-        items.append(WorkspaceSourceListItemVM(withTitle: "",
-                                               icon: .project,
-                                               destination: .ProjectConfig))
+        projectItem.children.append(WorkspaceSourceListItemVM(withTitle: "Freelance",
+                                                              icon: .freelance,
+                                                              destination: .Freelance))
+            
+        projectItem.children.append(WorkspaceSourceListItemVM(withTitle: "Client",
+                                                              icon: .client,
+                                                              destination: .Client))
+        
+        items.append(projectItem)
+        
+        
         
         return items
     }()
