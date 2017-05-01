@@ -15,6 +15,7 @@ public protocol WorkspaceCanvasViewModelProtocol : ViewControllerModelProtocol {
     
     func userDidSelect(item: WorkspaceSourceListItemVM)
     
+    var document: Document? { get }
 }
 
 
@@ -50,8 +51,8 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     
     // UNSAFE!
     // TODO: IMPROVE THIS
-    var document: Document {
-        return vc!.window!.doc! as! Document
+    public var document: Document? {
+        return vc?.window?.doc as? Document
     }
     
     
@@ -98,6 +99,10 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     
     
     private func updateProjectName() {
+        guard let document = document else {
+            return
+        }
+        
         for item in items {
             if item.collapsedIcon == .project {
                 item.title = document.project?.name ?? ""
@@ -123,6 +128,10 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
     
     func userDidCompleteProjectCreation(
         withCompletionVM completionVM: ProjectCreationContainerViewModel) {
+        
+        guard let document = document else {
+            return
+        }
         
         document.project = Project(with: completionVM)
         

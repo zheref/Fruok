@@ -12,6 +12,7 @@
 		2B44D2081EB6ED070046C173 /* WorkspaceSourceListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */; };
 		2B44D20B1EB7D2B60046C173 /* ProjectConfig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B44D20A1EB7D2B60046C173 /* ProjectConfig.storyboard */; };
 		2B44D20D1EB7D2FD0046C173 /* ProjectConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */; };
+		2B44D20F1EB7DC910046C173 /* ProjectConfigVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20E1EB7DC910046C173 /* ProjectConfigVM.swift */; };
 		2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26841E988EAA00BD6285 /* ProjectCreationWC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */; };
@@ -145,6 +146,7 @@
 		2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkspaceSourceListItemVM.swift; path = UI/macOS/Workspace/WorkspaceSourceListItem/WorkspaceSourceListItemVM.swift; sourceTree = "<group>"; };
 		2B44D20A1EB7D2B60046C173 /* ProjectConfig.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectConfig.storyboard; path = UI/macOS/Workspace/ProjectConfig/ProjectConfig.storyboard; sourceTree = "<group>"; };
 		2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectConfigVC.swift; path = UI/macOS/Workspace/ProjectConfig/ProjectConfigVC.swift; sourceTree = "<group>"; };
+		2B44D20E1EB7DC910046C173 /* ProjectConfigVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectConfigVM.swift; path = UI/macOS/Workspace/ProjectConfig/ProjectConfigVM.swift; sourceTree = "<group>"; };
 		2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectCreation.storyboard; path = UI/macOS/ProjectCreation/ProjectCreation.storyboard; sourceTree = "<group>"; };
 		2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationWC.swift; path = UI/macOS/ProjectCreation/ProjectCreationWC.swift; sourceTree = "<group>"; };
 		2B6C26891E98F23800BD6285 /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVVM.swift; path = UI/Common/MVVM.swift; sourceTree = "<group>"; };
@@ -243,6 +245,7 @@
 			children = (
 				2B44D20A1EB7D2B60046C173 /* ProjectConfig.storyboard */,
 				2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */,
+				2B44D20E1EB7DC910046C173 /* ProjectConfigVM.swift */,
 			);
 			name = ProjectConfig;
 			sourceTree = "<group>";
@@ -788,6 +791,7 @@
 				2B93ED861E95F841000D15A2 /* WorkspaceCanvasVM.swift in Sources */,
 				2B93ED731E95BDD8000D15A2 /* Writer.swift in Sources */,
 				2B6C26BB1E9AE25100BD6285 /* ProjectOptionsFormVC.swift in Sources */,
+				2B44D20F1EB7DC910046C173 /* ProjectConfigVM.swift in Sources */,
 				2B6C26A61E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
 				2B6C26B41E9A816800BD6285 /* ProjectTypeCollectionItemVM.swift in Sources */,
 				2B7C5BE01E9BA92F009974E7 /* ProjectCreationContainerVC.swift in Sources */,

@@ -11,7 +11,7 @@ import AEXML
 
 
 // This is the custom model representation of a document specific for Fruok
-class Document: FruokDocument {
+public class Document: FruokDocument {
     
     // MARK: - CONSTANTS
     
@@ -44,16 +44,16 @@ class Document: FruokDocument {
     
     // MARK: - NSDOCUMENT OVERRIDES
     
-    override class func autosavesInPlace() -> Bool {
+    override public class func autosavesInPlace() -> Bool {
         return true
     }
 
-    override func makeWindowControllers() {
+    override public func makeWindowControllers() {
         addWindowController(Wireframe.requestWorkspace().wc)
     }
     
 
-    override func data(ofType typeName: String) throws -> Data {
+    override public func data(ofType typeName: String) throws -> Data {
         if let data = content.xml.data(using: Document.FileEncoding) {
             return data
         } else {
@@ -62,7 +62,7 @@ class Document: FruokDocument {
     }
     
 
-    override func read(from data: Data, ofType typeName: String) throws {
+    override public func read(from data: Data, ofType typeName: String) throws {
         if let fileContent = String(data: data, encoding: Document.FileEncoding) {
             do {
                 content = try FXMLContent.from(xmlString: fileContent)

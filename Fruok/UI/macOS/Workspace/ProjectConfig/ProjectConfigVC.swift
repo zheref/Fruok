@@ -14,7 +14,15 @@ protocol ProjectConfigDelegate {
     
 }
 
-class ProjectConfigViewController: NSViewController {
+
+protocol ProjectConfigViewControllerProtocol : ViewControllerProtocol {
+    
+    
+    
+}
+
+
+class ProjectConfigViewController: NSViewController, ProjectConfigViewControllerProtocol {
     
     // MARK: - CLASS MEMBERS
     
@@ -39,6 +47,14 @@ class ProjectConfigViewController: NSViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
+    }
+    
+    // MARK: - ProjectConfigViewControllerProtocol
+    
+    var vm: ViewControllerModelProtocol = ProjectConfigViewModel()
+    
+    func closeMyWindow() {
+        // NOT ACTIONABLE FROM HERE
     }
     
 }
