@@ -15,3 +15,9 @@ class KCore {
     }
     
 }
+
+protocol FXMLPermissioned {
+    
+    var fxml: FXMLContent? { get set }
+    
+}

@@ -65,11 +65,7 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     
     // MARK: - WorkspaceCanvasViewControllerProtocol
     
-    var vm: ViewControllerModelProtocol = WorkspaceCanvasViewModel() {
-        didSet {
-            
-        }
-    }
+    var vm: ViewControllerModelProtocol = WorkspaceCanvasViewModel()
     
     
     func closeMyWindow() {
@@ -89,7 +85,9 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
             contentViewController?.removeFromParentViewController()
             contentViewController = nil
             
-            contentViewController = ProjectConfigViewController.create(withDelegate: self)
+            guard let model = model as? WorkspaceCanvasViewModel else { return }
+            
+            contentViewController = ProjectConfigViewController.create(withDelegate: model)
             
             if let vc = contentViewController {
                 addChildViewController(vc)
@@ -173,13 +171,6 @@ extension WorkspaceCanvasViewController : NSOutlineViewDelegate {
             model.userDidSelect(item: selectedItem)
         }
     }
-    
-    
-}
-
-
-extension WorkspaceCanvasViewController : ProjectConfigDelegate {
-    
     
     
 }

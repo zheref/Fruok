@@ -8,7 +8,7 @@
 
 import Cocoa
 
-protocol ProjectConfigDelegate {
+protocol ProjectConfigDelegate : FXMLPermissioned {
     
     
     
@@ -17,7 +17,7 @@ protocol ProjectConfigDelegate {
 
 protocol ProjectConfigViewControllerProtocol : ViewControllerProtocol {
     
-    
+    func refreshUI()
     
 }
 
@@ -33,14 +33,23 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
             withIdentifier: KUI.ViewController.ProjectConfig.rawValue)
                 as! ProjectConfigViewController
         
-        viewController.delegate = delegate
+        if viewController.vm is ProjectConfigViewModelProtocol {
+            (viewController.vm as! ProjectConfigViewModelProtocol).delegate = delegate
+        }
         
         return viewController
     }
     
-    // MARK: - PROPERTIES
+    // MARK: - OUTLETS
     
-    var delegate: ProjectConfigDelegate?
+    @IBOutlet weak var codenameTextField: NSTextField!
+    @IBOutlet weak var commercialNameTextField: NSTextField!
+    @IBOutlet weak var durationTextField: NSTextField!
+    @IBOutlet weak var deadlineDatePicker: NSDatePicker!
+    @IBOutlet weak var projectTypeComboBox: NSComboBox!
+    
+    
+    // MARK: - PROPERTIES
     
     // MARK: - LIFECYCLE
 
@@ -55,6 +64,10 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
     
     func closeMyWindow() {
         // NOT ACTIONABLE FROM HERE
+    }
+    
+    func refreshUI() {
+        
     }
     
 }

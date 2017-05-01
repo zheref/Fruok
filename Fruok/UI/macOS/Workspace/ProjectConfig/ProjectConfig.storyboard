@@ -16,13 +16,13 @@
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
                             <box boxType="custom" translatesAutoresizingMaskIntoConstraints="NO" id="v36-cE-5gg">
-                                <rect key="frame" x="180" y="234" width="464" height="300"/>
+                                <rect key="frame" x="180" y="174" width="464" height="420"/>
                                 <view key="contentView" id="4tW-hN-ZUj">
-                                    <rect key="frame" x="1" y="1" width="462" height="298"/>
+                                    <rect key="frame" x="1" y="1" width="462" height="418"/>
                                     <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                     <subviews>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="YPL-eY-Dz0">
-                                            <rect key="frame" x="109" y="218" width="77" height="17"/>
+                                            <rect key="frame" x="109" y="338" width="77" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Code name:" id="oax-QR-oiP">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -30,7 +30,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" fixedFrame="YES" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dyU-ZA-hDr">
-                                            <rect key="frame" x="69" y="182" width="117" height="17"/>
+                                            <rect key="frame" x="69" y="302" width="117" height="17"/>
                                             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMinY="YES"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Commercial name:" id="Pfp-A1-z8w">
                                                 <font key="font" metaFont="system"/>
@@ -39,7 +39,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qf6-9l-Vs7">
-                                            <rect key="frame" x="126" y="146" width="60" height="17"/>
+                                            <rect key="frame" x="126" y="266" width="60" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Duration:" id="275-hw-dKH">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -47,7 +47,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qcl-Bq-E4c">
-                                            <rect key="frame" x="102" y="72" width="84" height="17"/>
+                                            <rect key="frame" x="102" y="67" width="84" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Project Type:" id="dcJ-hq-P8M">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -55,18 +55,18 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Hi-N4-eO5">
-                                            <rect key="frame" x="194" y="215" width="193" height="22"/>
+                                            <rect key="frame" x="194" y="335" width="193" height="22"/>
                                             <constraints>
                                                 <constraint firstAttribute="width" constant="193" id="wqK-Er-X5b"/>
                                             </constraints>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="FMY-st-YqF">
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" enabled="NO" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="FMY-st-YqF">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yMM-QR-Noc">
-                                            <rect key="frame" x="194" y="179" width="193" height="22"/>
+                                            <rect key="frame" x="194" y="299" width="193" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="bjo-H1-d66">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
@@ -74,16 +74,16 @@
                                             </textFieldCell>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-7T-bow">
-                                            <rect key="frame" x="194" y="143" width="178" height="22"/>
-                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="100 days" drawsBackground="YES" id="dr8-GH-HCj">
+                                            <rect key="frame" x="194" y="263" width="178" height="22"/>
+                                            <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="100" placeholderString="Number of days" drawsBackground="YES" id="dr8-GH-HCj">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jd6-GR-hpm">
-                                            <rect key="frame" x="194" y="106" width="196" height="27"/>
-                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="C5A-ak-RKx">
+                                            <rect key="frame" x="194" y="101" width="193" height="148"/>
+                                            <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" id="C5A-ak-RKx">
                                                 <font key="font" metaFont="system"/>
                                                 <date key="date" timeIntervalSinceReferenceDate="-595929600">
                                                     <!--1982-02-12 16:00:00 +0000-->
@@ -93,7 +93,7 @@
                                             </datePickerCell>
                                         </datePicker>
                                         <textField horizontalHuggingPriority="251" verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Fm5-lv-Qu0">
-                                            <rect key="frame" x="125" y="109" width="61" height="17"/>
+                                            <rect key="frame" x="125" y="232" width="61" height="17"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" sendsActionOnEndEditing="YES" title="Deadline:" id="8PK-hF-OYe">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="labelColor" catalog="System" colorSpace="catalog"/>
@@ -101,7 +101,7 @@
                                             </textFieldCell>
                                         </textField>
                                         <comboBox verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbn-Qe-eo2">
-                                            <rect key="frame" x="194" y="68" width="196" height="26"/>
+                                            <rect key="frame" x="194" y="63" width="196" height="26"/>
                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="x2i-HR-YUc">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -114,7 +114,7 @@
                                             </comboBoxCell>
                                         </comboBox>
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IZk-a4-S2u">
-                                            <rect key="frame" x="371" y="141" width="19" height="27"/>
+                                            <rect key="frame" x="371" y="261" width="19" height="27"/>
                                             <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="E1q-wX-IAz"/>
                                         </stepper>
                                     </subviews>
@@ -123,13 +123,13 @@
                                         <constraint firstItem="4Hi-N4-eO5" firstAttribute="leading" secondItem="4tW-hN-ZUj" secondAttribute="leading" constant="194" id="4ar-aP-zZ7"/>
                                         <constraint firstItem="4Hi-N4-eO5" firstAttribute="top" secondItem="4tW-hN-ZUj" secondAttribute="top" constant="61" id="7Hs-Ha-Mbw"/>
                                         <constraint firstItem="jbn-Qe-eo2" firstAttribute="width" secondItem="Jd6-GR-hpm" secondAttribute="width" id="B3M-XJ-gOb"/>
+                                        <constraint firstItem="Fm5-lv-Qu0" firstAttribute="top" secondItem="Jd6-GR-hpm" secondAttribute="top" id="Cr6-Q2-phN"/>
                                         <constraint firstItem="yMM-QR-Noc" firstAttribute="width" secondItem="4Hi-N4-eO5" secondAttribute="width" id="E6l-R2-pDo"/>
                                         <constraint firstItem="Jd6-GR-hpm" firstAttribute="width" secondItem="yMM-QR-Noc" secondAttribute="width" id="FJR-2a-zPz"/>
                                         <constraint firstItem="IZk-a4-S2u" firstAttribute="trailing" secondItem="yMM-QR-Noc" secondAttribute="trailing" id="G60-js-U6Y"/>
                                         <constraint firstItem="jbn-Qe-eo2" firstAttribute="leading" secondItem="qcl-Bq-E4c" secondAttribute="trailing" constant="10" id="GGK-ZB-HWj"/>
                                         <constraint firstItem="qf6-9l-Vs7" firstAttribute="baseline" secondItem="UOL-7T-bow" secondAttribute="baseline" id="IWh-2f-lPq"/>
                                         <constraint firstItem="yMM-QR-Noc" firstAttribute="leading" secondItem="4Hi-N4-eO5" secondAttribute="leading" id="K9O-lE-T5k"/>
-                                        <constraint firstItem="Fm5-lv-Qu0" firstAttribute="baseline" secondItem="Jd6-GR-hpm" secondAttribute="baseline" id="TIf-xq-ftE"/>
                                         <constraint firstItem="jbn-Qe-eo2" firstAttribute="leading" secondItem="Jd6-GR-hpm" secondAttribute="leading" id="UA4-4e-Clr"/>
                                         <constraint firstItem="UOL-7T-bow" firstAttribute="top" secondItem="yMM-QR-Noc" secondAttribute="bottom" constant="14" id="WbI-TL-W7P"/>
                                         <constraint firstItem="UOL-7T-bow" firstAttribute="width" secondItem="yMM-QR-Noc" secondAttribute="width" constant="-15" id="aa2-oX-MVc"/>
@@ -147,9 +147,8 @@
                                     </constraints>
                                 </view>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="300" id="9yY-40-6AM"/>
+                                    <constraint firstAttribute="height" constant="420" id="9yY-40-6AM"/>
                                     <constraint firstAttribute="width" constant="464" id="MxZ-Y1-uGT"/>
-                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="300" id="fWZ-68-YYy"/>
                                 </constraints>
                                 <color key="borderColor" red="0.77426671979999995" green="0.77128273250000001" blue="0.7743557096" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <color key="fillColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -160,6 +159,13 @@
                             <constraint firstItem="v36-cE-5gg" firstAttribute="centerX" secondItem="5Dp-bL-KOe" secondAttribute="centerX" id="c9G-NK-csf"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="codenameTextField" destination="4Hi-N4-eO5" id="fWZ-dQ-1jX"/>
+                        <outlet property="commercialNameTextField" destination="yMM-QR-Noc" id="8Qm-dk-7i1"/>
+                        <outlet property="deadlineDatePicker" destination="Jd6-GR-hpm" id="xev-zV-QdQ"/>
+                        <outlet property="durationTextField" destination="UOL-7T-bow" id="IHG-5M-7Ca"/>
+                        <outlet property="projectTypeComboBox" destination="jbn-Qe-eo2" id="qSg-Vj-a8T"/>
+                    </connections>
                 </viewController>
                 <customObject id="8HC-uB-du2" userLabel="First Responder" customClass="NSResponder" sceneMemberID="firstResponder"/>
             </objects>

@@ -49,8 +49,6 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     
     // MARK: - COMPUTED PROPERTIES
     
-    // UNSAFE!
-    // TODO: IMPROVE THIS
     public var document: Document? {
         return vc?.window?.doc as? Document
     }
@@ -139,6 +137,31 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
             // TODO: HANDLE ERROR
         }
     }
+    
+    
+}
+
+
+extension WorkspaceCanvasViewModel : FXMLPermissioned {
+    
+    
+    var fxml: FXMLContent? {
+        get { return document?.fxml }
+        set {
+            guard let doc = document else {
+                return
+            }
+            
+            doc.fxml = newValue
+        }
+    }
+    
+    
+}
+
+
+extension WorkspaceCanvasViewModel : ProjectConfigDelegate {
+    
     
     
 }

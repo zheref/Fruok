@@ -11,6 +11,8 @@ import Foundation
 
 protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
+    var delegate: ProjectConfigDelegate? { get set }
+    
 }
 
 
@@ -27,6 +29,8 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     var deadline = Date()
     
     var projectType: ProjectType?
+    
+    var delegate: ProjectConfigDelegate?
     
     // MARK: - ProjectConfigViewModelProtocol
     
