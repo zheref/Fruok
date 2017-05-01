@@ -31,18 +31,18 @@ class XMLParser {
     static func unparse(project: Project) -> AEXMLElement {
         var attributes = [String: String]();
         
-        attributes[Project.NameAttrName] = project.name
+        attributes[Project.Attribute.name.rawValue] = project.name
         
         if let displayName = project.displayName {
-            attributes[Project.DisplayNameAttrName] = displayName
+            attributes[Project.Attribute.displayName.rawValue] = displayName
         }
         
         if let duration = project.duration {
-            attributes[Project.DurationAttrName] = duration.description
+            attributes[Project.Attribute.duration.rawValue] = duration.description
         }
         
         if let deadline = project.deadline {
-            attributes[Project.DeadlineAttrName] = deadline.description
+            attributes[Project.Attribute.deadline.rawValue] = deadline.description
         }
         
         let xmlElement = AEXMLElement(name: Project.TagName,
@@ -54,14 +54,58 @@ class XMLParser {
         return xmlElement
     }
     
+    
+    private static func parse(fromXML xml: AEXMLElement) -> XMLElementProtocol? {
+        switch xml.name {
+        case Project.TagName:
+            return XMLParser.parseToProject(fromXML: xml)
+        case Client.TagName:
+            return XMLParser.parseToClient(fromXML: xml)
+        default:
+            return nil
+        }
+    }
+    
+    
+    static func parseToProject(fromXML xml: AEXMLElement) -> Project {
+        let codename = xml.attributes[Project.Attribute.name.rawValue] ?? ""
+        
+        var client: Client?
+        
+        if let clientTag = xml.firstTag(withName: Client.TagName) {
+            client = XMLParser.parseToClient(fromXML: clientTag)
+        }
+        
+        var projectType: ProjectType?
+        
+        if let projectTypeTag = xml.firstTag(withName: ProjectType.TagName) {
+            projectType = XMLParser.parseToProjectType(xml: projectTypeTag)
+        }
+        
+        guard let safeClient = client, let safeProjectType = projectType else {
+            return Project.defaultToken
+        }
+        
+        var project = Project(withName: codename, client: safeClient, andType: safeProjectType)
+        
+        project.displayName = xml.attributes[Project.Attribute.displayName.rawValue] ?? ""
+        
+        if let durationStr = xml.attributes[Project.Attribute.duration.rawValue] {
+            project.duration = Double(durationStr) ?? 0
+        }
+        
+        return project
+    }
+    
+    
     // Unparse project type instance into its XML equivalent element and returns it
     static func unparse(projectType: ProjectType) -> AEXMLElement {
         var attributes = [String: String]();
         
-        attributes[ProjectType.IdAttrName] = projectType.id
+        attributes[ProjectType.Attribute.id.rawValue] = projectType.id
         
         if let relImageUrl = projectType.relImageUrl {
-            attributes[ProjectType.RelImageUrlAttrName] = relImageUrl
+            attributes[ProjectType.Attribute.relImageUrl.rawValue] = relImageUrl
         }
         
         let xmlElement = AEXMLElement(name: ProjectType.TagName,
@@ -71,32 +115,35 @@ class XMLParser {
         return xmlElement
     }
     
-//    static func parse(xml: AEXMLElement) -> ProjectType {
-//        
-//    }
+    
+    static func parseToProjectType(xml: AEXMLElement) -> ProjectType {
+        let title = xml.value ?? ""
+        
+        let relImageUrl = xml.attributes[ProjectType.Attribute.relImageUrl.rawValue] ?? nil
+        let id = xml.attributes[ProjectType.Attribute.id.rawValue] ?? ""
+        
+        return ProjectType(id: id, relImageUrl: relImageUrl, title: title)
+    }
+    
     
     // Unparse client instance into ints XML equivalent element and returns it
     static func unparse(client: Client) -> AEXMLElement {
         var attributes = [String: String]();
         
         if let socialName = client.socialName {
-            attributes[Client.SocialNameAttrName] = socialName
+            attributes[Client.Attribute.socialName.rawValue] = socialName
         }
         
-        if let socialId = client.socialId {
-            attributes[Client.SocialIdAttrName] = socialId
-        }
-        
-        if let responsible = client.socialName {
-            attributes[Client.ResponsibleAttrName] = responsible
+        if let responsible = client.responsible {
+            attributes[Client.Attribute.responsible.rawValue] = responsible
         }
         
         if let email = client.email {
-            attributes[Client.EmailAttrName] = email
+            attributes[Client.Attribute.email.rawValue] = email
         }
         
         if let phoneNumber = client.phoneNumber {
-            attributes[Client.PhoneNumberAttrName] = phoneNumber
+            attributes[Client.Attribute.phoneNumber.rawValue] = phoneNumber
         }
         
         let xmlElement = AEXMLElement(name: Client.TagName,
@@ -104,6 +151,25 @@ class XMLParser {
                                       attributes: attributes)
         
         return xmlElement
+    }
+    
+    
+    static func parseToClient(fromXML xml: AEXMLElement) -> Client {
+        let name = xml.value ?? ""
+        
+        let socialName = xml.attributes[Client.Attribute.socialName.rawValue] ?? ""
+        let responsible = xml.attributes[Client.Attribute.responsible.rawValue] ?? ""
+        let email = xml.attributes[Client.Attribute.email.rawValue] ?? ""
+        let phoneNumber = xml.attributes[Client.Attribute.phoneNumber.rawValue] ?? ""
+        
+        let client = Client(name: name,
+                            socialName: socialName,
+                            socialId: nil,
+                            responsible: responsible,
+                            email: email,
+                            phoneNumber: phoneNumber)
+        
+        return client
     }
     
     

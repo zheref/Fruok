@@ -16,6 +16,7 @@ class Document: FruokDocument {
     // MARK: - CONSTANTS
     
     private static let ExtensionPLKey = "FileExtension"
+    private static let FileEncoding = String.Encoding.utf8
     
     // MARK: - PROPERTIES
     
@@ -53,7 +54,7 @@ class Document: FruokDocument {
     
 
     override func data(ofType typeName: String) throws -> Data {
-        if let data = content.xml.data(using: .utf8) {
+        if let data = content.xml.data(using: Document.FileEncoding) {
             return data
         } else {
             throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
@@ -62,10 +63,19 @@ class Document: FruokDocument {
     
 
     override func read(from data: Data, ofType typeName: String) throws {
+        if let fileContent = String(data: data, encoding: Document.FileEncoding) {
+            do {
+                content = try FXMLContent.from(xmlString: fileContent)
+            } catch {
+                throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+            }
+        } else {
+            throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
+        }
+        
         // Insert code here to read your document from the given data of the specified type. If outError != nil, ensure that you create and set an appropriate error when returning false.
         // You can also choose to override readFromFileWrapper:ofType:error: or readFromURL:ofType:error: instead.
         // If you override either of these, you should also override -isEntireFileLoaded to return false if the contents are lazily loaded.
-        throw NSError(domain: NSOSStatusErrorDomain, code: unimpErr, userInfo: nil)
     }
 
 

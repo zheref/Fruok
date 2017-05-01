@@ -15,9 +15,10 @@ public struct ProjectType : XMLElementProtocol {
     
     static var TagName = "projecttype"
     
-    static let RelImageUrlAttrName = "relImageUrl"
-    
-    static let IdAttrName = "id"
+    enum Attribute : String {
+        case id
+        case relImageUrl
+    }
     
     // MARK: - STORED PROPERTIES
     

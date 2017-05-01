@@ -15,11 +15,12 @@ public struct Client : XMLElementProtocol {
     
     static var TagName = "client"
     
-    static let SocialNameAttrName = "relImageUrl"
-    static let SocialIdAttrName = "socialId"
-    static let ResponsibleAttrName = "responsible"
-    static let EmailAttrName = "email"
-    static let PhoneNumberAttrName = "phoneNumber"
+    enum Attribute : String {
+        case socialName
+        case responsible
+        case email
+        case phoneNumber
+    }
     
     // MARK: - STORED PROPERTIES
     

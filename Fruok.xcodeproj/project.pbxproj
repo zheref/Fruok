@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1CB5C0E33AB5BFF20A14E7EC /* Pods_Fruok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0971BAA60165D6104169A /* Pods_Fruok.framework */; };
+		2B44D2051EB6D1FD0046C173 /* AEXMLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */; };
 		2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26841E988EAA00BD6285 /* ProjectCreationWC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */; };
@@ -137,6 +138,7 @@
 		066425D60E3A161DEC3D9144 /* Pods-FruokTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FruokTests/Pods-FruokTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20AC4386318C4051534DA5D0 /* Pods-FruokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokUITests/Pods-FruokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		27088D216761F1798183548A /* Pods-FruokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokTests/Pods-FruokTests.release.xcconfig"; sourceTree = "<group>"; };
+		2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AEXMLExtensions.swift; path = IO/Common/AEXMLExtensions.swift; sourceTree = "<group>"; };
 		2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectCreation.storyboard; path = UI/macOS/ProjectCreation/ProjectCreation.storyboard; sourceTree = "<group>"; };
 		2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationWC.swift; path = UI/macOS/ProjectCreation/ProjectCreationWC.swift; sourceTree = "<group>"; };
 		2B6C26891E98F23800BD6285 /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVVM.swift; path = UI/Common/MVVM.swift; sourceTree = "<group>"; };
@@ -356,6 +358,7 @@
 			isa = PBXGroup;
 			children = (
 				2B93ED691E95BD04000D15A2 /* Common */,
+				2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */,
 			);
 			name = IO;
 			sourceTree = "<group>";
@@ -778,6 +781,7 @@
 				2B6C26961E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */,
 				2B93ED261E95ACF0000D15A2 /* Document.swift in Sources */,
+				2B44D2051EB6D1FD0046C173 /* AEXMLExtensions.swift in Sources */,
 				2B93ED781E95F2DA000D15A2 /* IODocument.swift in Sources */,
 				2B92AF1C1EB668F10091D72C /* FXMLContent.swift in Sources */,
 				2B93ED511E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,

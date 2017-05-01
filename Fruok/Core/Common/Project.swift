@@ -16,10 +16,12 @@ public struct Project : XMLCompliantProtocol {
     
     static var TagName: String = "project"
     
-    static let NameAttrName = "name"
-    static let DisplayNameAttrName = "displayName"
-    static let DurationAttrName = "duration"
-    static let DeadlineAttrName = "deadline"
+    enum Attribute : String {
+        case name
+        case displayName
+        case duration
+        case deadline
+    }
     
     // MARK: - STORED PROPERTIES
     
@@ -33,6 +35,19 @@ public struct Project : XMLCompliantProtocol {
     public var projectType: ProjectType
     
     // MARK: - INITIALIZERS
+    
+    public static var defaultToken: Project {
+        let client = Client(name: "Unknown Client",
+                            socialName: "Unknown Client Company",
+                            socialId: nil,
+                            responsible: nil,
+                            email: nil,
+                            phoneNumber: nil)
+        
+        let projectType = ProjectType(id: "unknown", relImageUrl: nil, title: "Unknown ProjectType")
+        
+        return Project(withName: "UntitledProject", client: client, andType: projectType)
+    }
     
     public init(withName name: String, client: Client, andType projectType: ProjectType) {
         self.name = name
@@ -56,6 +71,11 @@ public struct Project : XMLCompliantProtocol {
             ?? ProjectType(id: "notdefined", relImageUrl: nil, title: "Not defined")
         
         self.init(withName: name, client: client, andType: projectType)
+    }
+    
+    
+    static func fromXML(_ xml: AEXMLElement) -> Project {
+        return XMLParser.parseToProject(fromXML: xml)
     }
     
     
