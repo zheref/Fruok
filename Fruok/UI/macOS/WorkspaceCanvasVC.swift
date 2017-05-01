@@ -16,23 +16,42 @@ protocol WorkspaceCanvasViewControllerProtocol : ViewControllerProtocol {
 
 class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewControllerProtocol {
     
+    // MARK: - OUTLETS
+    
+    @IBOutlet weak var splitView: NSSplitView!
+    
+    // MARK: - LIFECYCLE
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        vm.vc = self
+        
+        setup()
+    }
+    
+    
+    override func viewDidAppear() {
+        vm.ready()
+    }
+    
+    
+    // MARK: - INSTANCE METHODS
+    
+    
+    func setup() {
+        splitView.setPosition(200, ofDividerAt: 0)
+    }
+    
+    
+    // MARK: - WorkspaceCanvasViewControllerProtocol
+    
     var vm: ViewControllerModelProtocol = WorkspaceCanvasViewModel() {
         didSet {
             
         }
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
-        vm.vc = self
-    }
-    
-    override func viewDidAppear() {
-        vm.ready()
-    }
-    
-    // MARK: WorkspaceCanvasViewControllerProtocol
     
     func closeMyWindow() {
         window?.close()
