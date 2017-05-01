@@ -13,6 +13,8 @@ class KUI {
     enum Storyboard : String {
         case Workspace
         case ProjectCreation
+        
+        case ProjectConfig
     }
     
     enum WindowController : String {
@@ -24,6 +26,8 @@ class KUI {
         case ProjectCreationContainer
         case ProjectTypeSelection
         case ProjectOptionsForm
+        
+        case ProjectConfig
     }
     
 }

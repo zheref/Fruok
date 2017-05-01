@@ -10,6 +10,8 @@
 		1CB5C0E33AB5BFF20A14E7EC /* Pods_Fruok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0971BAA60165D6104169A /* Pods_Fruok.framework */; };
 		2B44D2051EB6D1FD0046C173 /* AEXMLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */; };
 		2B44D2081EB6ED070046C173 /* WorkspaceSourceListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */; };
+		2B44D20B1EB7D2B60046C173 /* ProjectConfig.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B44D20A1EB7D2B60046C173 /* ProjectConfig.storyboard */; };
+		2B44D20D1EB7D2FD0046C173 /* ProjectConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */; };
 		2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26841E988EAA00BD6285 /* ProjectCreationWC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */; };
@@ -141,6 +143,8 @@
 		27088D216761F1798183548A /* Pods-FruokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokTests/Pods-FruokTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AEXMLExtensions.swift; path = IO/Common/AEXMLExtensions.swift; sourceTree = "<group>"; };
 		2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkspaceSourceListItemVM.swift; path = UI/macOS/Workspace/WorkspaceSourceListItem/WorkspaceSourceListItemVM.swift; sourceTree = "<group>"; };
+		2B44D20A1EB7D2B60046C173 /* ProjectConfig.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectConfig.storyboard; path = UI/macOS/Workspace/ProjectConfig/ProjectConfig.storyboard; sourceTree = "<group>"; };
+		2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectConfigVC.swift; path = UI/macOS/Workspace/ProjectConfig/ProjectConfigVC.swift; sourceTree = "<group>"; };
 		2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectCreation.storyboard; path = UI/macOS/ProjectCreation/ProjectCreation.storyboard; sourceTree = "<group>"; };
 		2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationWC.swift; path = UI/macOS/ProjectCreation/ProjectCreationWC.swift; sourceTree = "<group>"; };
 		2B6C26891E98F23800BD6285 /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVVM.swift; path = UI/Common/MVVM.swift; sourceTree = "<group>"; };
@@ -232,6 +236,15 @@
 				2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */,
 			);
 			name = WorkspaceSourceListItem;
+			sourceTree = "<group>";
+		};
+		2B44D2091EB7C3160046C173 /* ProjectConfig */ = {
+			isa = PBXGroup;
+			children = (
+				2B44D20A1EB7D2B60046C173 /* ProjectConfig.storyboard */,
+				2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */,
+			);
+			name = ProjectConfig;
 			sourceTree = "<group>";
 		};
 		2B6C267F1E9738F900BD6285 /* ProjectCreation */ = {
@@ -419,6 +432,7 @@
 				2B93ED811E95F81D000D15A2 /* WorkspaceCanvasVC.swift */,
 				2B93ED851E95F841000D15A2 /* WorkspaceCanvasVM.swift */,
 				2B44D2061EB6ECBF0046C173 /* WorkspaceSourceListItem */,
+				2B44D2091EB7C3160046C173 /* ProjectConfig */,
 			);
 			name = Workspace;
 			sourceTree = "<group>";
@@ -597,6 +611,7 @@
 			files = (
 				2B93ED8B1E966245000D15A2 /* Workspace.storyboard in Resources */,
 				2B6C26B11E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib in Resources */,
+				2B44D20B1EB7D2B60046C173 /* ProjectConfig.storyboard in Resources */,
 				2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */,
 				2B6C269A1E99222B00BD6285 /* ProjectTypes.xml in Resources */,
 				2B93ED281E95ACF0000D15A2 /* Assets.xcassets in Resources */,
@@ -783,6 +798,7 @@
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */,
 				2B93ED7E1E95F797000D15A2 /* WorkspaceWC.swift in Sources */,
+				2B44D20D1EB7D2FD0046C173 /* ProjectConfigVC.swift in Sources */,
 				2B6C26BE1E9AE9E900BD6285 /* ProjectOptionsFormVM.swift in Sources */,
 				2B93ED921E966AEF000D15A2 /* KUI.swift in Sources */,
 				2B6C268A1E98F23800BD6285 /* MVVM.swift in Sources */,

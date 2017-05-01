@@ -13,6 +13,8 @@ protocol WorkspaceCanvasViewControllerProtocol : ViewControllerProtocol {
     
     func reloadSourceListData()
     
+    func displayProjectConfig(into destination: DisplayDestination)
+    
 }
 
 
@@ -22,6 +24,11 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     
     @IBOutlet weak var splitView: NSSplitView!
     @IBOutlet weak var sourceListOutlineView: NSOutlineView!
+    @IBOutlet weak var contentView: NSView!
+    
+    // MARK: - PROPERTIES
+    
+    var contentViewController: NSViewController?
     
     // MARK: - COMPUTED PROPERTIES
     
@@ -72,6 +79,30 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     
     func reloadSourceListData() {
         sourceListOutlineView.reloadData()
+    }
+    
+    
+    func displayProjectConfig(into destination: DisplayDestination) {
+        
+        switch destination {
+        case .intoSameView:
+            contentViewController?.removeFromParentViewController()
+            contentViewController = nil
+            
+            contentViewController = ProjectConfigViewController.create(withDelegate: self)
+            
+            if let vc = contentViewController {
+                addChildViewController(vc)
+                
+                for subview in contentView.subviews {
+                    subview.removeFromSuperview()
+                }
+                
+                contentView.addSubview(vc.view)
+            }
+        default:
+            return
+        }
     }
     
     
@@ -129,6 +160,26 @@ extension WorkspaceCanvasViewController : NSOutlineViewDelegate {
         
         return view
     }
+    
+    
+    func outlineViewSelectionDidChange(_ notification: Notification) {
+        guard let outlineView = notification.object as? NSOutlineView else {
+            return
+        }
+        
+        if let selectedItem = outlineView.item(atRow: outlineView.selectedRow)
+            as? WorkspaceSourceListItemVM {
+            
+            model.userDidSelect(item: selectedItem)
+        }
+    }
+    
+    
+}
+
+
+extension WorkspaceCanvasViewController : ProjectConfigDelegate {
+    
     
     
 }

@@ -10,6 +10,13 @@ import Cocoa
 
 // MARK: - VIEW RELATED
 
+public enum DisplayDestination {
+    case intoNewWindow
+    case intoSameView
+    case intoPanel
+    case intoSheet
+}
+
 public protocol ViewModelProtocol : class {
     
     weak var view: ViewProtocol? { get set }

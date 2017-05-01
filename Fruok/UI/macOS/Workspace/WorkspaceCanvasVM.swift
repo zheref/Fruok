@@ -13,6 +13,8 @@ public protocol WorkspaceCanvasViewModelProtocol : ViewControllerModelProtocol {
     
     var items: [WorkspaceSourceListItemVM] { get }
     
+    func userDidSelect(item: WorkspaceSourceListItemVM)
+    
 }
 
 
@@ -73,6 +75,16 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
         } else {
             updateProjectName()
             ui?.reloadSourceListData()
+        }
+    }
+    
+    
+    public func userDidSelect(item: WorkspaceSourceListItemVM) {
+        switch item.destination {
+        case .ProjectConfig:
+            ui?.displayProjectConfig(into: .intoSameView)
+        default:
+            return
         }
     }
     
