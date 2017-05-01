@@ -20,6 +20,15 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     
     @IBOutlet weak var splitView: NSSplitView!
     
+    // MARK: - COMPUTED PROPERTIES
+    
+    
+    // UNSAFE
+    var model: WorkspaceCanvasViewModelProtocol {
+        return vm as! WorkspaceCanvasViewModelProtocol
+    }
+    
+    
     // MARK: - LIFECYCLE
     
     override func viewDidLoad() {
@@ -56,5 +65,61 @@ class WorkspaceCanvasViewController: NSViewController, WorkspaceCanvasViewContro
     func closeMyWindow() {
         window?.close()
     }
+    
+}
+
+
+extension WorkspaceCanvasViewController : NSOutlineViewDataSource {
+    
+    
+    func outlineView(_ outlineView: NSOutlineView, numberOfChildrenOfItem item: Any?) -> Int {
+        if let item = item as? WorkspaceSourceListItemVM {
+            return item.children.count
+        } else {
+            return model.items.count
+        }
+    }
+    
+    
+    func outlineView(_ outlineView: NSOutlineView, isItemExpandable item: Any) -> Bool {
+        guard let item = item as? WorkspaceSourceListItemVM else {
+            return false
+        }
+        
+        return item.children.count > 0 || item.expandedIcon != nil
+    }
+    
+    
+    func outlineView(_ outlineView: NSOutlineView, child index: Int, ofItem item: Any?) -> Any {
+        if let item = item as? WorkspaceSourceListItemVM {
+            return item.children[index]
+        } else {
+            return model.items[index]
+        }
+    }
+    
+    
+}
+
+
+extension WorkspaceCanvasViewController : NSOutlineViewDelegate {
+    
+    
+    func outlineView(_ outlineView: NSOutlineView, viewFor tableColumn: NSTableColumn?, item: Any) -> NSView? {
+        guard let item = item as? WorkspaceSourceListItemVM else {
+            return nil
+        }
+        
+        var view: NSTableCellView?
+        
+        view = outlineView.make(withIdentifier: "ItemCell", owner: self) as? NSTableCellView
+        
+        if let textField = view?.textField {
+            textField.stringValue = item.title
+        }
+        
+        return view
+    }
+    
     
 }

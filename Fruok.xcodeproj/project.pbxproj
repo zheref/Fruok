@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		1CB5C0E33AB5BFF20A14E7EC /* Pods_Fruok.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3EB0971BAA60165D6104169A /* Pods_Fruok.framework */; };
 		2B44D2051EB6D1FD0046C173 /* AEXMLExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */; };
+		2B44D2081EB6ED070046C173 /* WorkspaceSourceListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */; };
 		2B6C26811E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26821E986AE100BD6285 /* ProjectCreation.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */; };
 		2B6C26841E988EAA00BD6285 /* ProjectCreationWC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */; };
@@ -139,6 +140,7 @@
 		20AC4386318C4051534DA5D0 /* Pods-FruokUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokUITests/Pods-FruokUITests.release.xcconfig"; sourceTree = "<group>"; };
 		27088D216761F1798183548A /* Pods-FruokTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-FruokTests/Pods-FruokTests.release.xcconfig"; sourceTree = "<group>"; };
 		2B44D2041EB6D1FD0046C173 /* AEXMLExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = AEXMLExtensions.swift; path = IO/Common/AEXMLExtensions.swift; sourceTree = "<group>"; };
+		2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = WorkspaceSourceListItemVM.swift; path = UI/macOS/Workspace/WorkspaceSourceListItem/WorkspaceSourceListItemVM.swift; sourceTree = "<group>"; };
 		2B6C26801E986AE100BD6285 /* ProjectCreation.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = ProjectCreation.storyboard; path = UI/macOS/ProjectCreation/ProjectCreation.storyboard; sourceTree = "<group>"; };
 		2B6C26831E988EAA00BD6285 /* ProjectCreationWC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationWC.swift; path = UI/macOS/ProjectCreation/ProjectCreationWC.swift; sourceTree = "<group>"; };
 		2B6C26891E98F23800BD6285 /* MVVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MVVM.swift; path = UI/Common/MVVM.swift; sourceTree = "<group>"; };
@@ -224,6 +226,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2B44D2061EB6ECBF0046C173 /* WorkspaceSourceListItem */ = {
+			isa = PBXGroup;
+			children = (
+				2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */,
+			);
+			name = WorkspaceSourceListItem;
+			sourceTree = "<group>";
+		};
 		2B6C267F1E9738F900BD6285 /* ProjectCreation */ = {
 			isa = PBXGroup;
 			children = (
@@ -408,6 +418,7 @@
 				2B93ED7D1E95F797000D15A2 /* WorkspaceWC.swift */,
 				2B93ED811E95F81D000D15A2 /* WorkspaceCanvasVC.swift */,
 				2B93ED851E95F841000D15A2 /* WorkspaceCanvasVM.swift */,
+				2B44D2061EB6ECBF0046C173 /* WorkspaceSourceListItem */,
 			);
 			name = Workspace;
 			sourceTree = "<group>";
@@ -789,6 +800,7 @@
 				2B6C26A21E99242400BD6285 /* ProjectTypeSelectionVM.swift in Sources */,
 				2B6C26AF1E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */,
 				2B6C26921E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
+				2B44D2081EB6ED070046C173 /* WorkspaceSourceListItemVM.swift in Sources */,
 				2B93ED611E95BB67000D15A2 /* Client.swift in Sources */,
 				2B6C26C21E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift in Sources */,
 				2B7C5BE31E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */,

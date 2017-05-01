@@ -8,25 +8,48 @@
 
 import Foundation
 
+
 public protocol WorkspaceCanvasViewModelProtocol : ViewControllerModelProtocol {
     
-    
+    var items: [WorkspaceSourceListItemVM] { get set }
     
 }
 
 
 public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     
-    weak public var vc: ViewControllerProtocol?
+    // MARK: - PROPERTIES
+    
+    public lazy var items: [WorkspaceSourceListItemVM] = {
+        var items = [WorkspaceSourceListItemVM]()
+        
+        // TODO: This should be read from project XML
+        
+        items.append(WorkspaceSourceListItemVM(withTitle: "Project Name",
+                                               icon: .file,
+                                               destination: .ProjectConfig))
+        
+        return items
+    }()
+    
+    // MARK: - COMPUTED PROPERTIES
+    
+    // UNSAFE!
+    // TODO: IMPROVE THIS
+    var document: Document {
+        return vc!.window!.doc! as! Document
+    }
+    
     
     var ui: WorkspaceCanvasViewControllerProtocol? {
         return vc as? WorkspaceCanvasViewControllerProtocol
     }
     
-    // UNSAFE!
-    var document: Document {
-        return vc!.window!.doc! as! Document
-    }
+    
+    // MARK: - WorkspaceCanvasViewModelProtocol
+    
+    weak public var vc: ViewControllerProtocol?
+    
     
     public func ready() {
         guard let document = vc?.window?.doc else {
@@ -37,22 +60,30 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
             startProjectCreationFlow()
         }
     }
+    
+    
+    // MARK: - INSTANCE METHODS
 
     fileprivate func startProjectCreationFlow() {
+        // TODO: IMPROVE
         ui?.window?.presentSheet(forModule: Wireframe.requestProjectCreation(withDelegate: self))
     }
     
 }
 
+
 extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
+    
     
     func projectCreationDidFail(becauseOf error: Error) {
         
     }
     
+    
     func userDidCancelProjectCreation() {
         ui?.closeMyWindow()
     }
+    
     
     func userDidCompleteProjectCreation(
         withCompletionVM completionVM: ProjectCreationContainerViewModel) {
@@ -63,5 +94,6 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
             // TODO: HANDLE ERROR
         }
     }
+    
     
 }
