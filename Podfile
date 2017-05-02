@@ -2,6 +2,7 @@
 # platform :ios, '9.0'
 
 pod 'AEXML'
+pod 'SwiftyBeaver'
 
 target 'Fruok' do
   # Comment the next line if you're not using Swift and don't want to use dynamic frameworks
