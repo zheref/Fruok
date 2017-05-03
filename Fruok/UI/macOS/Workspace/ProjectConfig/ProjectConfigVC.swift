@@ -88,4 +88,22 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         projectTypeComboBox.stringValue = model.projectType?.title ?? ""
     }
     
+    
+    // MARK: - ACTIONS
+    
+    
+    @IBAction func userDidChangeText(_ sender: NSTextField) {
+        switch sender {
+        case commercialNameTextField:
+            return
+        case durationTextField:
+            return
+        case projectTypeComboBox:
+            return
+        default:
+            return
+        }
+    }
+    
+    
 }
