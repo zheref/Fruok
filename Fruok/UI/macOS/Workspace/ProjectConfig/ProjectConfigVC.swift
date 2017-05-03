@@ -48,14 +48,22 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
     @IBOutlet weak var deadlineDatePicker: NSDatePicker!
     @IBOutlet weak var projectTypeComboBox: NSComboBox!
     
-    
     // MARK: - PROPERTIES
+    
+    // MARK: - COMPUTED PROPERTIES
+    
+    var model: ProjectConfigViewModelProtocol {
+        return vm as! ProjectConfigViewModelProtocol
+    }
     
     // MARK: - LIFECYCLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        vm.vc = self
+        
+        vm.ready()
     }
     
     // MARK: - ProjectConfigViewControllerProtocol
@@ -66,8 +74,18 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         // NOT ACTIONABLE FROM HERE
     }
     
+    
+    /// Fill ui form with data from model
     func refreshUI() {
+        codenameTextField.stringValue = model.codename
+        commercialNameTextField.stringValue = model.commercialName
+        durationTextField.doubleValue = model.duration
         
+        if let deadline = model.deadline {
+            deadlineDatePicker.dateValue = deadline
+        }
+        
+        projectTypeComboBox.stringValue = model.projectType?.title ?? ""
     }
     
 }
