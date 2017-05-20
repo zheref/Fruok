@@ -7,6 +7,11 @@
 //
 
 import Cocoa
+import SwiftyBeaver
+
+
+let log = SwiftyBeaver.self
+
 
 @NSApplicationMain
 class AppDelegate: NSObject, NSApplicationDelegate {
@@ -14,7 +19,16 @@ class AppDelegate: NSObject, NSApplicationDelegate {
 
 
     func applicationDidFinishLaunching(_ aNotification: Notification) {
-        // Insert code here to initialize your application
+        configLog()
+    }
+    
+    private func configLog() {
+        let platform = SBPlatformDestination(appID: "r7xYVB",
+                                             appSecret: "ifNkbnpFsgox6na6kD1nfyn9vpaxgq8i",
+                                             encryptionKey: "I1cbl1iTw2xyntwv1o5rvo5828S8hyx8")
+        
+        log.addDestination(platform)
+        log.addDestination(ConsoleDestination())
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {

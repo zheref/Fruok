@@ -63,6 +63,8 @@ public class Document: FruokDocument {
     
 
     override public func read(from data: Data, ofType typeName: String) throws {
+        log.verbose("Reading file to open file last opened")
+        
         if let fileContent = String(data: data, encoding: Document.FileEncoding) {
             do {
                 content = try FXMLContent.from(xmlString: fileContent)
