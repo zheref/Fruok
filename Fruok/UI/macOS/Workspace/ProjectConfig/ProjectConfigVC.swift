@@ -48,25 +48,56 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
     @IBOutlet weak var deadlineDatePicker: NSDatePicker!
     @IBOutlet weak var projectTypeComboBox: NSComboBox!
     
+    // MARK: - COMPUTED PROPERTIES
+    
+    var model: ProjectConfigViewModelProtocol {
+        return vm as! ProjectConfigViewModelProtocol
+    }
+    
     
     // MARK: - PROPERTIES
+    
     
     // MARK: - LIFECYCLE
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do view setup here.
+        
+        refreshUI()
     }
     
     // MARK: - ProjectConfigViewControllerProtocol
     
     var vm: ViewControllerModelProtocol = ProjectConfigViewModel()
     
+    
     func closeMyWindow() {
         // NOT ACTIONABLE FROM HERE
     }
     
+    
     func refreshUI() {
+        guard let delegate = model.delegate,
+            let fxml = delegate.fxml,
+            let project = fxml.project else {
+            return
+        }
+        
+        codenameTextField.stringValue = project.name
+        
+        if let displayName = project.displayName {
+            commercialNameTextField.stringValue = displayName
+        }
+        
+        if let duration = project.duration {
+            durationTextField.stringValue = String(duration)
+        }
+        
+        if let deadline = project.deadline {
+            deadlineDatePicker.dateValue = deadline
+        }
+        
+        // TODO: Config project type combo box
         
     }
     
