@@ -42,7 +42,7 @@ class XMLParser {
         }
         
         if let deadline = project.deadline {
-            attributes[Project.Attribute.deadline.rawValue] = deadline.description
+            attributes[Project.Attribute.deadline.rawValue] = deadline.timeIntervalSince1970.description
         }
         
         let xmlElement = AEXMLElement(name: Project.TagName,
@@ -92,6 +92,12 @@ class XMLParser {
         
         if let durationStr = xml.attributes[Project.Attribute.duration.rawValue] {
             project.duration = Double(durationStr) ?? 0
+        }
+        
+        if let deadlineSince1970Str = xml.attributes[Project.Attribute.deadline.rawValue] {
+            if let deadlineSince1970 = Double(deadlineSince1970Str) {
+                project.deadline = Date(timeIntervalSince1970: deadlineSince1970)
+            }
         }
         
         return project
