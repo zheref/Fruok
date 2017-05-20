@@ -71,6 +71,12 @@ public struct Project : XMLCompliantProtocol {
             ?? ProjectType(id: "notdefined", relImageUrl: nil, title: "Not defined")
         
         self.init(withName: name, client: client, andType: projectType)
+        
+        if let projectOptionsFormVM = projectCreationVM.projectOptionsFormVM {
+            displayName = projectOptionsFormVM.commercialName.value
+            duration = Double(projectOptionsFormVM.duration.value)
+            deadline = projectOptionsFormVM.deadline.value
+        }
     }
     
     

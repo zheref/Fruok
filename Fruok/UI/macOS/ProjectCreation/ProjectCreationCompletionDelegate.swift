@@ -8,7 +8,7 @@
 
 import Foundation
 
-protocol ProjectCreationCompletionDelegate {
+protocol ProjectCreationCompletionDelegate : FXMLPermissioned {
     
     func projectCreationDidFail(becauseOf error: Error)
     

@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16D32" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
         <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
@@ -221,7 +221,7 @@ Gw
                                                 <action selector="userDidChangeText:" target="m2J-2G-JKe" id="aDa-cc-KDu"/>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-MW-Dn8">
+                                        <textField verticalHuggingPriority="750" tag="1" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fnH-MW-Dn8">
                                             <rect key="frame" x="194" y="179" width="193" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" drawsBackground="YES" id="g7F-pz-JNG">
                                                 <font key="font" metaFont="system"/>
@@ -232,7 +232,7 @@ Gw
                                                 <action selector="userDidChangeText:" target="m2J-2G-JKe" id="smh-t1-BPc"/>
                                             </connections>
                                         </textField>
-                                        <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-TR-9yg">
+                                        <textField verticalHuggingPriority="750" tag="2" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgS-TR-9yg">
                                             <rect key="frame" x="194" y="143" width="178" height="22"/>
                                             <textFieldCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" state="on" borderStyle="bezel" title="100 days" drawsBackground="YES" id="phR-2E-Rcd">
                                                 <font key="font" metaFont="system"/>
@@ -243,7 +243,7 @@ Gw
                                                 <action selector="userDidChangeText:" target="m2J-2G-JKe" id="GFd-Ag-m3c"/>
                                             </connections>
                                         </textField>
-                                        <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Vlk-aw-d5N">
+                                        <datePicker verticalHuggingPriority="750" tag="3" translatesAutoresizingMaskIntoConstraints="NO" id="Vlk-aw-d5N">
                                             <rect key="frame" x="194" y="106" width="196" height="27"/>
                                             <datePickerCell key="cell" borderStyle="bezel" alignment="left" id="2IW-fW-mck">
                                                 <font key="font" metaFont="system"/>
@@ -262,7 +262,7 @@ Gw
                                                 <color key="backgroundColor" name="controlColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
                                         </textField>
-                                        <comboBox verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-mZ-nca">
+                                        <comboBox verticalHuggingPriority="750" tag="4" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="EuD-mZ-nca">
                                             <rect key="frame" x="194" y="68" width="196" height="26"/>
                                             <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="cWE-vm-jeH">
                                                 <font key="font" metaFont="system"/>
@@ -278,9 +278,12 @@ Gw
                                                 <action selector="userDidChangeText:" target="m2J-2G-JKe" id="HYb-hX-8l6"/>
                                             </connections>
                                         </comboBox>
-                                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="daP-jk-1gZ">
+                                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" tag="7" translatesAutoresizingMaskIntoConstraints="NO" id="daP-jk-1gZ">
                                             <rect key="frame" x="371" y="141" width="19" height="27"/>
                                             <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="o67-6Y-bPA"/>
+                                            <connections>
+                                                <action selector="userDidChangeDurationStepper:" target="m2J-2G-JKe" id="n1t-cT-bBk"/>
+                                            </connections>
                                         </stepper>
                                     </subviews>
                                     <constraints>
@@ -343,7 +346,7 @@ Gw
                                     <action selector="userDidClickPrevious:" target="m2J-2G-JKe" id="7jz-4q-2ny"/>
                                 </connections>
                             </button>
-                            <button verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="jTj-Ok-cpb">
+                            <button verticalHuggingPriority="750" tag="5" translatesAutoresizingMaskIntoConstraints="NO" id="jTj-Ok-cpb">
                                 <rect key="frame" x="398" y="13" width="92" height="32"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="80" id="2vP-48-H9a"/>
@@ -386,6 +389,7 @@ Gw
                         <outlet property="codenameTextField" destination="w7x-1h-8IQ" id="PcP-RZ-HQ8"/>
                         <outlet property="commercialNameTextField" destination="fnH-MW-Dn8" id="23m-5Q-FYV"/>
                         <outlet property="deadlineDatePicker" destination="Vlk-aw-d5N" id="PJh-nY-zb4"/>
+                        <outlet property="durationStepper" destination="daP-jk-1gZ" id="eOW-Lr-gyO"/>
                         <outlet property="durationTextField" destination="lgS-TR-9yg" id="tcA-46-bPJ"/>
                     </connections>
                 </viewController>

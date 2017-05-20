@@ -29,6 +29,7 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     @IBOutlet weak var codenameTextField: NSTextField!
     @IBOutlet weak var commercialNameTextField: NSTextField!
     @IBOutlet weak var durationTextField: NSTextField!
+    @IBOutlet weak var durationStepper: NSStepper!
     @IBOutlet weak var deadlineDatePicker: NSDatePicker!
     @IBOutlet weak var clientComboBox: NSComboBox!
     
@@ -55,6 +56,8 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
         vm.duration
             .map({ "\($0) days" })
             .bind(to: durationTextField)
+        
+        //durationStepper.
         
         vm.deadline
             .map({ $0.americanString })
@@ -117,4 +120,7 @@ class ProjectOptionsFormViewController: NSViewController, ProjectOptionsFormView
     }
     
     
+    @IBAction func userDidChangeDurationStepper(_ sender: NSStepper) {
+        //sender.
+    }
 }
