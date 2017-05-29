@@ -63,6 +63,7 @@
 		2B7C5BE31E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
 		2B7C5BE41E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
 		2B7C5BE51E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
+		2B8095721EDC7EA1009AD070 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8095711EDC7EA1009AD070 /* Date.swift */; };
 		2B92AF1C1EB668F10091D72C /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
 		2B92AF1E1EB66BC80091D72C /* Freelance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1D1EB66BC80091D72C /* Freelance.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
@@ -166,6 +167,8 @@
 		2B6C26C11E9B29D200BD6285 /* ProjectCreationCompletionDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationCompletionDelegate.swift; path = UI/macOS/ProjectCreation/ProjectCreationCompletionDelegate.swift; sourceTree = "<group>"; };
 		2B7C5BDF1E9BA92F009974E7 /* ProjectCreationContainerVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationContainerVC.swift; path = UI/macOS/ProjectCreation/ProjectCreationContainerVC.swift; sourceTree = "<group>"; };
 		2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationContainerVM.swift; path = UI/macOS/ProjectCreation/ProjectCreationContainerVM.swift; sourceTree = "<group>"; };
+		2B80956F1EDC7D72009AD070 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Fruok/MyPlayground.playground; sourceTree = "<group>"; };
+		2B8095711EDC7EA1009AD070 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Core/Common/Extensions/Date.swift; sourceTree = "<group>"; };
 		2B92AF1B1EB668F10091D72C /* FXMLContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FXMLContent.swift; path = IO/Common/FXMLContent.swift; sourceTree = "<group>"; };
 		2B92AF1D1EB66BC80091D72C /* Freelance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Freelance.swift; path = Core/Common/Freelance.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -293,6 +296,14 @@
 			name = ProjectOptionsForm;
 			sourceTree = "<group>";
 		};
+		2B8095701EDC7E7C009AD070 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				2B8095711EDC7EA1009AD070 /* Date.swift */,
+			);
+			name = Extensions;
+			sourceTree = "<group>";
+		};
 		2B92AF1F1EB66BF60091D72C /* ProjectType */ = {
 			isa = PBXGroup;
 			children = (
@@ -306,6 +317,7 @@
 		2B93ED151E95ACF0000D15A2 = {
 			isa = PBXGroup;
 			children = (
+				2B80956F1EDC7D72009AD070 /* MyPlayground.playground */,
 				2B93ED201E95ACF0000D15A2 /* Fruok */,
 				2B93ED341E95ACF1000D15A2 /* FruokTests */,
 				2B93ED3F1E95ACF1000D15A2 /* FruokUITests */,
@@ -368,6 +380,7 @@
 		2B93ED4F1E95B759000D15A2 /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				2B8095701EDC7E7C009AD070 /* Extensions */,
 				2B92AF1F1EB66BF60091D72C /* ProjectType */,
 				2B93ED501E95B7E0000D15A2 /* XMLCompliantProtocol.swift */,
 				2B93ED541E95BA34000D15A2 /* XMLElementProtocol.swift */,
@@ -798,6 +811,7 @@
 				2B93ED6B1E95BD1B000D15A2 /* KCore.swift in Sources */,
 				2B93ED651E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				2B8095721EDC7EA1009AD070 /* Date.swift in Sources */,
 				2B92AF1E1EB66BC80091D72C /* Freelance.swift in Sources */,
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */,
