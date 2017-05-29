@@ -72,6 +72,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="Upg-nd-9iz" id="Kal-nW-7Eg"/>
+                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-7T-bow">
                                             <rect key="frame" x="194" y="263" width="178" height="22"/>
@@ -80,6 +83,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="Upg-nd-9iz" id="2N7-Af-X7P"/>
+                                            </connections>
                                         </textField>
                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jd6-GR-hpm">
                                             <rect key="frame" x="194" y="101" width="193" height="148"/>
@@ -112,6 +118,9 @@
                                                     <string>Item 3</string>
                                                 </objectValues>
                                             </comboBoxCell>
+                                            <connections>
+                                                <action selector="userDidChangeText:" target="Upg-nd-9iz" id="Sf3-Jg-4oc"/>
+                                            </connections>
                                         </comboBox>
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IZk-a4-S2u">
                                             <rect key="frame" x="371" y="261" width="19" height="27"/>

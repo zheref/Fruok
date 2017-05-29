@@ -20,6 +20,16 @@ protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
     var delegate: ProjectConfigDelegate? { get set }
     
+    var codename: String { get set }
+    
+    var commercialName: String { get set }
+    
+    var duration: TimeInterval { get set }
+    
+    var deadline: Date? { get set }
+    
+    var projectType: ProjectType? { get set }
+    
 }
 
 
@@ -31,13 +41,19 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     var commercialName = ""
     
-    var duration = 0
+    var duration: TimeInterval = 0
     
-    var deadline = Date()
+    var deadline: Date? = nil
     
     var projectType: ProjectType?
     
     var delegate: ProjectConfigDelegate?
+    
+    // MARK: - COMPUTED PROPERTIES
+    
+    var ui: ProjectConfigViewControllerProtocol? {
+        return vc as? ProjectConfigViewControllerProtocol
+    }
     
     // MARK: - ProjectConfigViewModelProtocol
     
@@ -45,7 +61,25 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     
     func ready() {
+        fillModelDataFromSource()
+        ui?.refreshUI()
+    }
+    
+    
+    // MARK: - INSTANCE METHODS
+    
+    
+    private func fillModelDataFromSource() {
+        guard let project = delegate?.fxml?.project else {
+            return
+        }
         
+        codename = project.name
+        commercialName = project.displayName ?? ""
+        duration = project.duration ?? TimeInterval()
+        deadline = project.deadline
+        
+        projectType = project.projectType
     }
     
 }
