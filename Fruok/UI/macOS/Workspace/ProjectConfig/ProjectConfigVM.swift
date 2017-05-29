@@ -9,6 +9,13 @@
 import Foundation
 
 
+protocol ProjectConfigDelegate : FXMLPermissioned {
+    
+    
+    
+}
+
+
 protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
     var delegate: ProjectConfigDelegate? { get set }

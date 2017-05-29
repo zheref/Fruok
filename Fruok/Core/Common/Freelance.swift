@@ -8,8 +8,18 @@
 
 import Foundation
 
-class Freelance {
+public struct Freelance {
     
+    let name: String
+    let title: String
+    let email: String
     
+    var billingDetails: String?
+    
+    init(name: String, title: String, email: String) {
+        self.name = name
+        self.title = title
+        self.email = email
+    }
     
 }

@@ -23,6 +23,14 @@ public class WorkspaceSourceListItemVM : NSObject, ViewModelProtocol {
         case ProjectConfig
         case Freelance
         case Client
+        case Summary
+        case Kanban
+        case Status
+        case Task
+        case Reports
+        case FocusFilters
+        case Resources
+        case ResourceDetails
     }
     
     // MARK: - PROPERTIES

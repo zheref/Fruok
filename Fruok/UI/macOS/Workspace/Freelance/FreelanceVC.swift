@@ -8,11 +8,37 @@
 
 import Cocoa
 
-class FreelanceVC: NSViewController {
+
+protocol FreelanceViewControllerProtocol : ViewControllerProtocol {
+    
+    func refreshUI()
+    
+}
+
+
+class FreelanceViewController : NSViewController, FreelanceViewControllerProtocol {
+
 
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do view setup here.
     }
+    
+    
+    // MARK: - FreelanceViewControllerProtocol
+    
+    var vm: ViewControllerModelProtocol = FreelanceViewModel()
+    
+    
+    func closeMyWindow() {
+        
+    }
+    
+    
+    func refreshUI() {
+        
+        
+    }
+
     
 }

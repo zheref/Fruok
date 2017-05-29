@@ -64,6 +64,9 @@
 		2B7C5BE41E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
 		2B7C5BE51E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */; };
 		2B8095721EDC7EA1009AD070 /* Date.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8095711EDC7EA1009AD070 /* Date.swift */; };
+		2B8095761EDC88C2009AD070 /* Freelance.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2B8095751EDC88C2009AD070 /* Freelance.storyboard */; };
+		2B8095781EDC88ED009AD070 /* FreelanceVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8095771EDC88ED009AD070 /* FreelanceVC.swift */; };
+		2B80957A1EDC89D0009AD070 /* FreelanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8095791EDC89D0009AD070 /* FreelanceVM.swift */; };
 		2B92AF1C1EB668F10091D72C /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
 		2B92AF1E1EB66BC80091D72C /* Freelance.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1D1EB66BC80091D72C /* Freelance.swift */; };
 		2B93ED221E95ACF0000D15A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED211E95ACF0000D15A2 /* AppDelegate.swift */; };
@@ -169,6 +172,9 @@
 		2B7C5BE21E9BAF3B009974E7 /* ProjectCreationContainerVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ProjectCreationContainerVM.swift; path = UI/macOS/ProjectCreation/ProjectCreationContainerVM.swift; sourceTree = "<group>"; };
 		2B80956F1EDC7D72009AD070 /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; name = MyPlayground.playground; path = Fruok/MyPlayground.playground; sourceTree = "<group>"; };
 		2B8095711EDC7EA1009AD070 /* Date.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Date.swift; path = Core/Common/Extensions/Date.swift; sourceTree = "<group>"; };
+		2B8095751EDC88C2009AD070 /* Freelance.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Freelance.storyboard; path = UI/macOS/Workspace/Freelance/Freelance.storyboard; sourceTree = "<group>"; };
+		2B8095771EDC88ED009AD070 /* FreelanceVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreelanceVC.swift; path = UI/macOS/Workspace/Freelance/FreelanceVC.swift; sourceTree = "<group>"; };
+		2B8095791EDC89D0009AD070 /* FreelanceVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FreelanceVM.swift; path = UI/macOS/Workspace/Freelance/FreelanceVM.swift; sourceTree = "<group>"; };
 		2B92AF1B1EB668F10091D72C /* FXMLContent.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FXMLContent.swift; path = IO/Common/FXMLContent.swift; sourceTree = "<group>"; };
 		2B92AF1D1EB66BC80091D72C /* Freelance.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Freelance.swift; path = Core/Common/Freelance.swift; sourceTree = "<group>"; };
 		2B93ED1E1E95ACF0000D15A2 /* Fruok.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Fruok.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -304,6 +310,23 @@
 			name = Extensions;
 			sourceTree = "<group>";
 		};
+		2B8095731EDC8528009AD070 /* Components */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Components;
+			sourceTree = "<group>";
+		};
+		2B8095741EDC8895009AD070 /* Freelance */ = {
+			isa = PBXGroup;
+			children = (
+				2B8095751EDC88C2009AD070 /* Freelance.storyboard */,
+				2B8095771EDC88ED009AD070 /* FreelanceVC.swift */,
+				2B8095791EDC89D0009AD070 /* FreelanceVM.swift */,
+			);
+			name = Freelance;
+			sourceTree = "<group>";
+		};
 		2B92AF1F1EB66BF60091D72C /* ProjectType */ = {
 			isa = PBXGroup;
 			children = (
@@ -434,6 +457,7 @@
 			isa = PBXGroup;
 			children = (
 				2B6C268D1E98FB6B00BD6285 /* FruokDocument.swift */,
+				2B8095731EDC8528009AD070 /* Components */,
 				2B6C267F1E9738F900BD6285 /* ProjectCreation */,
 				2B93ED891E95F846000D15A2 /* Workspace */,
 			);
@@ -449,6 +473,7 @@
 				2B93ED851E95F841000D15A2 /* WorkspaceCanvasVM.swift */,
 				2B44D2061EB6ECBF0046C173 /* WorkspaceSourceListItem */,
 				2B44D2091EB7C3160046C173 /* ProjectConfig */,
+				2B8095741EDC8895009AD070 /* Freelance */,
 			);
 			name = Workspace;
 			sourceTree = "<group>";
@@ -625,6 +650,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8095761EDC88C2009AD070 /* Freelance.storyboard in Resources */,
 				2B93ED8B1E966245000D15A2 /* Workspace.storyboard in Resources */,
 				2B6C26B11E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.xib in Resources */,
 				2B44D20B1EB7D2B60046C173 /* ProjectConfig.storyboard in Resources */,
@@ -800,6 +826,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B8095781EDC88ED009AD070 /* FreelanceVC.swift in Sources */,
 				2B6C26841E988EAA00BD6285 /* ProjectCreationWC.swift in Sources */,
 				2B93ED861E95F841000D15A2 /* WorkspaceCanvasVM.swift in Sources */,
 				2B93ED731E95BDD8000D15A2 /* Writer.swift in Sources */,
@@ -813,6 +840,7 @@
 				2B93ED5D1E95BB11000D15A2 /* XMLParser.swift in Sources */,
 				2B8095721EDC7EA1009AD070 /* Date.swift in Sources */,
 				2B92AF1E1EB66BC80091D72C /* Freelance.swift in Sources */,
+				2B80957A1EDC89D0009AD070 /* FreelanceVM.swift in Sources */,
 				2B93ED551E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */,
 				2B93ED7E1E95F797000D15A2 /* WorkspaceWC.swift in Sources */,

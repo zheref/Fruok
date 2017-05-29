@@ -7,3 +7,32 @@
 //
 
 import Foundation
+
+
+protocol FreelanceDelegate : FXMLPermissioned {
+    
+    
+    
+}
+
+
+protocol FreelanceViewModelProtocol : ViewControllerModelProtocol {
+    
+    var delegate: FreelanceDelegate? { get set }
+    
+}
+
+
+class FreelanceViewModel : FreelanceViewModelProtocol {
+    
+    // MARK: - FreelanceViewModelProtocol
+    
+    weak var vc: ViewControllerProtocol?
+    
+    var delegate: FreelanceDelegate?
+    
+    func ready() {
+        
+    }
+    
+}

@@ -40,9 +40,11 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
                                                               icon: .client,
                                                               destination: .Client))
         
+        projectItem.children.append(WorkspaceSourceListItemVM(withTitle: "Summary",
+                                                              icon: WorkspaceSourceListItemVM.ItemIcon.file,
+                                                              destination: WorkspaceSourceListItemVM.Destination.Summary))
+        
         items.append(projectItem)
-        
-        
         
         return items
     }()
@@ -163,5 +165,10 @@ extension WorkspaceCanvasViewModel : FXMLPermissioned {
 extension WorkspaceCanvasViewModel : ProjectConfigDelegate {
     
     
+    
+}
+
+
+extension WorkspaceCanvasViewModel : FreelanceDelegate {
     
 }

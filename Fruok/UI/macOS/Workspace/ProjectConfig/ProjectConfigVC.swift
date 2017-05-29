@@ -8,12 +8,6 @@
 
 import Cocoa
 
-protocol ProjectConfigDelegate : FXMLPermissioned {
-    
-    
-    
-}
-
 
 protocol ProjectConfigViewControllerProtocol : ViewControllerProtocol {
     
