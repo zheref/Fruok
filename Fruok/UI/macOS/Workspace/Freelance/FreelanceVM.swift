@@ -27,6 +27,8 @@ class FreelanceViewModel : FreelanceViewModelProtocol {
     
     // MARK: - FreelanceViewModelProtocol
     
+    public var persistanceReady = false
+    
     weak var vc: ViewControllerProtocol?
     
     var delegate: FreelanceDelegate?

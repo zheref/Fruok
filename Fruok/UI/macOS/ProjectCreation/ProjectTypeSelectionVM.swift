@@ -48,6 +48,8 @@ class ProjectTypeSelectionViewModel: ProjectTypeSelectionViewModelProtocol {
     }()
     
     // MARK: - PROJECTTYPESELECTION VIEWMODEL PROTOCOL
+    
+    public var persistanceReady = false
 
     public weak var vc: ViewControllerProtocol?
     

@@ -60,8 +60,9 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     // MARK: - ProjectConfigViewModelProtocol
     
-    weak var vc: ViewControllerProtocol?
+    public var persistanceReady = false
     
+    weak var vc: ViewControllerProtocol?
     
     func ready() {
         fillModelDataFromSource()

@@ -63,6 +63,8 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     
     // MARK: - WorkspaceCanvasViewModelProtocol
     
+    public var persistanceReady = false
+    
     weak public var vc: ViewControllerProtocol?
     
     

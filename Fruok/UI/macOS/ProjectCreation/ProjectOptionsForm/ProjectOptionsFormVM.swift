@@ -48,6 +48,8 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     
     // MARK: - PROJECT OPTIONS FORM VIEWMODEL PROTOCOL
     
+    public var persistanceReady = false
+    
     public weak var vc: ViewControllerProtocol?
     
     var ui: ProjectOptionsFormViewControllerProtocol? {

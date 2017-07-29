@@ -39,6 +39,8 @@ public protocol ViewProtocol : class, ViewModelRepresentant {
 
 public protocol ViewControllerModelProtocol : class {
     
+    var persistanceReady: Bool { get set }
+    
     weak var vc: ViewControllerProtocol? { get set }
     
     func ready()

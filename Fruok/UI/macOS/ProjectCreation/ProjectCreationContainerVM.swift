@@ -34,6 +34,8 @@ class ProjectCreationContainerViewModel : ProjectCreationContainerViewModelProto
         return nil
     }
     
+    public var persistanceReady = false
+    
     weak var vc: ViewControllerProtocol?
     
     weak var projectTypeSelectionVM: ProjectTypeSelectionViewModelProtocol?
