@@ -122,6 +122,8 @@
 		2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
 		7497358592B08B90A4CFED0C /* Pods_FruokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */; };
 		78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0352E1EAFA73E00A04161 /* BondExtensions.swift */; };
+		78ECB9031F2C9E3000560B31 /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
+		78ECB9041F2C9E3200560B31 /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
 		9611097ABFBD5621D77E4F42 /* Pods_FruokUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 74CEF88CA40E9C82B3B94BB7 /* Pods_FruokUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -888,6 +890,7 @@
 				2B6C268F1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B93ED7F1E95F797000D15A2 /* WorkspaceWC.swift in Sources */,
 				2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */,
+				78ECB9031F2C9E3000560B31 /* FXMLContent.swift in Sources */,
 				2B7C5BE41E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */,
 				2B93ED701E95BD57000D15A2 /* PropertyList.swift in Sources */,
 				2B93ED741E95BDD8000D15A2 /* Writer.swift in Sources */,
@@ -938,6 +941,7 @@
 				2B93ED841E95F81D000D15A2 /* WorkspaceCanvasVC.swift in Sources */,
 				2B93ED671E95BB7F000D15A2 /* ProjectType.swift in Sources */,
 				2B93ED7A1E95F2DA000D15A2 /* IODocument.swift in Sources */,
+				78ECB9041F2C9E3200560B31 /* FXMLContent.swift in Sources */,
 				2B6C26BC1E9AE25100BD6285 /* ProjectOptionsFormVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
