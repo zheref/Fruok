@@ -52,6 +52,11 @@ class ProjectCreationContainerViewModel : ProjectCreationContainerViewModelProto
     }
     
     
+    func persistIfNeeded() {
+        
+    }
+    
+    
     func userDidCancel() {
         delegate?.userDidCancelProjectCreation()
     }

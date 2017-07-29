@@ -57,6 +57,8 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        commercialNameTextField.delegate = self
+        
         refreshUI()
     }
     
@@ -93,6 +95,28 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         
         // TODO: Config project type combo box
         
+    }
+    
+    // MARK: - ACTIONS
+    
+    
+    
+}
+
+
+extension ProjectConfigViewController : NSTextFieldDelegate {
+    
+    func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
+        switch fieldEditor {
+        case commercialNameTextField:
+            if let str = fieldEditor.string {
+                model.commercialName = str
+            }
+        default:
+            break
+        }
+        
+        return true
     }
     
 }

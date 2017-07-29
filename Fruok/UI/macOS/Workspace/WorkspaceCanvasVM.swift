@@ -80,6 +80,11 @@ public class WorkspaceCanvasViewModel : WorkspaceCanvasViewModelProtocol {
     }
     
     
+    public func persistIfNeeded() {
+        
+    }
+    
+    
     public func userDidSelect(item: WorkspaceSourceListItemVM) {
         switch item.destination {
         case .ProjectConfig:

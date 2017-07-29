@@ -43,6 +43,8 @@ public protocol ViewControllerModelProtocol : class {
     
     func ready()
     
+    func persistIfNeeded()
+    
 }
 
 public protocol ViewControllerModelRepresentant {

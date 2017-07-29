@@ -35,4 +35,8 @@ class FreelanceViewModel : FreelanceViewModelProtocol {
         
     }
     
+    func persistIfNeeded() {
+        
+    }
+    
 }

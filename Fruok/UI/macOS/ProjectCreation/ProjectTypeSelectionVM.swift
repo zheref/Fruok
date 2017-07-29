@@ -66,6 +66,11 @@ class ProjectTypeSelectionViewModel: ProjectTypeSelectionViewModelProtocol {
     }
     
     
+    func persistIfNeeded() {
+        
+    }
+    
+    
     func userDidCancel() {
         ui?.cancelByDismissing()
     }

@@ -15,6 +15,7 @@ protocol ProjectConfigDelegate : FXMLPermissioned {
     
 }
 
+// MARK: - INTERFACE
 
 protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
@@ -32,7 +33,9 @@ protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
 }
 
+// MARK: - IMPLEMENTATION
 
+/// Use this as example of how to handle IO whe not using binders
 class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     // MARK: - PROPERTIES
@@ -65,6 +68,9 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
         ui?.refreshUI()
     }
     
+    func persistIfNeeded() {
+        
+    }
     
     // MARK: - INSTANCE METHODS
     

@@ -32,6 +32,7 @@ protocol ProjectOptionsFormViewModelProtocol : ViewControllerModelProtocol {
 
 // MARK: - IMPLEMENTATION
 
+
 class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     
     // MARK: INSTANCE PROPERTIES
@@ -56,6 +57,11 @@ class ProjectOptionsFormViewModel : ProjectOptionsFormViewModelProtocol {
     
     func ready() {
         loadClients()
+    }
+    
+    
+    func persistIfNeeded() {
+        
     }
     
     
