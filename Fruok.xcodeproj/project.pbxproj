@@ -121,6 +121,19 @@
 		2B93ED931E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
 		2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED911E966AEF000D15A2 /* KUI.swift */; };
 		7497358592B08B90A4CFED0C /* Pods_FruokTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */; };
+		788BBF8E1F30265300A25F03 /* ProjectConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */; };
+		788BBF8F1F30265300A25F03 /* ProjectConfigVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20C1EB7D2FD0046C173 /* ProjectConfigVC.swift */; };
+		788BBF911F30C1DA00A25F03 /* FUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788BBF901F30C1DA00A25F03 /* FUIUtilities.swift */; };
+		788BBF921F30C1DA00A25F03 /* FUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788BBF901F30C1DA00A25F03 /* FUIUtilities.swift */; };
+		788BBF931F30C1DA00A25F03 /* FUIUtilities.swift in Sources */ = {isa = PBXBuildFile; fileRef = 788BBF901F30C1DA00A25F03 /* FUIUtilities.swift */; };
+		78D545F91F2CD01F00B4C507 /* ProjectConfigVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20E1EB7DC910046C173 /* ProjectConfigVM.swift */; };
+		78D545FA1F2CD01F00B4C507 /* ProjectConfigVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D20E1EB7DC910046C173 /* ProjectConfigVM.swift */; };
+		78D545FB1F2CD02900B4C507 /* FreelanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8095791EDC89D0009AD070 /* FreelanceVM.swift */; };
+		78D545FC1F2CD02A00B4C507 /* FreelanceVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B8095791EDC89D0009AD070 /* FreelanceVM.swift */; };
+		78D545FD1F2CD21600B4C507 /* WorkspaceSourceListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */; };
+		78D545FE1F2CD21700B4C507 /* WorkspaceSourceListItemVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B44D2071EB6ED070046C173 /* WorkspaceSourceListItemVM.swift */; };
+		78D545FF1F2CD21B00B4C507 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
+		78D546001F2CD21C00B4C507 /* Document.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B93ED251E95ACF0000D15A2 /* Document.swift */; };
 		78E0352F1EAFA73E00A04161 /* BondExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 78E0352E1EAFA73E00A04161 /* BondExtensions.swift */; };
 		78ECB9031F2C9E3000560B31 /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
 		78ECB9041F2C9E3200560B31 /* FXMLContent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2B92AF1B1EB668F10091D72C /* FXMLContent.swift */; };
@@ -208,6 +221,7 @@
 		2B93ED911E966AEF000D15A2 /* KUI.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = KUI.swift; path = UI/Common/KUI.swift; sourceTree = "<group>"; };
 		3EB0971BAA60165D6104169A /* Pods_Fruok.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Fruok.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		74CEF88CA40E9C82B3B94BB7 /* Pods_FruokUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruokUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		788BBF901F30C1DA00A25F03 /* FUIUtilities.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FUIUtilities.swift; path = UI/Common/FUIUtilities.swift; sourceTree = "<group>"; };
 		78E0352E1EAFA73E00A04161 /* BondExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = BondExtensions.swift; path = UI/Common/BondExtensions.swift; sourceTree = "<group>"; };
 		CF2F0E2E9E1D10F1926428CA /* Pods_FruokTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_FruokTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		DA3967F0D0954624E5193CEE /* Pods-FruokUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FruokUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-FruokUITests/Pods-FruokUITests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -506,6 +520,7 @@
 				2B93ED911E966AEF000D15A2 /* KUI.swift */,
 				2B6C26891E98F23800BD6285 /* MVVM.swift */,
 				78E0352E1EAFA73E00A04161 /* BondExtensions.swift */,
+				788BBF901F30C1DA00A25F03 /* FUIUtilities.swift */,
 			);
 			name = Common;
 			sourceTree = "<group>";
@@ -859,6 +874,7 @@
 				2B44D2051EB6D1FD0046C173 /* AEXMLExtensions.swift in Sources */,
 				2B93ED781E95F2DA000D15A2 /* IODocument.swift in Sources */,
 				2B92AF1C1EB668F10091D72C /* FXMLContent.swift in Sources */,
+				788BBF911F30C1DA00A25F03 /* FUIUtilities.swift in Sources */,
 				2B93ED511E95B7E0000D15A2 /* XMLCompliantProtocol.swift in Sources */,
 				2B6C268E1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B6C26A21E99242400BD6285 /* ProjectTypeSelectionVM.swift in Sources */,
@@ -886,7 +902,9 @@
 				2B93ED871E95F841000D15A2 /* WorkspaceCanvasVM.swift in Sources */,
 				2B93ED561E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B6C26A31E99242400BD6285 /* ProjectTypeSelectionVM.swift in Sources */,
+				788BBF921F30C1DA00A25F03 /* FUIUtilities.swift in Sources */,
 				2B6C26BF1E9AE9E900BD6285 /* ProjectOptionsFormVM.swift in Sources */,
+				78D545FD1F2CD21600B4C507 /* WorkspaceSourceListItemVM.swift in Sources */,
 				2B6C268F1E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
 				2B93ED7F1E95F797000D15A2 /* WorkspaceWC.swift in Sources */,
 				2B6C26971E98FE6100BD6285 /* FruokModule.swift in Sources */,
@@ -897,7 +915,11 @@
 				2B93ED5A1E95BA64000D15A2 /* Project.swift in Sources */,
 				2B6C26A71E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
 				2B93ED5E1E95BB11000D15A2 /* XMLParser.swift in Sources */,
+				78D545F91F2CD01F00B4C507 /* ProjectConfigVM.swift in Sources */,
+				788BBF8E1F30265300A25F03 /* ProjectConfigVC.swift in Sources */,
 				2B6C26AB1E997DD600BD6285 /* Globals.swift in Sources */,
+				78D545FF1F2CD21B00B4C507 /* Document.swift in Sources */,
+				78D545FB1F2CD02900B4C507 /* FreelanceVM.swift in Sources */,
 				2B6C268B1E98F23800BD6285 /* MVVM.swift in Sources */,
 				2B6C26B51E9A816800BD6285 /* ProjectTypeCollectionItemVM.swift in Sources */,
 				2B93ED931E966AEF000D15A2 /* KUI.swift in Sources */,
@@ -921,6 +943,7 @@
 				2B6C26C01E9AE9E900BD6285 /* ProjectOptionsFormVM.swift in Sources */,
 				2B93ED571E95BA34000D15A2 /* XMLElementProtocol.swift in Sources */,
 				2B6C26901E98FB6B00BD6285 /* FruokDocument.swift in Sources */,
+				78D545FA1F2CD01F00B4C507 /* ProjectConfigVM.swift in Sources */,
 				2B6C26941E98FDD400BD6285 /* FruokWireframe.swift in Sources */,
 				2B6C26A81E99288900BD6285 /* ProjectTypesManager.swift in Sources */,
 				2B93ED801E95F797000D15A2 /* WorkspaceWC.swift in Sources */,
@@ -930,16 +953,21 @@
 				2B93ED751E95BDD8000D15A2 /* Writer.swift in Sources */,
 				2B6C26981E98FE6100BD6285 /* FruokModule.swift in Sources */,
 				2B93ED5B1E95BA64000D15A2 /* Project.swift in Sources */,
+				78D545FE1F2CD21700B4C507 /* WorkspaceSourceListItemVM.swift in Sources */,
 				2B93ED5F1E95BB11000D15A2 /* XMLParser.swift in Sources */,
 				2B6C26A01E9923B100BD6285 /* ProjectTypeSelectionVC.swift in Sources */,
 				2B6C26A41E99242400BD6285 /* ProjectTypeSelectionVM.swift in Sources */,
 				2B6C26B61E9A816800BD6285 /* ProjectTypeCollectionItemVM.swift in Sources */,
+				78D545FC1F2CD02A00B4C507 /* FreelanceVM.swift in Sources */,
 				2B93ED941E966AEF000D15A2 /* KUI.swift in Sources */,
+				788BBF931F30C1DA00A25F03 /* FUIUtilities.swift in Sources */,
 				2B6C26B01E9A7F6F00BD6285 /* ProjectTypeCollectionViewItem.swift in Sources */,
+				788BBF8F1F30265300A25F03 /* ProjectConfigVC.swift in Sources */,
 				2B7C5BE51E9BAF3B009974E7 /* ProjectCreationContainerVM.swift in Sources */,
 				2B6C26AC1E997DD600BD6285 /* Globals.swift in Sources */,
 				2B93ED841E95F81D000D15A2 /* WorkspaceCanvasVC.swift in Sources */,
 				2B93ED671E95BB7F000D15A2 /* ProjectType.swift in Sources */,
+				78D546001F2CD21C00B4C507 /* Document.swift in Sources */,
 				2B93ED7A1E95F2DA000D15A2 /* IODocument.swift in Sources */,
 				78ECB9041F2C9E3200560B31 /* FXMLContent.swift in Sources */,
 				2B6C26BC1E9AE25100BD6285 /* ProjectOptionsFormVC.swift in Sources */,

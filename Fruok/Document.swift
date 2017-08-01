@@ -83,19 +83,3 @@ public class Document: FruokDocument {
 
 }
 
-
-extension Document : FXMLPermissioned {
-    
-    var fxml: FXMLContent? {
-        get {
-            return content
-        }
-        set {
-            if let val = newValue {
-                content = val
-            }
-        }
-    }
-    
-}
-

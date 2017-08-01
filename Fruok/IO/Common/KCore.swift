@@ -16,8 +16,10 @@ class KCore {
     
 }
 
-protocol FXMLPermissioned {
+public protocol FXMLPermissioned : class {
     
     var fxml: FXMLContent? { get set }
+    
+    func persist()
     
 }

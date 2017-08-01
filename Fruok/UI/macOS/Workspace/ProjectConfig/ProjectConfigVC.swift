@@ -59,7 +59,8 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         
         commercialNameTextField.delegate = self
         
-        refreshUI()
+        vm.vc = self
+        vm.ready()
     }
     
     // MARK: - ProjectConfigViewControllerProtocol
@@ -73,23 +74,14 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
     
     
     func refreshUI() {
-        guard let delegate = model.delegate,
-            let fxml = delegate.fxml,
-            let project = fxml.project else {
-            return
-        }
         
-        codenameTextField.stringValue = project.name
+        codenameTextField.stringValue = model.codename
         
-        if let displayName = project.displayName {
-            commercialNameTextField.stringValue = displayName
-        }
+        commercialNameTextField.stringValue = model.commercialName
         
-        if let duration = project.duration {
-            durationTextField.stringValue = String(duration)
-        }
+        durationTextField.stringValue = String(model.duration)
         
-        if let deadline = project.deadline {
+        if let deadline = model.deadline {
             deadlineDatePicker.dateValue = deadline
         }
         
@@ -107,10 +99,21 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
 extension ProjectConfigViewController : NSTextFieldDelegate {
     
     func control(_ control: NSControl, textShouldEndEditing fieldEditor: NSText) -> Bool {
-        switch fieldEditor {
+        switch control {
+        case codenameTextField:
+            // Codename should not be modified
+            break
         case commercialNameTextField:
             if let str = fieldEditor.string {
                 model.commercialName = str
+            }
+        case durationTextField:
+            if let str = fieldEditor.string {
+                if let duration = str.asDouble {
+                    model.duration = duration
+                } else {
+                    // TODO: Handle parsing error
+                }
             }
         default:
             break

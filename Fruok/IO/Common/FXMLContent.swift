@@ -8,7 +8,7 @@
 
 import AEXML
 
-class FXMLContent : AEXMLDocument {
+public class FXMLContent : AEXMLDocument {
     
     // MARK: - PROPERTIES
     

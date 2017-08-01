@@ -42,9 +42,21 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     var codename = ""
     
-    var commercialName = ""
+    var commercialName = "" {
+        didSet {
+            if persistanceReady {
+                delegate?.fxml?.project?.displayName = commercialName
+            }
+        }
+    }
     
-    var duration: TimeInterval = 0
+    var duration: TimeInterval = 0 {
+        didSet {
+            if persistanceReady {
+                delegate?.fxml?.project?.duration = duration
+            }
+        }
+    }
     
     var deadline: Date? = nil
     
@@ -67,10 +79,12 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     func ready() {
         fillModelDataFromSource()
         ui?.refreshUI()
+        
+        persistanceReady = true
     }
     
     func persistIfNeeded() {
-        
+        delegate?.persist()
     }
     
     // MARK: - INSTANCE METHODS

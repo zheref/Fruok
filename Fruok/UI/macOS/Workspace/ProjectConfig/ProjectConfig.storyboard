@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12120" systemVersion="16E195" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
+<document type="com.apple.InterfaceBuilder3.Cocoa.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16F73" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES">
     <dependencies>
         <deployment identifier="macosx"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12120"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="12121"/>
         <capability name="box content view" minToolsVersion="7.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -72,9 +72,6 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
-                                            <connections>
-                                                <action selector="userDidChangeText:" target="Upg-nd-9iz" id="Kal-nW-7Eg"/>
-                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-7T-bow">
                                             <rect key="frame" x="194" y="263" width="178" height="22"/>
@@ -83,10 +80,11 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
-                                            <connections>
-                                                <action selector="userDidChangeText:" target="Upg-nd-9iz" id="2N7-Af-X7P"/>
-                                            </connections>
                                         </textField>
+                                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IZk-a4-S2u">
+                                            <rect key="frame" x="371" y="261" width="19" height="27"/>
+                                            <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="E1q-wX-IAz"/>
+                                        </stepper>
                                         <datePicker verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Jd6-GR-hpm">
                                             <rect key="frame" x="194" y="101" width="193" height="148"/>
                                             <datePickerCell key="cell" borderStyle="bezel" alignment="left" datePickerStyle="clockAndCalendar" id="C5A-ak-RKx">
@@ -118,14 +116,7 @@
                                                     <string>Item 3</string>
                                                 </objectValues>
                                             </comboBoxCell>
-                                            <connections>
-                                                <action selector="userDidChangeText:" target="Upg-nd-9iz" id="Sf3-Jg-4oc"/>
-                                            </connections>
                                         </comboBox>
-                                        <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IZk-a4-S2u">
-                                            <rect key="frame" x="371" y="261" width="19" height="27"/>
-                                            <stepperCell key="cell" continuous="YES" alignment="left" maxValue="100" id="E1q-wX-IAz"/>
-                                        </stepper>
                                     </subviews>
                                     <constraints>
                                         <constraint firstItem="IZk-a4-S2u" firstAttribute="leading" secondItem="UOL-7T-bow" secondAttribute="trailing" constant="2" id="0oJ-Yp-8Mx"/>

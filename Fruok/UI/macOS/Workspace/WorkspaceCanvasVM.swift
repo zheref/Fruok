@@ -154,15 +154,22 @@ extension WorkspaceCanvasViewModel : ProjectCreationCompletionDelegate {
 extension WorkspaceCanvasViewModel : FXMLPermissioned {
     
     
-    var fxml: FXMLContent? {
-        get { return document?.fxml }
+    public var fxml: FXMLContent? {
+        get { return document?.content }
         set {
             guard let doc = document else {
                 return
             }
             
-            doc.fxml = newValue
+            if let content = newValue {
+                doc.content = content
+            }
         }
+    }
+    
+    
+    public func persist() {
+        document?.save(self)
     }
     
     
