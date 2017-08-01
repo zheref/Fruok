@@ -54,6 +54,8 @@ public class Document: FruokDocument {
     
 
     override public func data(ofType typeName: String) throws -> Data {
+        content.updateXML()
+        
         if let data = content.xml.data(using: Document.FileEncoding) {
             return data
         } else {

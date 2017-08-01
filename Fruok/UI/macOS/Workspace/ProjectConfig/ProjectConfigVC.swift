@@ -58,6 +58,7 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         super.viewDidLoad()
         
         commercialNameTextField.delegate = self
+        durationTextField.delegate = self
         
         vm.vc = self
         vm.ready()
