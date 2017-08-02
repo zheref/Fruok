@@ -58,9 +58,23 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
         }
     }
     
-    var deadline: Date? = nil
+    var deadline: Date? = nil {
+        didSet {
+            if persistanceReady {
+                delegate?.fxml?.project?.deadline = deadline
+            }
+        }
+    }
     
-    var projectType: ProjectType?
+    var projectType: ProjectType? {
+        didSet {
+            if persistanceReady {
+                if let projectType = projectType {
+                    delegate?.fxml?.project?.projectType = projectType
+                }
+            }
+        }
+    }
     
     var delegate: ProjectConfigDelegate?
     

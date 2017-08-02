@@ -11,10 +11,18 @@
         <scene sceneID="1oB-0d-gwZ">
             <objects>
                 <viewController storyboardIdentifier="ProjectConfig" id="Upg-nd-9iz" customClass="ProjectConfigViewController" customModule="Fruok" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" id="5Dp-bL-KOe">
+                    <view key="view" wantsLayer="YES" id="5Dp-bL-KOe">
                         <rect key="frame" x="0.0" y="0.0" width="824" height="768"/>
                         <autoresizingMask key="autoresizingMask"/>
                         <subviews>
+                            <imageView horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="pl7-Ji-AhI">
+                                <rect key="frame" x="0.0" y="0.0" width="824" height="768"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="768" id="JFH-ez-Ql4"/>
+                                    <constraint firstAttribute="width" constant="824" id="vKE-wQ-WT7"/>
+                                </constraints>
+                                <imageCell key="cell" refusesFirstResponder="YES" alignment="left" image="infinite" id="oGr-py-kX4"/>
+                            </imageView>
                             <box boxType="custom" translatesAutoresizingMaskIntoConstraints="NO" id="v36-cE-5gg">
                                 <rect key="frame" x="180" y="174" width="464" height="420"/>
                                 <view key="contentView" id="4tW-hN-ZUj">
@@ -156,7 +164,13 @@
                         </subviews>
                         <constraints>
                             <constraint firstItem="v36-cE-5gg" firstAttribute="centerY" secondItem="5Dp-bL-KOe" secondAttribute="centerY" id="4nN-YH-Tye"/>
+                            <constraint firstItem="pl7-Ji-AhI" firstAttribute="leading" secondItem="5Dp-bL-KOe" secondAttribute="leading" id="9Rl-Zm-Q9T"/>
+                            <constraint firstAttribute="bottom" secondItem="pl7-Ji-AhI" secondAttribute="bottom" id="KNd-t2-KZG"/>
+                            <constraint firstItem="v36-cE-5gg" firstAttribute="centerX" secondItem="pl7-Ji-AhI" secondAttribute="centerX" id="RaD-7J-kSS"/>
+                            <constraint firstItem="v36-cE-5gg" firstAttribute="centerY" secondItem="pl7-Ji-AhI" secondAttribute="centerY" id="ThD-LL-AEl"/>
                             <constraint firstItem="v36-cE-5gg" firstAttribute="centerX" secondItem="5Dp-bL-KOe" secondAttribute="centerX" id="c9G-NK-csf"/>
+                            <constraint firstItem="pl7-Ji-AhI" firstAttribute="top" secondItem="5Dp-bL-KOe" secondAttribute="top" id="o8E-TL-Pcp"/>
+                            <constraint firstAttribute="trailing" secondItem="pl7-Ji-AhI" secondAttribute="trailing" id="vzu-nS-hlu"/>
                         </constraints>
                     </view>
                     <connections>
@@ -172,4 +186,7 @@
             <point key="canvasLocation" x="-48" y="38"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="infinite" width="3000" height="2000"/>
+    </resources>
 </document>

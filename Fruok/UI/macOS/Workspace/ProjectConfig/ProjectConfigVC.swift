@@ -60,6 +60,8 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         commercialNameTextField.delegate = self
         durationTextField.delegate = self
         
+        deadlineDatePicker.delegate = self
+        
         vm.vc = self
         vm.ready()
     }
@@ -121,6 +123,18 @@ extension ProjectConfigViewController : NSTextFieldDelegate {
         }
         
         return true
+    }
+    
+}
+
+
+extension ProjectConfigViewController : NSDatePickerCellDelegate {
+    
+    func datePickerCell(_ datePickerCell: NSDatePickerCell,
+                        validateProposedDateValue proposedDateValue: AutoreleasingUnsafeMutablePointer<NSDate>,
+                        timeInterval proposedTimeInterval: UnsafeMutablePointer<TimeInterval>?) {
+        
+        model.deadline = proposedDateValue.pointee as Date
     }
     
 }
