@@ -9,7 +9,7 @@
 import Foundation
 import AEXML
 
-public struct ProjectType : XMLElementProtocol {
+public struct ProjectType : XMLElementProtocol, Equatable, CustomStringConvertible {
     
     // MARK: - CLASS CONSTANTS
     
@@ -32,6 +32,16 @@ public struct ProjectType : XMLElementProtocol {
     
     var xmlElementEquivalent: AEXMLElement {
         return XMLParser.unparse(projectType: self)
+    }
+    
+    // MARK: - EQUATABLE
+    
+    public static func ==(lhs: ProjectType, rhs: ProjectType) -> Bool {
+        return lhs.id == rhs.id && lhs.title == rhs.title
+    }
+    
+    public var description: String {
+        return title
     }
     
 }

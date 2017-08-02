@@ -19,6 +19,8 @@ protocol ProjectConfigDelegate : FXMLPermissioned {
 
 protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
+    var projectTypes: [ProjectType] { get }
+    
     var delegate: ProjectConfigDelegate? { get set }
     
     var codename: String { get set }
@@ -39,6 +41,12 @@ protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
 class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     // MARK: - PROPERTIES
+    
+    // MARK: PROVIDED DATA PROPERTIES
+    
+    var projectTypes = [ProjectType]()
+    
+    // MARK: FILLED PROPERTIES
     
     var codename = ""
     
@@ -91,8 +99,9 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     weak var vc: ViewControllerProtocol?
     
     func ready() {
-        fillModelDataFromSource()
-        ui?.refreshUI()
+        fillModelDataFromSource() { [weak self] in
+            self?.ui?.refreshUI()
+        }
         
         persistanceReady = true
     }
@@ -104,7 +113,7 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     // MARK: - INSTANCE METHODS
     
     
-    private func fillModelDataFromSource() {
+    private func fillModelDataFromSource(then: @escaping () -> Void) {
         guard let project = delegate?.fxml?.project else {
             return
         }
@@ -115,6 +124,14 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
         deadline = project.deadline
         
         projectType = project.projectType
+        
+        ProjectTypesManager.shared.readProjectTypes {
+            [weak self] projectTypes in
+            if let this = self {
+                this.projectTypes = projectTypes
+                then()
+            }
+        }
     }
     
 }

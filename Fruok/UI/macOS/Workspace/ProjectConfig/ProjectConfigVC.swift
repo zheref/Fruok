@@ -57,9 +57,6 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        commercialNameTextField.delegate = self
-        durationTextField.delegate = self
-        
         deadlineDatePicker.delegate = self
         
         vm.vc = self
@@ -87,6 +84,8 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         if let deadline = model.deadline {
             deadlineDatePicker.dateValue = deadline
         }
+        
+        projectTypeComboBox.reloadData()
         
         // TODO: Config project type combo box
         
@@ -135,6 +134,47 @@ extension ProjectConfigViewController : NSDatePickerCellDelegate {
                         timeInterval proposedTimeInterval: UnsafeMutablePointer<TimeInterval>?) {
         
         model.deadline = proposedDateValue.pointee as Date
+    }
+    
+}
+
+
+extension ProjectConfigViewController : NSComboBoxDataSource {
+    
+    func numberOfItems(in comboBox: NSComboBox) -> Int {
+        return model.projectTypes.count
+    }
+    
+    
+    func comboBox(_ comboBox: NSComboBox, objectValueForItemAt index: Int) -> Any? {
+        return model.projectTypes[index]
+    }
+    
+    
+    func comboBox(_ comboBox: NSComboBox, indexOfItemWithStringValue string: String) -> Int {
+        if let firstMatching = model.projectTypes.first(where: { $0.title == string }) {
+            if let index = model.projectTypes.index(of: firstMatching) {
+                return index
+            } else {
+                return -1
+            }
+        } else {
+            return -1
+        }
+    }
+    
+    
+    func comboBox(_ comboBox: NSComboBox, completedString string: String) -> String? {
+        return model.projectTypes.first(where: { $0.title.hasPrefix(string) })?.title
+    }
+    
+}
+
+extension ProjectConfigViewController : NSComboBoxDelegate {
+    
+    func comboBoxSelectionDidChange(_ notification: Notification) {
+        let selected = model.projectTypes[projectTypeComboBox.indexOfSelectedItem]
+        model.projectType = selected
     }
     
 }

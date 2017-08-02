@@ -80,6 +80,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="Upg-nd-9iz" id="0NF-eJ-h6J"/>
+                                            </connections>
                                         </textField>
                                         <textField verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="NO" translatesAutoresizingMaskIntoConstraints="NO" id="UOL-7T-bow">
                                             <rect key="frame" x="194" y="263" width="178" height="22"/>
@@ -88,6 +91,9 @@
                                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
                                             </textFieldCell>
+                                            <connections>
+                                                <outlet property="delegate" destination="Upg-nd-9iz" id="vHl-zG-ocy"/>
+                                            </connections>
                                         </textField>
                                         <stepper horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="IZk-a4-S2u">
                                             <rect key="frame" x="371" y="261" width="19" height="27"/>
@@ -114,16 +120,15 @@
                                         </textField>
                                         <comboBox verticalHuggingPriority="750" allowsCharacterPickerTouchBarItem="YES" translatesAutoresizingMaskIntoConstraints="NO" id="jbn-Qe-eo2">
                                             <rect key="frame" x="194" y="63" width="196" height="26"/>
-                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" completes="NO" numberOfVisibleItems="5" id="x2i-HR-YUc">
+                                            <comboBoxCell key="cell" scrollable="YES" lineBreakMode="clipping" selectable="YES" editable="YES" sendsActionOnEndEditing="YES" borderStyle="bezel" drawsBackground="YES" usesDataSource="YES" numberOfVisibleItems="5" id="x2i-HR-YUc">
                                                 <font key="font" metaFont="system"/>
                                                 <color key="textColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                 <color key="backgroundColor" name="textBackgroundColor" catalog="System" colorSpace="catalog"/>
-                                                <objectValues>
-                                                    <string>Item 1</string>
-                                                    <string>Item 2</string>
-                                                    <string>Item 3</string>
-                                                </objectValues>
                                             </comboBoxCell>
+                                            <connections>
+                                                <outlet property="dataSource" destination="Upg-nd-9iz" id="3dX-dX-2K8"/>
+                                                <outlet property="delegate" destination="Upg-nd-9iz" id="pEG-oR-RnE"/>
+                                            </connections>
                                         </comboBox>
                                     </subviews>
                                     <constraints>
