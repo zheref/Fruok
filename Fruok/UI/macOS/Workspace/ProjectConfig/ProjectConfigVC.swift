@@ -87,6 +87,10 @@ class ProjectConfigViewController: NSViewController, ProjectConfigViewController
         
         projectTypeComboBox.reloadData()
         
+        if let preselectedIndex = model.projectTypeIndexInDataSource {
+            projectTypeComboBox.selectItem(at: preselectedIndex)
+        }
+        
         // TODO: Config project type combo box
         
     }

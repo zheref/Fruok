@@ -33,6 +33,8 @@ protocol ProjectConfigViewModelProtocol : ViewControllerModelProtocol {
     
     var projectType: ProjectType? { get set }
     
+    var projectTypeIndexInDataSource: Int? { get }
+    
 }
 
 // MARK: - IMPLEMENTATION
@@ -90,6 +92,14 @@ class ProjectConfigViewModel : ProjectConfigViewModelProtocol {
     
     var ui: ProjectConfigViewControllerProtocol? {
         return vc as? ProjectConfigViewControllerProtocol
+    }
+    
+    var projectTypeIndexInDataSource: Int? {
+        if let pt = projectType {
+            return projectTypes.index(of: pt)
+        } else {
+            return nil
+        }
     }
     
     // MARK: - ProjectConfigViewModelProtocol
